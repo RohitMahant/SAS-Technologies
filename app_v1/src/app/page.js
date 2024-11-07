@@ -15,7 +15,7 @@ export default function Home() {
 
          </div>
          <ProductCards/>
-         <div className="m-10 w-full md:flex justify-between">
+         {/* <div className="m-10 w-full md:flex justify-between">
             <div>
               <h1>Available at best Prices</h1>
               <h1>We have the best prices for products both in Retail and Wholesale</h1>
@@ -23,7 +23,7 @@ export default function Home() {
             <div className=" bg-secondary">
               
             </div>
-         </div>
+         </div> */}
        </div>
   );
 }
