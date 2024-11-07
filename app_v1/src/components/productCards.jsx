@@ -58,17 +58,17 @@ export default function ProductCards() {
       {products.map((product) => (
         <div
           key={product.id}
-          className="bg-white shadow-md rounded-lg overflow-hidden w-52  flex-shrink-0 sm:w-72 md:w-72 lg:w-60 xl:w-72"
+          className="bg-white shadow-md rounded-lg overflow-hidden flex-shrink-0 w-36 md:w-72 lg:w-60 xl:w-72"
         >
           <img
             src={product.image}
             alt={product.title}
-            className="h-40 w-full object-cover"
+            className="h-20 md:h-44 w-full object-cover"
           />
           <div className="p-4">
             <h3 className="text-lg font-semibold">{product.title}</h3>
             <p className="text-gray-600">{product.price}</p>
-            <button className="mt-4 w-full py-2 bg-primary text-white rounded hover:bg-primary-dark transition duration-200">
+            <button className="mt-4 w-full py-2 bg-red-800 text-white rounded hover:bg-primary-dark transition duration-200">
               Details
             </button>
           </div>
