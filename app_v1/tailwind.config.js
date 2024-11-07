@@ -8,9 +8,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "#0096C7",      
+        secondary: "#90E0EF",    
+        textColor: "#03045E",    
+        tertiary: "#90E0EF",     
       },
+      fontFamily:{
+        mergeOne: "var(--font-merge-one)",
+      }
     },
   },
   plugins: [],
