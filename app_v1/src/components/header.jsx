@@ -1,23 +1,50 @@
-"use client"
+"use client";
 
 import { IoMenuSharp, IoCloseSharp } from "react-icons/io5";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [activePage, setActivePage] = useState("HOME");
+  const router = useRouter();
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  const handleNavClick = (page) => {
+  const handleNavClick = (page, path) => {
     setActivePage(page);
-    setIsSidebarOpen(false); // Close sidebar when a page is selected
+    setIsSidebarOpen(false);
+    router.push(path); // Programmatic navigation
   };
+
+  // Set active page based on current route
+  useEffect(() => {
+    const pathToPage = {
+      "/": "HOME",
+      "/contact": "CONTACT US",
+    };
+    setActivePage(pathToPage[router.pathname] || "HOME");
+  }, [router.pathname]);
 
   const getNavItemClasses = (page) =>
     `cursor-pointer ${activePage === page ? "border-b-4 border-textColor text-textColor" : "hover:text-textColor"}`;
+
+  // Disable scrolling when sidebar is open
+  useEffect(() => {
+    if (isSidebarOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    // Cleanup to reset scroll when component unmounts or sidebar closes
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isSidebarOpen]);
 
   return (
     <>
@@ -28,10 +55,10 @@ export default function Header() {
         </div>
         <div>
           <ul className="flex font-mergeOne md:text-[24px] lg:text-3xl md:gap-x-16 lg:gap-x-20">
-            <li className={getNavItemClasses("HOME")} onClick={() => handleNavClick("HOME")}>HOME</li>
-            <li className={getNavItemClasses("RETAIL")} onClick={() => handleNavClick("RETAIL")}>RETAIL</li>
-            <li className={getNavItemClasses("WHOLESALE")} onClick={() => handleNavClick("WHOLESALE")}>WHOLESALE</li>
-            <li className={getNavItemClasses("CONTACT US")} onClick={() => handleNavClick("CONTACT US")}>CONTACT US</li>
+            <li className={getNavItemClasses("HOME")} onClick={() => handleNavClick("HOME", "/")}><Link href="/">HOME</Link></li>
+            <li className={getNavItemClasses("RETAIL")} onClick={() => handleNavClick("RETAIL", "/retail")}>RETAIL</li>
+            <li className={getNavItemClasses("WHOLESALE")} onClick={() => handleNavClick("WHOLESALE", "/wholesale")}>WHOLESALE</li>
+            <li className={getNavItemClasses("CONTACT US")} onClick={() => handleNavClick("CONTACT US", "/contact")}><Link href="/contact">CONTACT US</Link></li>
           </ul>
         </div>
       </nav>
@@ -60,17 +87,17 @@ export default function Header() {
           <IoCloseSharp size={40} color="#03045E" className="cursor-pointer hover:text-textColor" onClick={toggleSidebar} />
         </div>
         <ul className="font-mergeOne text-2xl text-textColor space-y-16 p-6">
-          <li className={getNavItemClasses("HOME")} onClick={() => handleNavClick("HOME")}>HOME</li>
-          <li className={getNavItemClasses("RETAIL")} onClick={() => handleNavClick("RETAIL")}>RETAIL</li>
-          <li className={getNavItemClasses("WHOLESALE")} onClick={() => handleNavClick("WHOLESALE")}>WHOLESALE</li>
-          <li className={getNavItemClasses("CONTACT US")} onClick={() => handleNavClick("CONTACT US")}>CONTACT US</li>
+          <li className={getNavItemClasses("HOME")} onClick={() => handleNavClick("HOME", "/")}><Link href="/">HOME</Link></li>
+          <li className={getNavItemClasses("RETAIL")} onClick={() => handleNavClick("RETAIL", "/retail")}>RETAIL</li>
+          <li className={getNavItemClasses("WHOLESALE")} onClick={() => handleNavClick("WHOLESALE", "/wholesale")}>WHOLESALE</li>
+          <li className={getNavItemClasses("CONTACT US")} onClick={() => handleNavClick("CONTACT US", "/contact")}><Link href="/contact">CONTACT US</Link></li>
         </ul>
       </div>
 
       {/* Overlay when sidebar is open */}
       {isSidebarOpen && (
         <div
-          className="md:hidden lg:hidden fixed inset-0 bg-black opacity-50 z-40"
+          className="md:hidden lg:hidden fixed inset-0 bg-black opacity-50 z-40" 
           onClick={toggleSidebar}
         ></div>
       )}
