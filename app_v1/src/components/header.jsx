@@ -30,7 +30,7 @@ export default function Header() {
   }, [router.pathname]);
 
   const getNavItemClasses = (page) =>
-    `cursor-pointer ${activePage === page ? "border-b-4 border-textColor text-textColor" : "hover:text-textColor"}`;
+    `cursor-pointer ${activePage === page ? "border-b-4 border-red-800 text-red-800" : "hover:text-textColor"}`;
 
   // Disable scrolling when sidebar is open
   useEffect(() => {
@@ -49,12 +49,12 @@ export default function Header() {
   return (
     <>
       {/* Desktop Navbar */}
-      <nav className="hidden top-0 lg:flex sticky z-10 bg-secondary w-full md:h-16 lg:h-20 items-center justify-center md:gap-x-12 lg:gap-x-16 border-b-2 border-textColor md:flex">
+      <nav className="hidden top-3 rounded-lg lg:flex sticky z-10 bg-white m-3 md:h-16 lg:h-20 items-center justify-center md:gap-x-12 lg:gap-x-16  md:flex">
         <div>
           <img src="logo.png" alt="sas-technologiesLogo" className="md:h-14 lg:h-20" />
         </div>
         <div>
-          <ul className="flex font-mergeOne md:text-[24px] lg:text-3xl md:gap-x-16 lg:gap-x-20">
+          <ul className="flex font-mergeOne md:text-[26px] lg:text-2xl md:gap-x-16 lg:gap-x-20">
             <li className={getNavItemClasses("HOME")} onClick={() => handleNavClick("HOME", "/")}><Link href="/">HOME</Link></li>
             <li className={getNavItemClasses("RETAIL")} onClick={() => handleNavClick("RETAIL", "/retail")}>RETAIL</li>
             <li className={getNavItemClasses("WHOLESALE")} onClick={() => handleNavClick("WHOLESALE", "/wholesale")}>WHOLESALE</li>
@@ -64,7 +64,7 @@ export default function Header() {
       </nav>
 
       {/* Mobile Navbar */}
-      <nav className="md:hidden lg:hidden relative w-full h-16 border-b-2  border-textColor bg-secondary flex items-center justify-between">
+      <nav className="md:hidden lg:hidden relative w-full h-16 border-b-2  border-textColor bg-white flex items-center justify-between">
         <div>
           <img src="logo.png" alt="sas-technologiesLogo" className="h-14 m-6" />
         </div>
@@ -79,7 +79,7 @@ export default function Header() {
 
       {/* Sidebar for Mobile (Right Side) */}
       <div
-        className={`md:hidden lg:hidden fixed inset-y-0 right-0 bg-secondary transform ${
+        className={`md:hidden lg:hidden fixed inset-y-0 right-0 bg-white transform ${
           isSidebarOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 w-3/4 sm:w-2/3 md:w-1/2 z-50`}
       >
@@ -88,7 +88,7 @@ export default function Header() {
         </div>
         <ul className="font-mergeOne text-2xl text-textColor space-y-16 p-6">
           <li className={getNavItemClasses("HOME")} onClick={() => handleNavClick("HOME", "/")}><Link href="/">HOME</Link></li>
-          <li className={getNavItemClasses("RETAIL")} onClick={() => handleNavClick("RETAIL", "/retail")}>RETAIL</li>
+          <li className={getNavItemClasses("RETAIL")} onClick={() => handleNavClick("RETAIL", "/retail")}><Link href="/retail">RETAIL</Link></li>
           <li className={getNavItemClasses("WHOLESALE")} onClick={() => handleNavClick("WHOLESALE", "/wholesale")}>WHOLESALE</li>
           <li className={getNavItemClasses("CONTACT US")} onClick={() => handleNavClick("CONTACT US", "/contact")}><Link href="/contact">CONTACT US</Link></li>
         </ul>

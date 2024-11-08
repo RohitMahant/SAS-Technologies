@@ -98,14 +98,14 @@ export default function Contact() {
           <div className="flex justify-between mt-4">
             <button
               type="button"
-              className="w-32 h-10  gap-x-3 flex justify-center items-center bg-red-800 text-white rounded hover:bg-green-600 transition"
+              className="w-32 md:w-48 h-10  gap-x-3 flex justify-center items-center bg-red-800 text-white rounded hover:bg-red-900 transition"
             >
                 Call
               <IoCall size={30}/>
             </button>
             <button
               type="submit"
-              className="w-32 h-10 gap-x-3 flex justify-center items-center bg-red-800 text-white rounded hover:bg-blue-600 transition"
+              className="w-32 md:w-48 h-10 gap-x-3 flex justify-center items-center bg-red-800 text-white rounded hover:bg-red-900 transition"
             >
                 <span className="">Send</span>
               <IoSend size={30} />
