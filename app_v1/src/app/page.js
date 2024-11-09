@@ -58,11 +58,11 @@ export default function Home() {
       </div>
       </div>
       <ReviewCards/>
-      <div className="md:mt-20 m-6">
+      <div className="md:mt-20 m-6 md:m-14">
         <h1 className="text-center text-2xl md:text-5xl text-white font-mergeOne">
           Have a query ?
         </h1>
-        <div className="justify-center items-center  mt-6">
+        <div className="justify-center items-center w-full md:flex mt-6">
         <button className="flex w-40  ml-[70px] h-10 justify-center text-white rounded-md bg-red-800  items-center gap-x-2">
           <IoIosCall size={25} color="white" className=""/>  Give us a call
         </button>

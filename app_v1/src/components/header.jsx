@@ -54,7 +54,7 @@ export default function Header() {
           <img src="logo.png" alt="sas-technologiesLogo" className="md:h-14 lg:h-20" />
         </div>
         <div>
-          <ul className="flex font-mergeOne md:text-[26px] lg:text-2xl md:gap-x-16 lg:gap-x-20">
+          <ul className="flex font-mergeOne md:text-[26px] lg:text-2xl md:gap-x-16 lg:gap-x-20 justify-center">
             <li className={getNavItemClasses("HOME")} onClick={() => handleNavClick("HOME", "/")}><Link href="/">HOME</Link></li>
             <li className={getNavItemClasses("RETAIL")} onClick={() => handleNavClick("RETAIL", "/retail")}>RETAIL</li>
             <li className={getNavItemClasses("WHOLESALE")} onClick={() => handleNavClick("WHOLESALE", "/wholesale")}><Link href="/wholesale">WHOLESALE</Link></li>
@@ -86,7 +86,7 @@ export default function Header() {
         <div className="flex justify-end items-center p-4 ">
           <IoCloseSharp size={40} color="#03045E" className="cursor-pointer hover:text-textColor" onClick={toggleSidebar} />
         </div>
-        <ul className="font-mergeOne text-2xl text-textColor space-y-16 p-6">
+        <ul className="font-mergeOne text-center text-2xl text-textColor space-y-16 p-6">
           <li className={getNavItemClasses("HOME")} onClick={() => handleNavClick("HOME", "/")}><Link href="/">HOME</Link></li>
           <li className={getNavItemClasses("RETAIL")} onClick={() => handleNavClick("RETAIL", "/retail")}><Link href="/retail">RETAIL</Link></li>
           <li className={getNavItemClasses("WHOLESALE")} onClick={() => handleNavClick("WHOLESALE", "/wholesale")}><Link href="/wholesale">WHOLESALE</Link></li>
