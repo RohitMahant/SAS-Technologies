@@ -49,7 +49,7 @@ export default function Header() {
   return (
     <>
       {/* Desktop Navbar */}
-      <nav className="hidden top-3 rounded-lg lg:flex sticky z-10 bg-white m-3 md:h-16 lg:h-20 items-center justify-center md:gap-x-12 lg:gap-x-16  md:flex">
+      <nav className="hidden  lg:flex sticky z-10 bg-white  md:h-16 lg:h-20 items-center justify-center md:gap-x-12 lg:gap-x-16  md:flex">
         <div>
           <img src="logo.png" alt="sas-technologiesLogo" className="md:h-14 lg:h-20" />
         </div>

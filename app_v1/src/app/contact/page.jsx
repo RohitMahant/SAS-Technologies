@@ -43,7 +43,7 @@ export default function Contact() {
 
   return (
     <div className="relative justify-center min-h-screen bg-primary">
-      <Header />
+
 
 
       {/* Flex container for form and image side by side on lg screens */}
@@ -139,7 +139,6 @@ export default function Contact() {
         <p>Sunday: Closed</p>
       </div>
 
-      <Footer />
     </div>
   );
 }

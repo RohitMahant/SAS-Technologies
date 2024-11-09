@@ -1,5 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 
 const mergeOne = localFont({
@@ -16,8 +18,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-primary">
+      <body className="relative bg-primary">
+        <Header/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
