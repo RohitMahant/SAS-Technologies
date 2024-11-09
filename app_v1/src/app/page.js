@@ -9,7 +9,6 @@ import { FaMessage } from "react-icons/fa6";
 export default function Home() {
   return (
     <div className="font-mergeOne">
-      <Header />
       <Carousel />
       <div className="m-6">
         <h1 className="text-center text-3xl md:text-5xl text-white font-mergeOne">
@@ -73,7 +72,7 @@ export default function Home() {
         </button>
         </div>
       </div>
-      <Footer />
+
     </div>
   );
 }

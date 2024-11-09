@@ -77,7 +77,6 @@ export default function Retail() {
           </div>
         </div>
       </div>
-    
     </div>
   );
 }

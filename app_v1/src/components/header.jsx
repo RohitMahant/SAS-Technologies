@@ -57,7 +57,7 @@ export default function Header() {
           <ul className="flex font-mergeOne md:text-[26px] lg:text-2xl md:gap-x-16 lg:gap-x-20">
             <li className={getNavItemClasses("HOME")} onClick={() => handleNavClick("HOME", "/")}><Link href="/">HOME</Link></li>
             <li className={getNavItemClasses("RETAIL")} onClick={() => handleNavClick("RETAIL", "/retail")}>RETAIL</li>
-            <li className={getNavItemClasses("WHOLESALE")} onClick={() => handleNavClick("WHOLESALE", "/wholesale")}>WHOLESALE</li>
+            <li className={getNavItemClasses("WHOLESALE")} onClick={() => handleNavClick("WHOLESALE", "/wholesale")}><Link href="/wholesale">WHOLESALE</Link></li>
             <li className={getNavItemClasses("CONTACT US")} onClick={() => handleNavClick("CONTACT US", "/contact")}><Link href="/contact">CONTACT US</Link></li>
           </ul>
         </div>
@@ -89,7 +89,7 @@ export default function Header() {
         <ul className="font-mergeOne text-2xl text-textColor space-y-16 p-6">
           <li className={getNavItemClasses("HOME")} onClick={() => handleNavClick("HOME", "/")}><Link href="/">HOME</Link></li>
           <li className={getNavItemClasses("RETAIL")} onClick={() => handleNavClick("RETAIL", "/retail")}><Link href="/retail">RETAIL</Link></li>
-          <li className={getNavItemClasses("WHOLESALE")} onClick={() => handleNavClick("WHOLESALE", "/wholesale")}>WHOLESALE</li>
+          <li className={getNavItemClasses("WHOLESALE")} onClick={() => handleNavClick("WHOLESALE", "/wholesale")}><Link href="/wholesale">WHOLESALE</Link></li>
           <li className={getNavItemClasses("CONTACT US")} onClick={() => handleNavClick("CONTACT US", "/contact")}><Link href="/contact">CONTACT US</Link></li>
         </ul>
       </div>
