@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import Head from "next/head";
 
 
 const mergeOne = localFont({
@@ -18,9 +19,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         <link rel="icon" href="favicon.ico" />
-      </head>
+      </Head>
       <body className="relative bg-primary">
         <Header/>
         {children}
