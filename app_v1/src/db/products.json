@@ -1,981 +1,132 @@
 [
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-URC-DC24PL2-V3",
-        "description": "DOME",
-        "cameraType": "HD",
-        "resolution": "2.4MP",
-        "price": 640
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-URC-TC24PL2-V3",
-        "description": "BULLET",
-        "cameraType": "HD",
-        "resolution": "2.4MP",
-        "price": 710
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-URC-DC24PL2-V3",
-        "description": "DOME (Audio)",
-        "cameraType": "HD",
-        "resolution": "2.4MP",
-        "price": 728
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-URC-TC24PL2-V3",
-        "description": "Bullet (Audio)",
-        "cameraType": "HD",
-        "resolution": "2.4MP",
-        "price": 795
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-URC-DC24PL2-L",
-        "description": "DUAL LIGHT DOME",
-        "cameraType": "HD",
-        "resolution": "2.4MP Colour+Audio",
-        "price": 1030
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-URC-TC24PL2-L",
-        "description": "DUAL LIGHT DOME",
-        "cameraType": "HD",
-        "resolution": "2.4MP Colour+Audio",
-        "price": 1095
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-GPC-DA24PL2-S",
-        "description": "DOME (Audio)",
-        "cameraType": "HD",
-        "resolution": "2.4MP Colour+Audio",
-        "price": 1265
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-GPC-T24PL2C-S",
-        "description": "BULLET (Audio)",
-        "cameraType": "HD",
-        "resolution": "2.4MP Colour+Audio",
-        "price": 1325
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-USC-DC51PL2-V3",
-        "description": "DOME",
-        "cameraType": "HD",
-        "resolution": "5MP",
-        "price": 1050
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-USC-TC51PL2-V3",
-        "description": "BULLET",
-        "cameraType": "HD",
-        "resolution": "5MP",
-        "price": 1120
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-USC-TA50L3-S-0360",
-        "description": "BULLET 30mtr IR",
-        "cameraType": "HD",
-        "resolution": "5MP",
-        "price": 1120
-      },
-      {
-        "productType": "XVR",
-        "company": "CP Plus",
-        "model": "CP-UVR-0401E1-CV5",
-        "description": "4 CH (H.264)",
-        "cameraType": "HD",
-        "resolution": "2MP Supported",
-        "price": 2975
-      },
-      {
-        "productType": "XVR",
-        "company": "CP Plus",
-        "model": "CP-UVR-0801E1-CV4",
-        "description": "8 CH (H.264)",
-        "cameraType": "HD",
-        "resolution": "2MP Supported",
-        "price": 4205
-      },
-      {
-        "productType": "XVR",
-        "company": "CP Plus",
-        "model": "CP-UVR-0801E1-HC-IC",
-        "description": "8 CH (H.265)",
-        "cameraType": "HD",
-        "resolution": "5MP Supported",
-        "price": 3150
-      },
-      {
-        "productType": "XVR",
-        "company": "CP Plus",
-        "model": "CP-UVR-3201-K2-V5",
-        "description": "32 CH (H.265)",
-        "cameraType": "HD",
-        "resolution": "5MP Supported",
-        "price": 16550
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-UNC-DA21PL3",
-        "description": "Plastic Dome 25 fps",
-        "cameraType": "IP",
-        "resolution": "2MP Normal Gold",
-        "price": 1780
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-UNC-TA21PL3",
-        "description": "Plastic Bullet 25 fps",
-        "cameraType": "IP",
-        "resolution": "2MP Normal Gold",
-        "price": 1845
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-UNC-DA21L2 GP",
-        "description": "Plastic Dome 25 fps",
-        "cameraType": "IP",
-        "resolution": "2MP Color Gold",
-        "price": 2115
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-UNC-TA21L2 GP",
-        "description": "Plastic Bullet 25 fps",
-        "cameraType": "IP",
-        "resolution": "2MP Color Gold",
-        "price": 2165
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-UNC-TA21PL3C",
-        "description": "IP 2MP Bullet With Audio",
-        "cameraType": "IP",
-        "resolution": "2MP Normal Audio",
-        "price": 1950
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-UNC-VD4113-VMD J",
-        "description": "Plastic Dome 25 fps",
-        "cameraType": "IP",
-        "resolution": "4MP Normal",
-        "price": 2850
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-UNC-DA41PL3-D",
-        "description": "Plastic Dome 25 fps",
-        "cameraType": "IP",
-        "resolution": "4MP Normal",
-        "price": 2880
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-UNC-TA41PL3C-D",
-        "description": "Plastic Bullet 25 fps (Audio)",
-        "cameraType": "IP",
-        "resolution": "4MP Normal Audio",
-        "price": 3330
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-UNC-DA41PL3C-D",
-        "description": "Plastic Dome 25 fps (Audio)",
-        "cameraType": "IP",
-        "resolution": "4MP Normal Audio",
-        "price": 3010
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-UNC-DA41L2C-GP",
-        "description": "IP 4MP Dome With Audio",
-        "cameraType": "IP",
-        "resolution": "4MP Color With Audio",
-        "price": 3900
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-UNC-TA51L3C",
-        "description": "Audio Bullet 25 fps",
-        "cameraType": "IP",
-        "resolution": "5MP",
-        "price": 4225
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-UNC-DA51L3C",
-        "description": "Audio Dome 25 fps",
-        "cameraType": "IP",
-        "resolution": "5MP",
-        "price": 4225
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-UNC-TA81L3C",
-        "description": "Audio Bullet 25 fps",
-        "cameraType": "IP",
-        "resolution": "8MP",
-        "price": 7300
-      },
-      {
-        "productType": "NVR",
-        "company": "CP Plus",
-        "model": "CP-UNR-104 F1",
-        "description": "4 CH, 1 SATA",
-        "cameraType": "NVR",
-        "bandwidth": "80 Mbps",
-        "price": 3060
-      },
-      {
-        "productType": "NVR",
-        "company": "CP Plus",
-        "model": "CP-UNR-108 F1",
-        "description": "8 CH, 1 SATA",
-        "cameraType": "NVR",
-        "bandwidth": "80 Mbps",
-        "price": 3540
-      },
-      {
-        "productType": "NVR",
-        "company": "CP Plus",
-        "model": "CP-UNR-4K2161F1-V2",
-        "description": "16 CH, 1 SATA",
-        "cameraType": "NVR",
-        "bandwidth": "80 Mbps",
-        "price": 5240
-      },
-      {
-        "productType": "NVR",
-        "company": "CP Plus",
-        "model": "CP-UNR-4K2162-V2",
-        "description": "16 CH, 2 SATA",
-        "cameraType": "NVR",
-        "bandwidth": "144 Mbps",
-        "price": 6400
-      },
-      {
-        "productType": "NVR",
-        "company": "CP Plus",
-        "model": "CP-UNR-4K4322-V2",
-        "description": "32 CH, 2 SATA",
-        "cameraType": "NVR",
-        "bandwidth": "200 Mbps",
-        "price": 10400
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-UNC-DA21PL3-Y",
-        "description": "Silver Line IP Camera",
-        "series": "IP 2MP Silver Normal",
-        "price": 1395
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-UNC-TA21PL3-Y",
-        "description": "Silver Line IP Camera",
-        "series": "IP 2MP Silver Normal",
-        "price": 1455
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-UNC-DA21PL3C-L-Y",
-        "description": "Dual Silver Line IP Camera",
-        "series": "IP 2MP Silver Dual",
-        "price": 1935
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-UNC-TA21PL3C-L-Y",
-        "description": "Dual Silver Line IP Camera",
-        "series": "IP 2MP Silver Dual",
-        "price": 1995
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-UNC-DA41PL3C-L-Y",
-        "description": "IP 4MP Bullet With Audio Silver",
-        "series": "IP 4MP Color With Audio",
-        "price": 2450
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-UNC-TA41PL3C-L-Y",
-        "description": "IP 4MP Dome With Audio Silver",
-        "series": "IP 4MP Color With Audio",
-        "price": 2505
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "E-24A",
-        "description": "Wi-Fi Camera Alexa",
-        "series": "IP 2MP Wi-Fi Camera",
-        "price": 1100
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "E-28A",
-        "description": "Wi-Fi Camera Alexa",
-        "series": "IP 2MP Wi-Fi Camera",
-        "price": 1175
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "E-29A",
-        "description": "Wi-Fi Camera Alexa",
-        "series": "IP 2MP Wi-Fi Camera",
-        "price": 1020
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "E31A",
-        "description": "Wi-Fi Camera Alexa",
-        "series": "IP 3MP Wi-Fi Camera",
-        "price": 1685
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "E-39A",
-        "description": "Wi-Fi Camera Alexa",
-        "series": "IP 3MP Wi-Fi Camera",
-        "price": 1220
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "V31A",
-        "description": "Bullet Wi-Fi Camera",
-        "series": "IP 3MP Wi-Fi Camera",
-        "price": 2000
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "T31A",
-        "description": "Bullet Wi-Fi Camera",
-        "series": "IP 3MP Wi-Fi Camera",
-        "price": 1835
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-P21",
-        "description": "Wi-Fi Camera",
-        "series": "IP 3MP Wi-Fi Camera",
-        "price": 975
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "E-44A/E-41A",
-        "description": "Wi-Fi Camera Alexa",
-        "series": "IP 4MP Wi-Fi Camera",
-        "price": 2090
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "E-48A",
-        "description": "Dome Wi-Fi Camera",
-        "series": "IP 4MP Wi-Fi Camera",
-        "price": 1900
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "V41A",
-        "description": "Bullet Wi-Fi Camera",
-        "series": "IP 4MP Wi-Fi Camera",
-        "price": 2380
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "V47A",
-        "description": "Bullet Wi-Fi Camera",
-        "series": "IP 4MP Wi-Fi Camera",
-        "price": 2985
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "V48A",
-        "description": "Bullet Wi-Fi Camera",
-        "series": "IP 4MP Wi-Fi Camera",
-        "price": 2515
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "EZ-P51",
-        "description": "Wi-Fi Camera",
-        "series": "IP 4MP Wi-Fi Camera",
-        "price": 2050
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-Z43A",
-        "description": "Full Color PT Camera",
-        "series": "IP 4MP PT Camera",
-        "price": 2575
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-Z32G",
-        "description": "PT Camera",
-        "series": "IP 4G Camera",
-        "price": 3230
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-V32G",
-        "description": "Bullet 4G",
-        "series": "IP 4G Camera",
-        "price": 1650
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-V33GN",
-        "description": "4G Camera",
-        "series": "IP 4G Camera",
-        "price": 1725
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-D31G",
-        "description": "Dome 4G",
-        "series": "IP 4G Camera",
-        "price": 2135
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-R33G",
-        "description": "4G Camera",
-        "series": "IP 4G Camera",
-        "price": 1988
-      },
-      {
-        "productType": "CCTV",
-        "company": "CP Plus",
-        "model": "CP-Z44R",
-        "description": "4 MP Solar Camera",
-        "series": "IP 4 MP Solar Camera",
-        "price": 6090
-      },
-      {
-        "productType": "SMPS",
-        "company": "CP Plus",
-        "model": "CP-DPS-MD50-12D",
-        "description": "4 CH Metal Case",
-        "price": 385
-      },
-      {
-        "productType": "SMPS",
-        "company": "CP Plus",
-        "model": "CP-DPS-MD100-12D",
-        "description": "8 CH Metal Case",
-        "price": 535
-      },
-      {
-        "productType": "SMPS",
-        "company": "CP Plus",
-        "model": "CP-DPS-MD200-12D",
-        "description": "16 CH Metal Case",
-        "price": 1025
-      },
-      {
-        "productType": "SMPS",
-        "company": "CP Plus",
-        "model": "CP-DPS-PD04V2-12D",
-        "description": "4 CH Plastic Housing",
-        "price": 340
-      },
-      {
-        "productType": "SMPS",
-        "company": "CP Plus",
-        "model": "CP-DPS-PD08V2-12D",
-        "description": "8 CH Plastic Housing",
-        "price": 385
-      },
-      {
-        "productType": "SMPS",
-        "company": "CP Plus",
-        "model": "CP-DPS-PD16V2-12D",
-        "description": "16 CH Plastic Housing",
-        "price": 795
-      },
-      {
-        "productType": "RACK",
-        "company": "CP Plus",
-        "model": "CP-HA-RK3535VM-2U",
-        "description": "2 U Rack",
-        "price": 545
-      },
-      {
-        "productType": "RACK",
-        "company": "CP Plus",
-        "model": "CP-HA-RK3535T-2U ECO",
-        "description": "2 U Rack",
-        "price": 460
-      },
-      {
-        "productType": "RACK",
-        "company": "CP Plus",
-        "model": "CP-HA-RK4535VM-2U",
-        "description": "2 U Rack",
-        "price": 710
-      },
-      {
-        "productType": "3+1 CABLES",
-        "company": "CP Plus",
-        "model": "CP-HCC-180R",
-        "description": "Copper Cable 90M",
-        "price": 1925
-      },
-      {
-        "productType": "3+1 CABLES",
-        "company": "CP Plus",
-        "model": "CP-WCC-90RSO",
-        "description": "Copper Cable 90M Outdoor",
-        "price": 1080
-      },
-      {
-        "productType": "3+1 CABLES",
-        "company": "CP Plus",
-        "model": "CP-WCC-180RSO",
-        "description": "Copper Cable 180M Outdoor",
-        "price": 2270
-      },
-      {
-        "productType": "3+1 CABLES",
-        "company": "CP Plus",
-        "model": "CP-WCC-90RS",
-        "description": "Copper Cable 90M (3+1)",
-        "price": 960
-      },
-      {
-        "productType": "3+1 CABLES",
-        "company": "CP Plus",
-        "model": "CP-WCC-90R",
-        "description": "Copper Cable 90M (3+1)",
-        "price": 930
-      },
-      {
-        "productType": "3+1 CABLES",
-        "company": "CP Plus",
-        "model": "CP-WCC-70R",
-        "description": "Copper Cable 7+R430M",
-        "price": 810
-      },
-      {
-        "productType": "CAT 6 CABLES",
-        "company": "CP Plus",
-        "model": "CP-EUT-6TGL-100",
-        "description": "CAT-6 Cable Copper",
-        "price": 2060
-      },
-      {
-        "productType": "CAT 6 CABLES",
-        "company": "CP Plus",
-        "model": "CP-EUT-6TGL-305",
-        "description": "CAT-6 Cable Copper",
-        "price": 6190
-      },
-      {
-        "productType": "CAT 6 CABLES",
-        "company": "CP Plus",
-        "model": "CP-GUT-6TGL-305",
-        "description": "CAT-6 Cable Outdoor",
-        "price": 7065
-      },
-      {
-        "productType": "CAT 6 CABLES",
-        "company": "CP Plus",
-        "model": "CP-FUT-6TSRH-305",
-        "description": "CAT-6 Cable Alloy",
-        "price": 2580
-      },
-      {
-        "productType": "CAT 6 CABLES",
-        "company": "CP Plus",
-        "model": "CP-FUT-6TSRH-100 ECO",
-        "description": "CAT-6 Cable Alloy",
-        "price": 945
-      },
-      {
-        "productType": "BIOMETRIC",
-        "company": "CP Plus",
-        "model": "CP-VTA-M1143",
-        "description": "Face/finger Reader",
-        "price": 5725
-      },
-      {
-        "productType": "BIOMETRIC",
-        "company": "CP Plus",
-        "model": "CP-VTA-M1043",
-        "description": "Face Reader",
-        "price": 3975
-      },
-      {
-        "productType": "BIOMETRIC",
-        "company": "CP Plus",
-        "model": "CP-VTA-T2324-U",
-        "description": "Finger Reader",
-        "price": 2390
-      },
-      {
-        "productType": "POE SWITCH 4 PORT",
-        "company": "CP Plus",
-        "model": "CP-DNW-HPU4H2-48",
-        "description": "4 Port 10x100 (10/100) 2 uplink",
-        "price": 950
-      },
-      {
-        "productType": "POE SWITCH 4 PORT",
-        "company": "CP Plus",
-        "model": "CP-DNW-GPU4G2-48",
-        "description": "4 Port 10x100x1000 Full Giga (2 uplink)",
-        "price": 2290
-      },
-      {
-        "productType": "POE SWITCH 4 PORT",
-        "company": "CP Plus",
-        "model": "CP-DNW-GPU4F2-48",
-        "description": "4 Port 10x100x1000 Full Giga (2 uplink)",
-        "price": 2450
-      },
-      {
-        "productType": "POE SWITCH 16 PORT",
-        "company": "CP Plus",
-        "model": "CP-ANW-HP16G2F1-N30",
-        "description": "16 Port 10/100 with 2 Giga & 1 SFP Uplink Ports",
-        "price": 6550
-      },
-      {
-        "productType": "POE SWITCH 24 PORT",
-        "company": "CP Plus",
-        "model": "CP-ANW-HP24G2F1 T25",
-        "description": "24 Port 10/100 with 2 Giga & 1 SFP link",
-        "price": 7520
-      },
-      {
-        "productType": "NON POE GIGA SWITCH",
-        "company": "CP Plus",
-        "model": "CP-ANW-GS105T",
-        "description": "5 Port Non POE Giga",
-        "price": 750
-      },
-      {
-        "productType": "NON POE GIGA SWITCH",
-        "company": "CP Plus",
-        "model": "CP-ANW-GS108T",
-        "description": "8 Port Non POE Giga",
-        "price": 1180
-      },
-      {
-        "productType": "4G ROUTER",
-        "company": "CP Plus",
-        "model": "CP-XR-DE21-S",
-        "description": "",
-        "price": 1455
-      },
-      {
-        "productType": "VDP",
-        "company": "CP Plus",
-        "model": "CP-UVK-701A",
-        "description": "Without Memory",
-        "price": 3975
-      },
-      {
-        "productType": "VDP",
-        "company": "CP Plus",
-        "model": "CP-UVK-701MTA",
-        "description": "With Memory",
-        "price": 4100
-      },
-      {
-        "productType": "VDP",
-        "company": "CP Plus",
-        "model": "CP-PVM-70T",
-        "description": "7\" Indoor Unit",
-        "price": 4100
-      },
-      {
-        "productType": "VDP",
-        "company": "CP Plus",
-        "model": "CP-PAV-C341",
-        "description": "4 Bell Panel (Outdoor Unit)",
-        "price": 5250
-      },
-      {
-        "productType": "VDP",
-        "company": "CP Plus",
-        "model": "CP-L23",
-        "description": "Smart Wi-Fi Doorbell",
-        "price": 6400
-      },
-      {
-        "productType": "VDP",
-        "company": "CP Plus",
-        "model": "CP-UVK-711M",
-        "description": "IP VDP kit with Mobile App Support",
-        "price": 12950
-      },
-      {
-        "productType": "RIM LOCK",
-        "company": "CP Plus",
-        "model": "CP Electronic Lock",
-        "description": "",
-        "price": 1140
-      },
-      {
-        "productType": "RIM LOCK",
-        "company": "CP Plus",
-        "model": "EM Lock",
-        "description": "",
-        "price": null
-      },
-      {
-        "productType": "LED MONITOR",
-        "company": "CP Plus",
-        "model": "CP UEM 19AH",
-        "description": "",
-        "price": 4700
-      },
-      {
-        "productType": "LED MONITOR",
-        "company": "CP Plus",
-        "model": "CP UEM 22AH",
-        "description": "",
-        "price": 5390
-      },
-      {
-        "productType": "MEMORY CARD",
-        "company": "CP Plus",
-        "model": "CP-NM64",
-        "description": "",
-        "price": 435
-      },
-      {
-        "productType": "ECO",
-        "company": "Hikvision",
-        "model": "DS-2CE1AD0T-ITP",
-        "description": "2MP BULLET 3.6 MM",
-        "mop": 660,
-        "discount": "13%",
-        "netBasic": 574,
-        "dp": 678
-      },
-      {
-        "productType": "ECO",
-        "company": "Hikvision",
-        "model": "DS-2CE5AD0T-ITP",
-        "description": "2MP DOME 3.6 MM",
-        "mop": 620,
-        "discount": "13%",
-        "netBasic": 539,
-        "dp": 636
-      },
-      {
-        "productType": "ECO",
-        "company": "Hikvision",
-        "model": "DS-7104HGHI-K1",
-        "description": "4 CH DVR",
-        "mop": 1980,
-        "discount": "10%",
-        "netBasic": 1782,
-        "dp": 2103
-      },
-      {
-        "productType": "ECO",
-        "company": "Hikvision",
-        "model": "DS-7108HGHI-K1",
-        "description": "8 CH DVR",
-        "mop": 2880,
-        "discount": "10%",
-        "netBasic": 2592,
-        "dp": 3059
-      },
-      {
-        "productType": "ECO",
-        "company": "Hikvision",
-        "model": "DS-7116HGHI-K1",
-        "description": "16 CH DVR",
-        "mop": 4900,
-        "discount": "10%",
-        "netBasic": 4410,
-        "dp": 5204
-      },
-      {
-        "productType": "ECO",
-        "company": "Hikvision",
-        "model": "DS-7232HGHI-M2",
-        "description": "32 CH DVR",
-        "mop": 16460,
-        "discount": "",
-        "netBasic": 0,
-        "dp": 0
-      },
-      {
-        "productType": "HD 2 MP AUDIO CAMERA",
-        "company": "Hikvision",
-        "model": "DS-2CE16D0T-ITPFS",
-        "description": "2 MP Bullet 3.6 MM",
-        "mop": 790,
-        "discount": "8%",
-        "netBasic": 727,
-        "dp": 858
-      },
-      {
-        "productType": "HD 2 MP AUDIO CAMERA",
-        "company": "Hikvision",
-        "model": "DS-2CE76D0T-ITPFS",
-        "description": "2 MP Dome 3.6 MM",
-        "mop": 720,
-        "discount": "8%",
-        "netBasic": 662,
-        "dp": 782
-      },
-      {
-        "productType": "HD 2 MP COLOUR +AUDIO",
-        "company": "Hikvision",
-        "model": "DS-2CE10DF0T-PFS",
-        "description": "2 MP Bullet 3.6 MM",
-        "mop": 1550,
-        "discount": "13%",
-        "netBasic": 1349,
-        "dp": 1591
-      },
-      {
-        "productType": "HD 2 MP COLOUR +AUDIO",
-        "company": "Hikvision",
-        "model": "DS-2CE70DF0T-PFS",
-        "description": "2 MP Dome 3.6 MM",
-        "mop": 1500,
-        "discount": "13%",
-        "netBasic": 1305,
-        "dp": 1540
-      },
-      {
-        "productType": "HD 2 MP DVR",
-        "company": "Hikvision",
-        "model": "IDS-7104HQHI-M1/S",
-        "description": "4 CH DVR",
-        "mop": 3150,
-        "discount": "13%",
-        "netBasic": 2741,
-        "dp": 3234
-      },
-      {
-        "productType": "HD 2 MP DVR",
-        "company": "Hikvision",
-        "model": "IDS-7108HQHI-M1/S",
-        "description": "8 CH DVR",
-        "mop": 4530,
-        "discount": "13%",
-        "netBasic": 3941,
-        "dp": 4650
-      },
-      {
-        "productType": "HD 2 MP DVR",
-        "company": "Hikvision",
-        "model": "IDS-7116HQHI-M1/S",
-        "description": "16 CH DVR",
-        "mop": 7850,
-        "discount": "13%",
-        "netBasic": 6830,
-        "dp": 8057
-      },
-      {
-        "productType": "HD 5 MP CAMERA",
-        "company": "Hikvision",
-        "model": "DS-2CE16H0T-ITPFS",
-        "description": "5 MP Bullet 3.6 MM (Audio)",
-        "mop": 1130,
-        "discount": "13%",
-        "netBasic": 984,
-        "dp": 1134
-      },
-      {
-        "productType": "HD 5 MP CAMERA",
-        "company": "Hikvision",
-        "model": "DS-2CE76H0T-ITPFS",
-        "description": "5 MP Dome 3.6 MM (Audio)",
-        "mop": 1070,
-        "discount": "12%",
-        "netBasic": 942,
-        "dp": 1113
-      },
-      {
-        "productType": "HD 5MP DVR",
-        "company": "Hikvision",
-        "model": "DS-7208HUHI-M1/FA",
-        "description": "8 CH TURBO DVR",
-        "mop": 7160,
-        "discount": "11%",
-        "netBasic": 6372,
-        "dp": 7519
-      },
-      {
-        "productType": "HD 5MP DVR",
-        "company": "Hikvision",
-        "model": "DS-7216HUHI-M2/FA",
-        "description": "16 CH TURBO DVR",
-        "mop": 12800,
-        "discount": "11%",
-        "netBasic": 11392,
-        "dp": 13443
-      }
-
-
+  {
+      "category": "(CP PLUS HD 1 MP/2",
+      "product_name": "PURCOCAAZ DOME (PUsCOCsILZVE ome | 050 PUNCDRIPLS Paste Dome 25 pe P-UNCOANIALSY SILVERLINE P CAMERA E268 Wel",
+      "price": null
+  },
+  {
+      "category": "(CP PLUS HD 1 MP/2",
+      "product_name": "PURCTCAPLAS BULLET (PUSCTCSIML2Va auUET CUNCTADIPLS Piast Bullet 5 fps (PUNCTANPLSY SILVERLINE IP CAMERA E284 WE CAVERA",
+      "price": null
+  },
+  {
+      "category": "(CP PLUS HD 1 MP/2",
+      "product_name": "\u2018puRcoczsp.zcva | DOME Rudd P-USCTA50195.0360 | BULLET 20m | s320-| |[TTiPaMp COLOR GoW iP 2MP SILVER DUAL EDA WE CAMERA",
+      "price": null
+  },
+  {
+      "category": "(CP PLUS HD 1 MP/2",
+      "product_name": "24M ColaurAudio (USC-TESIPLZC vowosuusT [175 PUNCTARIE \u2018CP-UNC-TAZIPLICLY ESA WET CAMERA ALKA |",
+      "price": null
+  },
+  {
+      "category": "(CP PLUS HD 1 MP/2",
+      "product_name": "\u2018PURCDCDAPLICL | BUALIGRTDOME] 1050 HDS MP GUARDS TP2MP NORMAL AUDIO AMP COLOR with Audio EamK WEE CAMERAALKA [",
+      "price": "3290"
+  },
+  {
+      "category": "(CP PLUS HD 1 MP/2",
+      "product_name": "\u2018URCTezipI2c [DUALLIGHTOOME [a095_| | ceuRcDcsspL2c 1975 -UNCTAZIPLIC TP aN Bulat Wiha 10 GPUNCORMIPLGCLY | Pa Balak Wah aio SIVER_[ 2450 Vata ule Wig CAMERA |",
+      "price": "2000"
+  },
+  {
+      "category": "(CP PLUS HD 1 MP/2",
+      "product_name": "C-@PCDRPLACS | _DOMETRuor PURE TESIPLC PUNE TAAIPLSCLY | WPaMP DOME With Auto SLVER [7505 Ta",
+      "price": "1835"
+  },
+  {
+      "category": "(CP PLUS HD 1 MP/2",
+      "product_name": "Pusc 0828123 ome | 775_| | cpcec-oas0e.2c6.0360_| Audio DOVE CPUNCORAIPLSD Prastc Dome 25195 eco | | eawesia [WEL CAMERAALEA |",
+      "price": "2090"
+  },
+  {
+      "category": "(CP PLUS HD 1 MP/2",
+      "product_name": "PUusC-TA24L20 auuet | 935 | [_co.coc-tasonizc.se.0360 | auio suuiet_| 193\u00a2| | TiPs4MPNORMALAUOIO i oy Dome Wis, CAMERA",
+      "price": null
+  },
+  {
+      "category": "(CP PLUS HD 1 MP/2",
+      "product_name": "PUSC-TARALZS auuiet | 760_| | iv-H.265 SMP SUPPORTED (PUNCTAAIPLICD sic 5 fstA sn | | Vata Baer Wisi CAMERA",
+      "price": "2560"
+  },
+  {
+      "category": "(CP PLUS HD 1 MP/2",
+      "product_name": "VR-H.264 COSMIC acnazes [2205 | | cpuncoaninsc Baste Dome 25 fost Audi soi} | Var Baler Wisi CAMERA |",
+      "price": "2965"
+  },
+  {
+      "category": "(CP PLUS HD 1 MP/2",
+      "product_name": "vs | cn 264) | 2085 \u2018ciiii265 | 4505_| [BEM COLOR With Audio i aaa But WG CAMERA |",
+      "price": "2515"
+  },
+  {
+      "category": "(CP PLUS HD 1 MP/2",
+      "product_name": "ch 264) | 2975 CPANR-t6OIF aechi2s | e440 | [ cPuNCDAsTL2C.cP TF aN Dome Ws ia ss | Ea WERCAMERA",
+      "price": "2050"
+  },
+  {
+      "category": "(CP PLUS HD 1 MP/2",
+      "product_name": "YR.H.26526P Supported pave. s20142v5 | 32eh 14265) 1B SMP. i 1B AMP",
+      "price": null
+  },
+  {
+      "category": "(CP PLUS HD 1 MP/2",
+      "product_name": "PANB-OB01E LHC \u2018BCH (H265), CP-UNC-TASILIC \u2018AuioBullet 25 ths azo | | \u2018CP-243A, Full Color PT Camera |",
+      "price": "2575"
+  },
+  {
+      "category": "(CP PLUS HD 1 MP/2",
+      "product_name": "CBayyaetenie Heng | 16H. 265 EWE OIL Kinga [METAL BGHH265 7900 (PUNE DASIISE Tua dome 251 295 | t ac",
+      "price": null
+  },
+  {
+      "category": "(CP PLUS HD 1 MP/2",
+      "product_name": "\u2018CP-UYR-1001E2-1 16 CHAH.265) 1 BMP | CP-132G, PT CAMERA",
+      "price": "3230"
+  },
+  {
+      "category": "(CP PLUS HD 1 MP/2",
+      "product_name": "CEN S207 szenth.265) | 16550 CPUNC TABI HuioButes2 e 700 || sre ult 4G |",
+      "price": "1650"
+  },
+  {
+      "category": "(CP PLUS HD 1 MP/2",
+      "product_name": "im : o.v396N",
+      "price": null
+  },
+  {
+      "category": "(CP PLUS HD 1 MP/2",
+      "product_name": "H NVR 80 Mbp: H pac, Dome ac",
+      "price": "2135"
+  },
+  {
+      "category": "(CP PLUS HD 1 MP/2",
+      "product_name": "i SESINEI04FE RES xa] | P8556",
+      "price": "66"
+  },
+  {
+      "category": "(CP PLUS HD 1 MP/2",
+      "product_name": "i \u2018CE-UNR-108F BCH SATA 3540 | | lp 4M SOLAR",
+      "price": null
+  },
+  {
+      "category": "(CP PLUS HD 1 MP/2",
+      "product_name": "H SE UNBAN 2I6FI-V2 TCH. SAI 5240 | CPR",
+      "price": "090"
+  },
+  {
+      "category": "(CP PLUS HD 1 MP/2",
+      "product_name": "TEuNRar62 V2 TCH 2K 400 | |",
+      "price": null
+  },
+  {
+      "category": "(CP PLUS HD 1 MP/2",
+      "product_name": "a | NV 200 Mb '",
+      "price": null
+  },
+  {
+      "category": "(CP PLUS HD 1 MP/2",
+      "product_name": "PURI IGRESS \u2018so400 |",
+      "price": null
+  }
 ]
