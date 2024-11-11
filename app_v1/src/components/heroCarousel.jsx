@@ -1,18 +1,51 @@
-"use client"
+"use client";
 import { MdOutlineNavigateNext } from "react-icons/md";
 import { GrFormPrevious } from "react-icons/gr";
-
 import { useState, useEffect } from "react";
 
 const slides = [
-  { id: 1, image: "slide1.jpg", alt: "Slide 1" },
-  { id: 2, image: "slide2.jpg", alt: "Slide 2" },
-  { id: 3, image: "slide3.jpg", alt: "Slide 3" },
+  {
+    id: 1,
+    img: "slide1_desktop.png",
+  
+    alt: "Slide 1",
+  },
+  {
+    id: 2,
+    img: "slide2_desktop.png",
+ 
+    alt: "Slide 2",
+  },
+  {
+    id: 3,
+    img: "slide3_desktop.png",
+
+    alt: "Slide 3",
+  },
+  {
+    id: 4,
+    img: "slide4_desktop.png",
+
+    alt: "Slide 4",
+  },
 ];
 
 export default function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const slideInterval = 5000; // 3 seconds
+  const [isMobile, setIsMobile] = useState(false);
+  const slideInterval = 5000; // 5 seconds
+
+  // Check screen width on resize to determine mobile view
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Mobile breakpoint
+    };
+
+    handleResize(); // Check on initial render
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   // Automatically move to the next slide
   useEffect(() => {
@@ -51,9 +84,9 @@ export default function Carousel() {
         {slides.map((slide) => (
           <div key={slide.id} className="w-full flex-shrink-0">
             <img
-              src={slide.image}
+              src={slide.img}
               alt={slide.alt}
-              className="w-full h-64 object-cover"
+              className="w-full md:h-96 h-[72px] object-cover"
             />
           </div>
         ))}
@@ -62,24 +95,24 @@ export default function Carousel() {
       {/* Controls */}
       <button
         onClick={goToPreviousSlide}
-        className="absolute top-1/2 -translate-y-1/2 left-4 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700"
+        className="absolute top-1/2 -translate-y-1/2 left-4 md:bg-gray-800 md:text-white md:p-2 rounded-full hover:bg-gray-700"
       >
-        <GrFormPrevious/>
+        <GrFormPrevious />
       </button>
       <button
         onClick={goToNextSlide}
-        className="absolute top-1/2 -translate-y-1/2 right-4 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700"
+        className="absolute top-1/2 -translate-y-1/2 right-4 md:bg-gray-800 md:text-white md:p-2 rounded-full hover:bg-gray-700"
       >
-        <MdOutlineNavigateNext/>
+        <MdOutlineNavigateNext />
       </button>
 
       {/* Indicators */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div className="absolute md:bottom-4 bottom-[4px] left-1/2 transform -translate-x-1/2 flex space-x-2">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full ${
+            className={`md:w-3 md:h-3  w-[2px] h-[2px] rounded-full ${
               currentIndex === index ? "bg-gray-800" : "bg-gray-400"
             }`}
           ></button>

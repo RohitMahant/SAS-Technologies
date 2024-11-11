@@ -54,23 +54,20 @@ const products = [
 
 export default function ProductCards() {
   return (
-    <div className="relative flex overflow-x-scroll scrollbar-hide p-4 space-x-4  w-full">
+    <div className="relative flex overflow-x-scroll scrollbar-hide p-4 space-x-4 md:mt-44 mt-24  w-full">
       {products.map((product) => (
         <div
           key={product.id}
-          className="bg-white shadow-md rounded-lg overflow-hidden flex-shrink-0 w-36 md:w-72 lg:w-60 xl:w-72"
+          className="bg-white shadow-md overflow-hidden flex-shrink-0 w-36 md:w-72 lg:w-60 xl:w-72"
         >
           <img
             src={product.image}
             alt={product.title}
-            className="h-20 md:h-44 w-full object-cover"
+            className="h-20 lg:h-52 md:h-44 w-full object-cover"
           />
           <div className="p-4">
             <h3 className="text-lg font-semibold">{product.title}</h3>
             <p className="text-gray-600">{product.price}</p>
-            <button className="mt-4 w-full py-2 bg-red-800 text-white rounded hover:bg-primary-dark transition duration-200">
-              Details
-            </button>
           </div>
         </div>
       ))}

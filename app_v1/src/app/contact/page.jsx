@@ -5,7 +5,8 @@ import { useState } from "react";
 import { IoCall, IoSend } from "react-icons/io5";
 
 export default function Contact() {
-  const [contactInfo, setContactInfo] = useState("");
+  const [phoneNo, setphoneNo] = useState("");
+  const [email, setEmail] = useState("");
   const [queryType, setQueryType] = useState("");
   const [query, setQuery] = useState("");
 
@@ -13,7 +14,7 @@ export default function Contact() {
     e.preventDefault();
 
     const data = {
-      contactInfo,
+      phoneNo,
       queryType,
       query,
     };
@@ -29,7 +30,7 @@ export default function Contact() {
 
       if (response.ok) {
         alert("Query sent successfully!");
-        setContactInfo("");
+        setphoneNo("");
         setQueryType("");
         setQuery("");
       } else {
@@ -66,11 +67,19 @@ export default function Contact() {
         >
           <input
             type="text"
-            placeholder="Your contact info"
-            value={contactInfo}
-            onChange={(e) => setContactInfo(e.target.value)}
+            placeholder="Phone Number"
+            value={phoneNo}
+            onChange={(e) => setphoneNo(e.target.value)}
             className=" w-full h-10 p-2 rounded placeholder:text-sm outline-none focus:ring-0 "
             required
+            style={{ boxShadow: "none" }}
+          />
+                    <input
+            type="email"
+            placeholder="Email Address"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className=" w-full h-10 mt-2 p-2 rounded placeholder:text-sm outline-none focus:ring-0 "
             style={{ boxShadow: "none" }}
           />
           <select
