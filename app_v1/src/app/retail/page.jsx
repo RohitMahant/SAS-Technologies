@@ -4,6 +4,7 @@ import { FaFilter, FaMagnifyingGlass } from "react-icons/fa6";
 import { searchProducts } from "../utils/searchProducts";
 import Products from "@/db/products.json";
 import { MdClose } from "react-icons/md";
+import { useEffect } from "react";
 
 export default function Retail() {
   const [filterBar, setFilterBar] = useState(false);
@@ -13,9 +14,8 @@ export default function Retail() {
   const [filteredProducts, setFilteredProducts] = useState(Products);
   const [searchTerm, setSearchTerm] = useState(""); // State for the search bar.
 
-  const productTypes = ["CCTV", "IP", "HD", "DOME", "BULLET", "NVR", "AUDIO"]; 
-  const companies = ["CP Plus", "Hikvision", "NEC", "SYNTEL", "I-Range"]; 
-
+  const productTypes = ["CCTV", "IP", "HD", "DOME", "BULLET", "NVR", "AUDIO"];
+  const companies = ["CP Plus", "Hikvision", "NEC", "SYNTEL", "I-Range"];
 
   const toggleSelection = (value, selectionType) => {
     const setSelection =
@@ -29,49 +29,63 @@ export default function Retail() {
     }
   };
 
+  useEffect(() => {
+    if (filterBar) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    // Cleanup to reset scroll when component unmounts or sidebar closes
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [filterBar]);
+
   const applyFilters = () => {
     const filtered = Products.filter((product) => {
       // Matches selected type (OR condition for types)
       const matchesType =
-        selectedType.length === 0 || 
-        selectedType.some((type) => product.category?.toLowerCase().includes(type.toLowerCase()));
-  
+        selectedType.length === 0 ||
+        selectedType.some((type) =>
+          product.category?.toLowerCase().includes(type.toLowerCase())
+        );
+
       // Matches selected company (OR condition for companies)
       const matchesCompany =
         selectedCompany.length === 0 ||
         selectedCompany.some((company) =>
           product.product_name?.toLowerCase().includes(company.toLowerCase())
         );
-  
+
       // Matches selected price range
       const productPrice = parseInt(product.price, 10); // Ensure price is a number
       const matchesPrice =
         !isNaN(productPrice) &&
         productPrice >= priceRange[0] &&
         productPrice <= priceRange[1];
-  
+
       // Return true if the product matches all applied filters
       return matchesType && matchesCompany && matchesPrice;
     });
-  
+
     // Set the filtered products and close the filter sidebar
     setFilteredProducts(filtered);
     setFilterBar(false);
   };
-  
+
   const clearFilters = () => {
     // Reset all filter states to their default values
     setSelectedType([]);
     setSelectedCompany([]);
     setPriceRange([0, 1000]);
-  
+
     // Reset the product list to show all products
     setFilteredProducts(Products);
-  
+
     // Close the filter sidebar
     setFilterBar(false);
   };
-  
 
   return (
     <>
@@ -93,10 +107,9 @@ export default function Retail() {
             </div>
 
             <h3 className="font-sans font-bold  text-[25px]">Product Type</h3>
-            <hr/>
+            <hr />
             {/* Product Type Filter */}
             <div className="mt-4 grid grid-cols-2 mb-4">
-        
               {productTypes.map((type) => (
                 <div key={type} className="flex  items-center">
                   <input
@@ -112,7 +125,7 @@ export default function Retail() {
                 </div>
               ))}
             </div>
-            <hr/>
+            <hr />
 
             {/* Company Filter */}
             <div className="mb-4 mt-4">
@@ -133,7 +146,7 @@ export default function Retail() {
               ))}
             </div>
 
-            <hr/>
+            <hr />
 
             {/* Price Range Filter */}
             <div className="mb-4 mt-4">
@@ -163,18 +176,18 @@ export default function Retail() {
 
             {/* Apply Filters Button */}
             <div className="justify-center items-center">
-            <button
-              onClick={applyFilters}
-              className="bg-red-800 text-white w-64 h-12 rounded mt-4 hover:bg-red-900"
-            >
-              Apply Filters
-            </button>
-            <button
-              onClick={applyFilters}
-              className="bg-red-800 w-64 h-12 hover:bg-red-900 text-white rounded mt-4"
-            >
-              Clear Filters
-            </button>
+              <button
+                onClick={applyFilters}
+                className="bg-red-800 text-white w-64 h-12 rounded mt-4 hover:bg-red-900"
+              >
+                Apply Filters
+              </button>
+              <button
+                onClick={applyFilters}
+                className="bg-red-800 w-64 h-12 hover:bg-red-900 text-white rounded mt-4"
+              >
+                Clear Filters
+              </button>
             </div>
           </div>
 
@@ -219,22 +232,22 @@ export default function Retail() {
               </form>
             </div>
 
-            <div className="flex-1 overflow-y-auto h-[80vh] flex   flex-wrap gap-6 p-6">
+            <div className="flex-1 overflow-y-auto h-[80vh] flex justify-center md:justify-start flex-wrap gap-6 p-6">
               {filteredProducts.map((product) => (
                 <div
                   key={product.id}
-                  className="flex-none h-52 md:h-96 w-[calc(50%-1.2rem)] sm:w-[calc(33.33%-1.5rem)]  md:w-[calc(25%-1.5rem)] lg:w-[calc(25%-1.5rem)] bg-white shadow-md rounded-md overflow-hidden"
+                  className="flex-none h-52 md:h-96 w-[calc(50%-1.2rem)] sm:w-[calc(33.33%-1.5rem)]  md:w-[calc(25%-1.5rem)] lg:w-[calc(25%-1.5rem)] bg-white shadow-md border overflow-hidden"
                 >
                   <img
-                    src={product.image}
+                    src={product.img}
                     alt={product.name}
-                    className="w-full md:h-72 lg:h-72 h-36 object-cover"
+                    className="w-full md:h-72 lg:h-72 h-36 object-contain"
                   />
-                  <div className="md:p-4 p-1">
-                    <h3 className="text-sm md:text-md font-semibold">
-                      {product.productType}
+                  <div className="md:p-4 p-1 h-full text-white bg-red-800">
+                    <h3 className="text-[12px] md:text-md font-semibold">
+                      {product.name}
                     </h3>
-                    <p className="text-gray-600">{product.price}</p>
+                    <p className="">{product.Price}</p>
                   </div>
                 </div>
               ))}
