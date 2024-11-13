@@ -7,14 +7,25 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        "infinite-scroll": "scroll 20s linear infinite",
+      },
+      keyframes: {
+        scroll: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+      },
       colors: {
-        primary: "#0096C7",      
+        primary: "#F9F6EE",      
         secondary: "#90E0EF",    
         textColor: "#03045E",    
         tertiary: "#72EFDD",     
       },
       fontFamily:{
         mergeOne: "var(--font-merge-one)",
+        cocoBold: "var(--font-coco-bold)",
+        cocoRegular: "var(--font-coco-regular)",
       }
     },
   },

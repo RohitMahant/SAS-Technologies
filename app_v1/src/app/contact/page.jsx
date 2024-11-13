@@ -56,18 +56,18 @@ export default function Contact() {
   };
 
   return (
-    <div className="relative justify-center min-h-screen bg-primary">
+    <div className="relative justify-center min-h-screen bg-primary font-cocoRegular text-gray-600">
       {/* Flex container for form and image side by side on lg screens */}
       <div className="flex flex-col lg:flex-row items-center justify-center mt-8 lg:mt-32 m-4 lg:px-0 lg:space-x-8">
         <div>
           <div className="text-center px-4 lg:px-0">
-            <h1 className="text-3xl lg:text-5xl text-white font-mergeOne">
-              Contact Us
+            <h1 className="text-3xl lg:text-5xl text-gray-700 font-cocoRegular">
+              CONTACT US
             </h1>
-            <p className="text-white text-lg md:text-xl m-2">
+            <p className="text-gray-600 text-lg md:text-xl m-2">
               Send us your queries or call us
             </p>
-            <p className="text-white text-lg md:text-xl m-2">
+            <p className="text-gray-600 text-lg md:text-xl m-2">
               We’re here to assist you
             </p>
           </div>

@@ -4,7 +4,10 @@
 
 
 :root {
-  --font-merge-one: 'MergeOne', sans-serif;
+  --font-merge-one: 'mergeOne', sans-serif;
+  --font-coco-bold: 'cocoBold', sans-serif;
+  --font-coco-regular: 'cocoRegular', sans-serif;
+
 }
 
 body{

@@ -11,6 +11,18 @@ const mergeOne = localFont({
   weight: "100 900",
 });
 
+const cocoBold = localFont({
+  src: "./fonts/Coco-Gothic-Bold-trial.ttf",
+  variable: "--font-coco-bold",
+  weight: "100 900",
+});
+
+const cocoRegular = localFont({
+  src: "./fonts/Coco-Gothic-Regular-trial.ttf",
+  variable: "--font-coco-regular",
+  weight: "100 900",
+});
+
 export const metadata = {
   title: "sastechnologies",
   description: "CCTV Camera sellers in Gurgaon",

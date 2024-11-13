@@ -5,6 +5,7 @@ import { searchProducts } from "../utils/searchProducts";
 import Products from "@/db/products.json";
 import { MdClose } from "react-icons/md";
 import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Retail() {
   const [filterBar, setFilterBar] = useState(false);
@@ -13,6 +14,8 @@ export default function Retail() {
   const [priceRange, setPriceRange] = useState([0, 1000]);
   const [filteredProducts, setFilteredProducts] = useState(Products);
   const [searchTerm, setSearchTerm] = useState(""); // State for the search bar.
+
+  const router = useRouter()
 
   const productTypes = ["CCTV", "IP", "HD", "DOME", "BULLET", "NVR", "AUDIO"];
   const companies = ["CP Plus", "Hikvision", "NEC", "SYNTEL", "I-Range"];
@@ -197,7 +200,7 @@ export default function Retail() {
               <div className="md:m-3 flex justify-center items-center lg:hidden md:block h-12 w-12 bg-transparent">
                 <FaFilter
                   size={28}
-                  color="white"
+                  color="gray"
                   onClick={() => {
                     setFilterBar(!filterBar);
                   }}
@@ -243,11 +246,12 @@ export default function Retail() {
                     alt={product.name}
                     className="w-full md:h-72 lg:h-72 h-36 object-contain"
                   />
-                  <div className="md:p-4 p-1 h-full text-white bg-red-800">
+                  <div className="md:p-4 p-1  text-gray-600 bg-secondary">
                     <h3 className="text-[12px] md:text-md font-semibold">
                       {product.name}
                     </h3>
-                    <p className="">{product.Price}</p>
+                    <p className="font-serif">Rs {product.Price}</p>
+                    
                   </div>
                 </div>
               ))}
