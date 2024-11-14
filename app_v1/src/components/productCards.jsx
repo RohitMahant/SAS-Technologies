@@ -31,15 +31,14 @@ const ServicesData = [
 ];
 
 export default function ProductCards() {
-
   const router = useRouter();
 
   return (
-    <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 mt-12 w-full">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 mt-12 w-full">
       {ServicesData.map((service) => (
         <div
           key={service.id}
-          className="relative  w-full h-64 lg:h-80  shadow-lg overflow-hidden group"
+          className="relative w-full h-64 lg:h-80 shadow-lg overflow-hidden group"
         >
           {/* Background Image */}
           <div className="absolute inset-0 w-full h-full overflow-hidden">
@@ -50,17 +49,30 @@ export default function ProductCards() {
             />
           </div>
 
-          {/* Overlay Content */}
-          <div className="relative hover:backdrop-blur-sm z-10 flex flex-col justify-between h-full p-4 bg-gradient-to-t from-black/70 to-transparent">
-            <h3 className="text-red-800 font-cocoBold text-2xl font-semibold transition-all duration-300 group-hover:scale-105">
-              {service.cardName || "Product Name"}
+          {/* Expandable Content */}
+          <div
+            className="absolute bottom-0 w-full bg-black/70 text-white p-4 transition-all duration-500 ease-in-out group-hover:h-full h-16 flex flex-col hover:justify-center"
+          >
+            <div className="flex justify-between items-center">
+            <h3 className="text-lg flex font-semibold">{service.cardName} 
+
             </h3>
-            <p className="text-white   mt-3 transition-all duration-300 group-hover:scale-105">
+            <button
+              onClick={() => router.push("/retail")}
+              className=" py-2 px-4 bg-transparent md:hidden border border-white text-white rounded  group-hover:opacity-100 hover:bg-primary hover:text-gray-700 transition-all duration-300"
+            >
+              View More
+            </button>
+            </div>
+            <p
+              className="mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
               {service.desc}
             </p>
             <button
-            onClick={()=>router.push('/retail')}
-             className="mt-auto py-2 px-4 transition-all duration-500 bg-transparent border text-white rounded font-cocoRegular3 hover:bg-primary hover:text-gray-700">
+              onClick={() => router.push("/retail")}
+              className="mt-3 py-2 px-4 bg-transparent border text-white rounded opacity-0 group-hover:opacity-100 hover:bg-primary hover:text-gray-700 transition-all duration-300"
+            >
               View More
             </button>
           </div>
