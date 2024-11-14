@@ -54,7 +54,7 @@ export default function Header() {
   return (
     <>
       {/* Desktop Navbar */}
-      <nav className="hidden  lg:flex sticky z-10 bg-white  md:h-16 lg:h-20 items-center justify-center md:gap-x-12 lg:gap-x-16  md:flex">
+      <nav className="hidden w-full  lg:flex sticky z-10 bg-white  md:h-16 lg:h-20 items-center justify-center md:gap-x-12 lg:gap-x-16  md:flex">
         <div>
           <img src="logo.png" alt="sas-technologiesLogo" className="md:h-14 lg:h-20 " />
         </div>
@@ -62,7 +62,7 @@ export default function Header() {
           <ul className="flex font-cocoRegular md:text-[18px] lg:text-1xl md:gap-x-16 lg:gap-x-20 justify-center">
             <li className={getNavItemClasses("HOME")} onClick={() => handleNavClick("HOME", "/")}><Link href="/">HOME</Link></li>
             <li className={getNavItemClasses("RETAIL")} onClick={() => handleNavClick("RETAIL", "/retail")}>RETAIL</li>
-            <li className={getNavItemClasses("BLOGS")} onClick={() => handleNavClick("RETAIL", "/retail")}>BLOGS</li>
+            <li className={getNavItemClasses("BLOGS")} onClick={() => handleNavClick("RETAIL", "/blogs")}>BLOGS</li>
             <li className={getNavItemClasses("WHOLESALE")} onClick={() => handleNavClick("WHOLESALE", "/wholesale")}><Link href="/wholesale">WHOLESALE</Link></li>
             <li className={getNavItemClasses("CONTACT US")} onClick={() => handleNavClick("CONTACT US", "/contact")}><Link href="/contact">CONTACT US</Link></li>
           </ul>
