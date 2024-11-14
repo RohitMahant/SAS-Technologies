@@ -192,8 +192,8 @@ export default function Home() {
         </div>
       </div>
       <ReviewCards />
-      <div className="relative bg-gradient-to-r from-violet-200 via-gray-400 to-primary p-10 md:mt-20 m-6 md:m-14 rounded-lg shadow-lg">
-  <h1 className="text-center text-2xl md:text-5xl font-cocoBold text-white leading-tight">
+      <div className="relative bg-transparent p-10 md:mt-20 m-6 md:m-14 ">
+  <h1 className="text-center text-2xl md:text-5xl font-cocoBold text-gray-700 leading-tight">
     Got Questions? <br /> We’re Here to Help
   </h1>
   <div className="flex justify-center mt-8">

@@ -51,18 +51,13 @@ export default function ProductCards() {
 
           {/* Expandable Content */}
           <div
-            className="absolute bottom-0 w-full bg-black/70 text-white p-4 transition-all duration-500 ease-in-out group-hover:h-full h-16 flex flex-col hover:justify-center"
+            className="absolute bottom-0 w-full bg-[#0096C7]/80 text-white p-4 transition-all duration-500 ease-in-out group-hover:h-full h-16 flex flex-col hover:justify-center"
           >
             <div className="flex justify-between items-center">
             <h3 className="text-lg flex font-semibold">{service.cardName} 
 
             </h3>
-            <button
-              onClick={() => router.push("/retail")}
-              className=" py-2 px-4 bg-transparent md:hidden border border-white text-white rounded  group-hover:opacity-100 hover:bg-primary hover:text-gray-700 transition-all duration-300"
-            >
-              View More
-            </button>
+    
             </div>
             <p
               className="mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"

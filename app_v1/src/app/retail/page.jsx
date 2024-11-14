@@ -1,21 +1,19 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaFilter, FaMagnifyingGlass } from "react-icons/fa6";
-import { searchProducts } from "../utils/searchProducts";
+import { MdClose, MdOutlineNavigateNext, MdSkipPrevious } from "react-icons/md";
 import Products from "@/db/products.json";
-import { MdClose } from "react-icons/md";
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { GrPrevious } from "react-icons/gr";
 
 export default function Retail() {
   const [filterBar, setFilterBar] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
   const [selectedType, setSelectedType] = useState([]);
   const [selectedCompany, setSelectedCompany] = useState([]);
   const [priceRange, setPriceRange] = useState([0, 1000]);
   const [filteredProducts, setFilteredProducts] = useState(Products);
-  const [searchTerm, setSearchTerm] = useState(""); // State for the search bar.
-
-  const router = useRouter()
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 8;
 
   const productTypes = ["CCTV", "IP", "HD", "DOME", "BULLET", "NVR", "AUDIO"];
   const companies = ["CP Plus", "Hikvision", "NEC", "SYNTEL", "I-Range"];
@@ -39,7 +37,6 @@ export default function Retail() {
       document.body.style.overflow = "auto";
     }
 
-    // Cleanup to reset scroll when component unmounts or sidebar closes
     return () => {
       document.body.style.overflow = "auto";
     };
@@ -47,59 +44,71 @@ export default function Retail() {
 
   const applyFilters = () => {
     const filtered = Products.filter((product) => {
-      // Matches selected type (OR condition for types)
       const matchesType =
         selectedType.length === 0 ||
         selectedType.some((type) =>
           product.category?.toLowerCase().includes(type.toLowerCase())
         );
 
-      // Matches selected company (OR condition for companies)
       const matchesCompany =
         selectedCompany.length === 0 ||
         selectedCompany.some((company) =>
           product.product_name?.toLowerCase().includes(company.toLowerCase())
         );
 
-      // Matches selected price range
-      const productPrice = parseInt(product.price, 10); // Ensure price is a number
+      const productPrice = parseInt(product.price, 10);
       const matchesPrice =
         !isNaN(productPrice) &&
         productPrice >= priceRange[0] &&
         productPrice <= priceRange[1];
 
-      // Return true if the product matches all applied filters
-      return matchesType && matchesCompany && matchesPrice;
+      const matchesSearch =
+        searchTerm === "" ||
+        product.name.toLowerCase().includes(searchTerm.toLowerCase());
+
+      return matchesType && matchesCompany && matchesPrice && matchesSearch;
     });
 
-    // Set the filtered products and close the filter sidebar
     setFilteredProducts(filtered);
+    setCurrentPage(1);
     setFilterBar(false);
   };
 
   const clearFilters = () => {
-    // Reset all filter states to their default values
     setSelectedType([]);
     setSelectedCompany([]);
     setPriceRange([0, 1000]);
-
-    // Reset the product list to show all products
+    setSearchTerm("");
     setFilteredProducts(Products);
-
-    // Close the filter sidebar
+    setCurrentPage(1);
     setFilterBar(false);
+  };
+
+  const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+  const paginatedProducts = filteredProducts.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) setCurrentPage(currentPage + 1);
+  };
+
+  const handlePreviousPage = () => {
+    if (currentPage > 1) setCurrentPage(currentPage - 1);
   };
 
   return (
     <>
       <div className="relative min-h-screen flex flex-col">
         <div className="flex text-textColor font-mergeOne flex-1">
-          {/* Filter Sidebar - Mobile Friendly */}
+          {/* Filter Sidebar */}
           <div
-            className={`fixed  top-0 left-0 border-b-2 border z-40 h-scren h-screen  w-72 bg-white shadow-lg p-4 transform transition-transform duration-300 ease-in-out ${
+            className={`fixed top-0 left-0 z-40 h-screen w-72 bg-white shadow-lg p-4 transform transition-transform duration-300 ease-in-out ${
               filterBar ? "translate-x-0" : "-translate-x-full"
             } lg:sticky lg:translate-x-0 lg:w-[380px]`}
           >
+            {/* Sidebar Content */}
             <div className="flex justify-between items-center mb-4 lg:hidden">
               <h2 className="font-semibold text-1xl">Filter Products</h2>
               <MdClose
@@ -108,13 +117,12 @@ export default function Retail() {
                 className="cursor-pointer"
               />
             </div>
-
-            <h3 className="font-sans font-bold  text-[25px]">Product Type</h3>
+            {/* Filters */}
+            <h3 className="font-sans font-bold text-[25px]">Product Type</h3>
             <hr />
-            {/* Product Type Filter */}
             <div className="mt-4 grid grid-cols-2 mb-4">
               {productTypes.map((type) => (
-                <div key={type} className="flex  items-center">
+                <div key={type} className="flex items-center">
                   <input
                     type="checkbox"
                     id={type}
@@ -122,17 +130,15 @@ export default function Retail() {
                     checked={selectedType.includes(type)}
                     onChange={() => toggleSelection(type, "type")}
                   />
-                  <label htmlFor={type} className="md:ml-2 ml-3 text-sm">
+                  <label htmlFor={type} className="ml-3 text-sm">
                     {type}
                   </label>
                 </div>
               ))}
             </div>
             <hr />
-
-            {/* Company Filter */}
-            <div className="mb-4 mt-4">
-              <h3 className="font-sans font-bold  text-[25px]">Company</h3>
+            <h3 className="font-sans font-bold text-[25px] mt-4">Company</h3>
+            <div className="mb-4">
               {companies.map((company) => (
                 <div key={company} className="flex items-center">
                   <input
@@ -148,123 +154,123 @@ export default function Retail() {
                 </div>
               ))}
             </div>
-
-            <hr />
-
-            {/* Price Range Filter */}
-            <div className="mb-4 mt-4">
-              <h3 className="font-sans font-bold  text-[25px]">Price Range</h3>
-              <div className="flex gap-2 items-center">
-                <input
-                  type="number"
-                  value={priceRange[0]}
-                  onChange={(e) =>
-                    setPriceRange([Number(e.target.value), priceRange[1]])
-                  }
-                  className="w-20 p-1 border rounded"
-                  placeholder="Min"
-                />
-                <span>-</span>
-                <input
-                  type="number"
-                  value={priceRange[1]}
-                  onChange={(e) =>
-                    setPriceRange([priceRange[0], Number(e.target.value)])
-                  }
-                  className="w-20 p-1 border rounded"
-                  placeholder="Max"
-                />
-              </div>
+            <h3 className="font-sans font-bold text-[25px] mt-4">Price Range</h3>
+            <div className="flex gap-2 items-center">
+              <input
+                type="number"
+                value={priceRange[0]}
+                onChange={(e) =>
+                  setPriceRange([Number(e.target.value), priceRange[1]])
+                }
+                className="w-20 p-1 border rounded"
+                placeholder="Min"
+              />
+              <span>-</span>
+              <input
+                type="number"
+                value={priceRange[1]}
+                onChange={(e) =>
+                  setPriceRange([priceRange[0], Number(e.target.value)])
+                }
+                className="w-20 p-1 border rounded"
+                placeholder="Max"
+              />
             </div>
-
-            {/* Apply Filters Button */}
-            <div className="justify-center items-center">
-              <button
-                onClick={applyFilters}
-                className="bg-red-800 text-white w-64 h-12 rounded mt-4 hover:bg-red-900"
-              >
-                Apply Filters
-              </button>
-              <button
-                onClick={applyFilters}
-                className="bg-red-800 w-64 h-12 hover:bg-red-900 text-white rounded mt-4"
-              >
-                Clear Filters
-              </button>
-            </div>
+            <button
+              onClick={applyFilters}
+              className="bg-red-800 text-white w-64 h-12 rounded mt-4 hover:bg-red-900"
+            >
+              Apply Filters
+            </button>
+            <button
+              onClick={clearFilters}
+              className="bg-red-800 w-64 h-12 hover:bg-red-900 text-white rounded mt-4"
+            >
+              Clear Filters
+            </button>
           </div>
 
-          {/* Products Section */}
+          {/* Main Section */}
           <div className="flex-1 flex flex-col">
-            <div className="justify-center flex md:flex-col items-center md:h-16 lg:h-20 h-12 w-full sticky top-0 bg-transparent z-20">
-              <div className="md:m-3 flex justify-center items-center lg:hidden md:block h-12 w-12 bg-transparent">
-                <FaFilter
-                  size={28}
-                  color="gray"
-                  onClick={() => {
-                    setFilterBar(!filterBar);
-                  }}
-                />
-              </div>
-              <form className="m-6 justify-center flex items-center">
-                <div className="bg-white lg:hidden w-60 md:hidden h-10 rounded flex justify-center items-center">
-                  <input
-                    type="text"
-                    placeholder="search products"
-                    className="lg:block m-3 md:m-3 md:w-[700px] md:h-14 w-full rounded placeholder:text-sm outline-none focus:ring-0"
-                    required
-                    style={{ boxShadow: "none" }}
-                  />
-                  <button className="m-3">
-                    <FaMagnifyingGlass />
-                  </button>
-                </div>
+            <div className="p-4 flex items-center  gap-3 bg-transparent">
+              {/* Filter Icon */}
 
-                <div className="bg-white w-[700px] md:block lg:flex hidden items-center justify-evenly h-14 rounded">
-                  <input
-                    type="text"
-                    placeholder="search products"
-                    className="hidden lg:block md:block md:w-[600px] md:h-14 p-2 rounded placeholder:text-sm outline-none focus:ring-0"
-                    required
-                    style={{ boxShadow: "none" }}
-                  />
-                  <button className="">
-                    <FaMagnifyingGlass />
-                  </button>
-                </div>
+              <button
+                onClick={() => setFilterBar(true)}
+                className="flex md:hidden items-center gap-2 bg-transparent rounded-full text-white px-2 justify-center py-2  hover:bg-red-900"
+              >
+                <FaFilter size={20} className="text-textColor" />
+          
+              </button>
+              {/* Search Bar */}
+              <form className="relative flex md:justify-center">
+              <div className="flex ">
+               
+                <input
+                  type="text"
+                  placeholder="Search Products..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="md:w-96 w-56 pl-3 pr-4 py-2 border rounded focus:outline-none "
+                />
+                 <FaMagnifyingGlass className="relative top-3 left-3 text-gray-500" />
+              </div>
               </form>
             </div>
 
-            <div className="flex-1 overflow-y-auto h-[80vh] flex justify-center md:justify-start flex-wrap gap-6 p-6">
-              {filteredProducts.map((product) => (
+            {/* Products */}
+            <div className="flex-1 overflow-y-auto h-[80vh] flex justify-center flex-wrap gap-6 p-6">
+              {paginatedProducts.map((product) => (
                 <div
                   key={product.id}
-                  className="flex-none h-52 md:h-96 w-[calc(50%-1.2rem)] sm:w-[calc(33.33%-1.5rem)]  md:w-[calc(25%-1.5rem)] lg:w-[calc(25%-1.5rem)] bg-white shadow-md border overflow-hidden"
+                  className="flex-none md:h-96 w-[calc(50%-1.2rem)] sm:w-[calc(33.33%-1.5rem)] md:w-[calc(25%-1.5rem)] bg-white shadow-md border overflow-hidden"
                 >
                   <img
                     src={product.img}
                     alt={product.name}
-                    className="w-full md:h-72 lg:h-72 h-36 object-contain"
+                    className="w-full md:h-72 lg:h-72 h-32 object-contain"
                   />
-                  <div className="md:p-4 p-1  text-gray-600 bg-secondary">
+                  <div className="md:p-4 p-1 text-primary bg-[#0096C7]/70">
                     <h3 className="text-[12px] md:text-md font-semibold">
                       {product.name}
                     </h3>
                     <p className="font-serif">Rs {product.Price}</p>
-                    
                   </div>
                 </div>
               ))}
             </div>
+
+            {/* Pagination */}
+            <div className="flex justify-center gap-4  m-6 mt-4">
+              <button
+                onClick={handlePreviousPage}
+                disabled={currentPage === 1}
+                className={`px-4 py-2 rounded ${
+                  currentPage === 1
+                    ? " text-black"
+                    : " text-red-800 hover:bg-red-900"
+                }`}
+              >
+                <GrPrevious/>
+              </button>
+              <span className="self-center font-cocoRegular">
+                Page <span className="font-serif">{currentPage}</span> of <span className="font-serif">{totalPages}</span>
+              </span>
+              <button
+                onClick={handleNextPage}
+                disabled={currentPage === totalPages}
+                className={`px-4 py-2 rounded ${
+                  currentPage === totalPages
+                    ? "bg-gray-300 text-gray-500"
+                    : " text-black hover:bg-red-900"
+                }`}
+              >
+                <MdOutlineNavigateNext />
+              </button>
+            </div>
           </div>
         </div>
       </div>
-      {filterBar && (
-        <div
-          className="md:hidden lg:hidden fixed inset-0 bg-black opacity-50 z-30"
-          // onClick={setFilterBar(!filterBar)}
-        ></div>
-      )}
     </>
   );
 }

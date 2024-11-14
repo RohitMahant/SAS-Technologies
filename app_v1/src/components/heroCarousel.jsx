@@ -107,7 +107,7 @@ export default function Carousel() {
       </button>
 
       {/* Indicators */}
-      <div className="absolute md:bottom-4 bottom-[4px] left-1/2 transform -translate-x-1/2 flex space-x-2">
+      {/* <div className="absolute md:bottom-4 bottom-[4px] left-1/2 transform -translate-x-1/2 flex space-x-2">
         {slides.map((_, index) => (
           <button
             key={index}
@@ -117,7 +117,7 @@ export default function Carousel() {
             }`}
           ></button>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }
