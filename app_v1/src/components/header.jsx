@@ -107,7 +107,7 @@ export default function Header() {
           <Link href="/retail">RETAIL</Link>
         </li>
         <li className={getNavItemClasses("BLOGS")} onClick={() => handleNavClick("BLOGS", "/blogs")}>
-          <Link href="/blogs">WHOLESALE</Link>
+          <Link href="/blogs">BLOGS</Link>
         </li>
         <li className={getNavItemClasses("WHOLESALE")} onClick={() => handleNavClick("WHOLESALE", "/wholesale")}>
           <Link href="/wholesale">WHOLESALE</Link>
