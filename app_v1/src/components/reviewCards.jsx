@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { FaUser } from "react-icons/fa6";
 
 const reviews = [
   {
@@ -34,21 +35,24 @@ const reviews = [
 
 export default function ReviewCards() {
   return (
-    <div className="relative flex overflow-x-scroll scrollbar-hide p-4 space-x-4 w-full">
+    <div className="mt-12 flex flex-wrap justify-center items-center gap-4 px-4">
       {reviews.map((review) => (
         <div
           key={review.id}
-          className="bg-tertiary shadow-md rounded-lg overflow-hidden flex-shrink-0 w-36 md:w-72 lg:w-60 xl:w-72"
+          className="bg-gradient-to-br from-violet-200 via-primary to-gray-400 text-gray-700 shadow-lg overflow-hidden w-full sm:w-72 md:w-60 lg:w-64 xl:w-72 p-4 flex flex-col items-center rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl hover:bg-gradient-to-br hover:from-purple-300 hover:via-blue-200 hover:to-green-300"
         >
-          <img
-            src={review.image}
-            alt={review.reviewerName}
-            className="h-20 md:h-44 w-full object-cover"
-          />
-          <div className="md:p-4">
+          <div className="flex justify-center items-center mb-3">
+            <FaUser size={50} className="text-gray-500 transition duration-300 hover:text-green-600" />
+          </div>
+
+          <div className="text-center">
             <h3 className="text-lg font-semibold">{review.reviewerName}</h3>
-            <p className="text-gray-600 mt-2">{review.reviewText}</p>
-            <p className="text-yellow-500 mt-2">Rating: {review.rating} ⭐</p>
+            <p className="text-gray-800 mt-2 text-sm sm:text-base">
+              {review.reviewText}
+            </p>
+            <p className="text-yellow-600 mt-2 text-sm sm:text-base">
+              Rating: {review.rating} ⭐
+            </p>
           </div>
         </div>
       ))}

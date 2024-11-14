@@ -39,7 +39,7 @@ export default function ProductCards() {
       {ServicesData.map((service) => (
         <div
           key={service.id}
-          className="relative  w-full h-64 lg:h-80 rounded-lg shadow-lg overflow-hidden group"
+          className="relative  w-full h-64 lg:h-80  shadow-lg overflow-hidden group"
         >
           {/* Background Image */}
           <div className="absolute inset-0 w-full h-full overflow-hidden">

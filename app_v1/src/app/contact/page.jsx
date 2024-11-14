@@ -73,7 +73,7 @@ export default function Contact() {
           </div>
           <form
             onSubmit={handleSubmit}
-            className="bg-secondary mt-6  w-full  max-w-lg p-6 lg:p-8 rounded shadow-lg font-mergeOne"
+            className="bg-transparent mt-6  w-full  max-w-lg p-6 lg:p-8 rounded shadow-lg font-mergeOne"
           >
             <input
               type="text"
@@ -150,13 +150,13 @@ export default function Contact() {
       </div>
 
       {/* Address and Business Hours */}
-      <div className="flex flex-col items-center lg:mt-20 px-6 m-10 lg:px-0 text-center text-white">
-        <h2 className="text-2xl lg:text-3xl font-mergeOne mb-4">Our Address</h2>
+      <div className="flex flex-col items-center lg:mt-20 px-6 m-10 lg:px-0 text-center text-gray-700">
+        <h2 className="text-2xl lg:text-3xl font-cocoRegular mb-4">Our Address</h2>
         <p>1234 Technology Drive,</p>
         <p>Building 4, Suite 300,</p>
         <p>Innovation City, CA 90210, USA</p>
 
-        <h2 className="text-2xl lg:text-3xl font-mergeOne mt-8 mb-4">
+        <h2 className="text-2xl lg:text-3xl font-cocoRegular mt-8 mb-4">
           Business Hours
         </h2>
         <p>Monday - Friday: 9:00 AM - 6:00 PM</p>

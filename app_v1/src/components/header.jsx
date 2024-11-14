@@ -126,7 +126,7 @@ export default function Header() {
             <span>{isDropdownOpen ? "▲" : "▼"}</span>
           </button>
           {isDropdownOpen && (
-            <ul className="absolute left-0 w-full  shadow-lg  p-4 space-y-2">
+            <ul className="absolute text-sm left-0 w-full  shadow-lg  p-4 space-y-2">
               <li>
                 <Link href="/ip-cameras">
                   IP Cameras
