@@ -45,7 +45,7 @@ export default function Footer() {
             {/* Column 3: Social MediLink */}
             <div>
               <h3 className="text-md font-cocoBold mb-4 text-center">Follow Us</h3>
-              <div className="flex justify-center space-x-6">
+              <div className="flex justify-center md:space-x-6 space-x-3">
                 <Link href="https://facebook.com" className="hover:text-gray-900 ">
                   <IoLogoFacebook size={30}/>
                 </Link>
