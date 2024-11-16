@@ -11,6 +11,7 @@ export default function Header() {
   const router = useRouter();
   const pathname = usePathname(); // Get the current pathname
 
+
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
@@ -46,9 +47,9 @@ export default function Header() {
   return (
     <>
       {/* Desktop Navbar */}
-      <nav className="hidden w-full lg:flex sticky z-10 bg-white md:h-16 lg:h-20 items-center justify-center md:gap-x-12 lg:gap-x-16 md:flex">
+      <nav className="hidden w-full border lg:flex sticky z-10 bg-white md:h-16 lg:h-20 items-center justify-center md:gap-x-12 lg:gap-x-16 md:flex">
         <div>
-          <img src="logo.png" alt="sas-technologiesLogo" className="md:h-14 lg:h-20" />
+          <img onClick={()=>{router.push('/')}} src="logo.png" alt="sas-technologiesLogo" className="md:h-14 lg:h-20 cursor-pointer" />
         </div>
         <div>
           <ul className="flex font-cocoRegular md:text-[18px] lg:text-1xl md:gap-x-16 lg:gap-x-20 justify-center">

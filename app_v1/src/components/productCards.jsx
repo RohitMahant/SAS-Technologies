@@ -28,17 +28,31 @@ const ServicesData = [
     desc:
       "We offer the finest selection of NVR, DVR, and XVR systems for all your security needs.",
   },
+  {
+    id: 4,
+    cardName: "DVR, NVR, and XVRs",
+    images: ["CP-UVR-3201-E2H.jpg"],
+    desc:
+      "We offer the finest selection of NVR, DVR, and XVR systems for all your security needs.",
+  },
+  {
+    id: 5,
+    cardName: "DVR, NVR, and XVRs",
+    images: ["CP-UVR-3201-E2H.jpg"],
+    desc:
+      "We offer the finest selection of NVR, DVR, and XVR systems for all your security needs.",
+  },
 ];
 
 export default function ProductCards() {
   const router = useRouter();
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 mt-12 w-full">
+    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 p-4 mt-12 w-full place-items-center">
       {ServicesData.map((service) => (
         <div
           key={service.id}
-          className="relative w-full h-64 lg:h-80 shadow-lg overflow-hidden group"
+          className="relative w-full lg:w-4/5 h-64 lg:h-56 shadow-lg overflow-hidden group"
         >
           {/* Background Image */}
           <div className="absolute inset-0 w-full h-full overflow-hidden">

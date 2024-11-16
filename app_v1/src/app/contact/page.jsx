@@ -73,14 +73,14 @@ export default function Contact() {
           </div>
           <form
             onSubmit={handleSubmit}
-            className="bg-transparent mt-6  w-full  max-w-lg p-6 lg:p-8 rounded shadow-lg font-mergeOne"
+            className="bg-transparent mt-6  w-full  max-w-lg p-6 lg:p-8  font-cocoRegular"
           >
             <input
               type="text"
               placeholder="Phone Number"
               value={phoneNo}
               onChange={(e) => setPhoneNo(e.target.value)}
-              className="w-full h-10 p-2 rounded placeholder:text-sm outline-none focus:ring-0"
+              className="w-full border h-10 p-2 rounded placeholder:text-sm outline-none focus:ring-0"
               required
               style={{ boxShadow: "none" }}
             />
@@ -89,13 +89,13 @@ export default function Contact() {
               placeholder="Email Address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full h-10 mt-2 p-2 rounded placeholder:text-sm outline-none focus:ring-0"
+              className="w-full border h-10 mt-2 p-2 rounded placeholder:text-sm outline-none focus:ring-0"
               style={{ boxShadow: "none" }}
             />
             <select
               value={queryType}
               onChange={(e) => setQueryType(e.target.value)}
-              className="mt-2 w-full h-10 p-2 rounded placeholder:text-sm outline-none focus:ring-0"
+              className="mt-2 w-full border h-10 p-2 placeholder:text-sm outline-none focus:ring-0"
               required
             >
               <option value="" disabled>
@@ -112,46 +112,49 @@ export default function Contact() {
               placeholder="Your query"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              className="mt-2 w-full h-32 p-2 rounded placeholder:text-sm outline-none focus:ring-0 resize-none"
+              className="mt-2 border w-full h-32 p-2 rounded placeholder:text-sm outline-none focus:ring-0 resize-none"
               required
               style={{ boxShadow: "none" }}
             />
-            <div className="flex justify-between mt-4">
+            <div className="justify-between items-center mt-4">
+              <button
+                type="submit"
+                className="w-full md:w-full h-10 gap-x-3 flex justify-center items-center bg-white text-gray-700 border rounded hover:bg-[#0096C7]/80 hover:text-white  transition-all duration-500"
+              >
+                <span>Send</span>
+                <IoSend size={25} />
+              </button>
               {/* Call Button */}
+
+              <h1 className="text-center m-2">or</h1>
               <button
                 type="button"
-                className="w-32 md:w-48 h-10 gap-x-3 flex justify-center items-center bg-red-800 text-white rounded hover:bg-red-900 transition"
+                className="w-full md:w-full h-10 gap-x-3 flex justify-center items-center bg-white text-gray-700 border rounded hover:bg-[#0096C7]/80  hover:text-white transition-all duration-500"
                 onClick={handleCall}
               >
                 Call
-                <IoCall size={30} />
+                <IoCall size={25} />
               </button>
 
               {/* Send Button */}
-              <button
-                type="submit"
-                className="w-32 md:w-48 h-10 gap-x-3 flex justify-center items-center bg-red-800 text-white rounded hover:bg-red-900 transition"
-              >
-                <span>Send</span>
-                <IoSend size={30} />
-              </button>
             </div>
           </form>
         </div>
 
-        {/* Company image */}
-        <div className="md:mt-16 m-10 mb-4 w-full lg:mt-0 lg:w-1/2 flex justify-center">
+        {/* <div className="md:mt-16 m-10 mb-4 w-full lg:mt-0 lg:w-1/2 flex justify-center">
           <img
             src="https://lh3.googleusercontent.com/p/AF1QipMvNRvaSVLUgJOfRNBMMKEWxrwCXPAQ6kyvXPOj=s680-w680-h510"
             alt="Company Building"
             className="h-52 w-[700px] lg:h-[500px] md:h-[300px] lg:w-[700px] md:w-[700px] rounded-md shadow-lg"
           />
-        </div>
+        </div> */}
       </div>
 
       {/* Address and Business Hours */}
       <div className="flex flex-col items-center lg:mt-20 px-6 m-10 lg:px-0 text-center text-gray-700">
-        <h2 className="text-2xl lg:text-3xl font-cocoRegular mb-4">Our Address</h2>
+        <h2 className="text-2xl lg:text-3xl font-cocoRegular mb-4">
+          Our Address
+        </h2>
         <p>1234 Technology Drive,</p>
         <p>Building 4, Suite 300,</p>
         <p>Innovation City, CA 90210, USA</p>

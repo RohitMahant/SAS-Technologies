@@ -95,13 +95,13 @@ export default function Carousel() {
       {/* Controls */}
       <button
         onClick={goToPreviousSlide}
-        className="absolute top-1/2 -translate-y-1/2 left-4 md:bg-gray-800 md:text-white md:p-2 rounded-full hover:bg-gray-700"
+        className="absolute top-1/2 -translate-y-1/2 left-4  md:text-white md:p-2 rounded-full hover:bg-gray-700"
       >
         <GrFormPrevious />
       </button>
       <button
         onClick={goToNextSlide}
-        className="absolute top-1/2 -translate-y-1/2 right-4 md:bg-gray-800 md:text-white md:p-2 rounded-full hover:bg-gray-700"
+        className="absolute top-1/2 -translate-y-1/2 right-4  md:text-white md:p-2 rounded-full hover:bg-gray-700"
       >
         <MdOutlineNavigateNext />
       </button>

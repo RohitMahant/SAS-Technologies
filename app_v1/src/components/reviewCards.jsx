@@ -13,7 +13,7 @@ const reviews = [
   {
     id: 2,
     image: "reviewer2.jpg",
-    reviewerName: "Deepak Joshi",
+    reviewerName: "Jhon Doe",
     reviewText: "Good quality, but delivery was a bit slow.",
     rating: 4,
   },
