@@ -78,7 +78,9 @@ export default function Header() {
           {isSidebarOpen ? "" : <IoMenuSharp size={30} color="#03045E" className="cursor-pointer hover:text-textColor" />}
         </div>
         <div>
-          <img src="logo.png" alt="sas-technologiesLogo" className="h-14 m-6" />
+          <img 
+          onClick={()=>{router.push('/')}}
+          src="logo.png" alt="sas-technologiesLogo" className="h-14 m-6" />
         </div>
       </nav>
 

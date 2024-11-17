@@ -56,18 +56,28 @@ export default function Contact() {
   };
 
   return (
-    <div className="relative justify-center min-h-screen bg-primary font-cocoRegular text-gray-600">
+    <div
+    style={{
+      backgroundImage: "url('contact_bg_img.jpeg')", // Replace with your image URL
+      backgroundSize: "cover", // Ensures the image covers the entire container
+      backgroundPosition: "center", // Centers the image
+      backgroundRepeat: "no-repeat", // Prevents repetition
+      backgroundColor: "rgba(0, 0, 0, 0.6)", // Adds a dark overlay
+      backgroundBlendMode: "overlay", // Blends the overlay with the image
+    }}
+    className="relative min-h-screen flex flex-col items-center justify-center font-cocoRegular text-gray-600"
+  >
       {/* Flex container for form and image side by side on lg screens */}
       <div className="flex flex-col lg:flex-row items-center justify-center mt-8 lg:mt-32 m-4 lg:px-0 lg:space-x-8">
         <div>
           <div className="text-center px-4 lg:px-0">
-            <h1 className="text-3xl lg:text-5xl text-gray-700 font-cocoRegular">
+            <h1 className="text-3xl lg:text-5xl text-white font-cocoRegular">
               CONTACT US
             </h1>
-            <p className="text-gray-600 text-lg md:text-xl m-2">
+            <p className="text-white text-lg md:text-xl m-2">
               Send us your queries or call us
             </p>
-            <p className="text-gray-600 text-lg md:text-xl m-2">
+            <p className="text-white text-lg md:text-xl m-2">
               We’re here to assist you
             </p>
           </div>
@@ -151,8 +161,8 @@ export default function Contact() {
       </div>
 
       {/* Address and Business Hours */}
-      <div className="flex flex-col items-center lg:mt-20 px-6 m-10 lg:px-0 text-center text-gray-700">
-        <h2 className="text-2xl lg:text-3xl font-cocoRegular mb-4">
+      <div className="flex flex-col items-center font-sans lg:mt-20 px-6 m-10 lg:px-0 text-center text-white">
+        <h2 className="text-2xl lg:text-3xl  mb-4">
           Our Address
         </h2>
         <p>1234 Technology Drive,</p>

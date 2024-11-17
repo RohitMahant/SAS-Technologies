@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { FaFilter, FaMagnifyingGlass } from "react-icons/fa6";
-import { MdClose, MdOutlineNavigateNext, MdSkipPrevious } from "react-icons/md";
+import { MdClose, MdOutlineNavigateNext } from "react-icons/md";
 import Products from "@/db/products.json";
 import { GrPrevious } from "react-icons/gr";
 
@@ -13,6 +13,7 @@ export default function Retail() {
   const [priceRange, setPriceRange] = useState([0, 1000]);
   const [filteredProducts, setFilteredProducts] = useState(Products);
   const [currentPage, setCurrentPage] = useState(1);
+  const [selectedProduct, setSelectedProduct] = useState(null); // For dialog box
   const itemsPerPage = 8;
 
   const productTypes = ["CCTV", "IP", "HD", "DOME", "BULLET", "NVR", "AUDIO"];
@@ -101,101 +102,118 @@ export default function Retail() {
   return (
     <>
       <div className="relative min-h-screen flex flex-col">
-        <div className="flex text-textColor font-mergeOne flex-1">
+        <div className="flex text-textColor font-sans flex-1">
           {/* Filter Sidebar */}
           <div
             className={`fixed top-0 left-0 z-40 h-screen w-72 bg-white shadow-lg p-4 transform transition-transform duration-300 ease-in-out ${
               filterBar ? "translate-x-0" : "-translate-x-full"
             } lg:sticky lg:translate-x-0 lg:w-[380px]`}
           >
-            {/* Sidebar Content */}
+            {/* Sidebar Header */}
             <div className="flex justify-between items-center mb-4 lg:hidden">
-              <h2 className="font-semibold text-1xl">Filter Products</h2>
+              <h2 className="font-bold text-xl text-gray-800">
+                Filter Products
+              </h2>
               <MdClose
                 size={24}
                 onClick={() => setFilterBar(false)}
-                className="cursor-pointer"
+                className="cursor-pointer text-gray-600 hover:text-gray-800"
               />
             </div>
-            {/* Filters */}
-            <h3 className="font-sans font-bold text-[25px]">Product Type</h3>
-            <hr />
-            <div className="mt-4 grid grid-cols-2 mb-4">
-              {productTypes.map((type) => (
-                <div key={type} className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id={type}
-                    value={type}
-                    checked={selectedType.includes(type)}
-                    onChange={() => toggleSelection(type, "type")}
-                  />
-                  <label htmlFor={type} className="ml-3 text-sm">
-                    {type}
+
+            {/* Product Type Filter */}
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold text-gray-700 flex items-center gap-2">
+                <FaFilter className="text-red-600" /> Product Type
+              </h3>
+              <div className="grid grid-cols-2 gap-2 mt-2">
+                {productTypes.map((type) => (
+                  <label key={type} className="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      value={type}
+                      checked={selectedType.includes(type)}
+                      onChange={() => toggleSelection(type, "type")}
+                      className="accent-red-600"
+                    />
+                    <span className="text-sm text-gray-600">{type}</span>
                   </label>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-            <hr />
-            <h3 className="font-sans font-bold text-[25px] mt-4">Company</h3>
-            <div className="mb-4">
-              {companies.map((company) => (
-                <div key={company} className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id={company}
-                    value={company}
-                    checked={selectedCompany.includes(company)}
-                    onChange={() => toggleSelection(company, "company")}
-                  />
-                  <label htmlFor={company} className="ml-2">
-                    {company}
+
+            {/* Company Filter */}
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold text-gray-700 flex items-center gap-2">
+                <FaFilter className="text-red-600" /> Company
+              </h3>
+              <div className="mt-2">
+                {companies.map((company) => (
+                  <label key={company} className="flex items-center gap-2 mb-2">
+                    <input
+                      type="checkbox"
+                      value={company}
+                      checked={selectedCompany.includes(company)}
+                      onChange={() => toggleSelection(company, "company")}
+                      className="accent-red-600"
+                    />
+                    <span className="text-sm text-gray-600">{company}</span>
                   </label>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-            <h3 className="font-sans font-bold text-[25px] mt-4">Price Range</h3>
-            <div className="flex gap-2 items-center">
-              <input
-                type="number"
-                value={priceRange[0]}
-                onChange={(e) =>
-                  setPriceRange([Number(e.target.value), priceRange[1]])
-                }
-                className="w-20 p-1 border rounded"
-                placeholder="Min"
-              />
-              <span>-</span>
-              <input
-                type="number"
-                value={priceRange[1]}
-                onChange={(e) =>
-                  setPriceRange([priceRange[0], Number(e.target.value)])
-                }
-                className="w-20 p-1 border rounded"
-                placeholder="Max"
-              />
+
+            {/* Price Range Filter */}
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold text-gray-700 flex items-center gap-2">
+                <FaFilter className="text-red-600" /> Price Range
+              </h3>
+              <div className="flex gap-2 items-center mt-2">
+                <input
+                  type="number"
+                  value={priceRange[0]}
+                  onChange={(e) =>
+                    setPriceRange([Number(e.target.value), priceRange[1]])
+                  }
+                  className="w-20 p-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-red-200"
+                  placeholder="Min"
+                />
+                <span>-</span>
+                <input
+                  type="number"
+                  value={priceRange[1]}
+                  onChange={(e) =>
+                    setPriceRange([priceRange[0], Number(e.target.value)])
+                  }
+                  className="w-20 p-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-red-200"
+                  placeholder="Max"
+                />
+              </div>
             </div>
-            <button
-              onClick={applyFilters}
-              className="bg-red-800 text-white w-64 h-12 rounded mt-4 hover:bg-red-900"
-            >
-              Apply Filters
-            </button>
-            <button
-              onClick={clearFilters}
-              className="bg-red-800 w-64 h-12 hover:bg-red-900 text-white rounded mt-4"
-            >
-              Clear Filters
-            </button>
+
+            {/* Action Buttons */}
+            <div className="flex flex-col gap-3">
+              <button
+                onClick={applyFilters}
+                className="bg-red-600 text-white font-semibold py-2 px-4 rounded shadow hover:bg-red-700 transition"
+              >
+                Apply Filters
+              </button>
+              <button
+                onClick={clearFilters}
+                className="bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded shadow hover:bg-gray-400 transition"
+              >
+                Clear Filters
+              </button>
+            </div>
           </div>
 
           {/* Main Section */}
           <div className="flex-1 flex flex-col">
-            <div className="p-4 flex items-center  gap-3 bg-transparent">
-              {/* Filter Icon */}
+            <div className="p-4 flex items-center gap-3 bg-transparent">
+                {/* Filter Icon */}
 
-              <button
+                <button
                 onClick={() => setFilterBar(true)}
                 className="flex md:hidden items-center gap-2 bg-transparent rounded-full text-white px-2 justify-center py-2  hover:bg-red-900"
               >
@@ -204,17 +222,16 @@ export default function Retail() {
               </button>
               {/* Search Bar */}
               <form className="relative flex md:justify-center">
-              <div className="flex ">
-               
-                <input
-                  type="text"
-                  placeholder="Search Products..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="md:w-96 w-56 pl-3 pr-4 py-2 border rounded focus:outline-none "
-                />
-                 <FaMagnifyingGlass className="relative top-3 left-3 text-gray-500" />
-              </div>
+                <div className="flex">
+                  <input
+                    type="text"
+                    placeholder="Search Products..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="md:w-96 w-56 pl-3 pr-4 py-2 border rounded focus:outline-none "
+                  />
+                  <FaMagnifyingGlass className="relative top-3 left-3 text-gray-500" />
+                </div>
               </form>
             </div>
 
@@ -223,18 +240,24 @@ export default function Retail() {
               {paginatedProducts.map((product) => (
                 <div
                   key={product.id}
-                  className="flex-none md:h-96 w-[calc(50%-1.2rem)] sm:w-[calc(33.33%-1.5rem)] md:w-[calc(25%-1.5rem)] bg-white shadow-md border overflow-hidden"
+                  className="flex-none md:h-96 w-[calc(50%-1.2rem)] sm:w-[calc(33.33%-1.5rem)] md:w-[calc(25%-1.5rem)] bg-white shadow-md border overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
+                  onClick={() => setSelectedProduct(product)} // Open dialog
                 >
                   <img
                     src={product.img}
                     alt={product.name}
-                    className="w-full md:h-72 lg:h-72 h-32 object-contain"
+                    className="w-full md:h-72 transition-all duration-500 hover:lg:h-72 lg:h-64 h-32 object-contain"
                   />
-                  <div className="md:p-4 p-1 text-primary bg-[#0096C7]/70">
-                    <h3 className="text-[12px] md:text-md font-semibold">
+                  <div className="md:p-4 p-1 text-gray-600 text-center">
+                    <h3 className="md:text-[18px] text-[12px] font-semibold">
                       {product.name}
                     </h3>
-                    <p className="font-serif">Rs {product.Price}</p>
+                    <p className="font-sans text-[12px] md:text-[15px]">
+                      {product.Description}
+                    </p>
+                    <p className="font-sans text-red-800 text-[12px] md:text-[15px]">
+                      Rs {product.Price}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -268,6 +291,38 @@ export default function Retail() {
                 <MdOutlineNavigateNext />
               </button>
             </div>
+            <div/>
+            <div/>
+
+            {/* Dialog Box */}
+            {selectedProduct && (
+              <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+                <div className="bg-white p-6 rounded-lg shadow-lg w-[90%] md:w-1/2">
+                  <div className="flex justify-between items-center mb-4">
+                    <h2 className="text-lg font-semibold">
+                      {selectedProduct.name}
+                    </h2>
+                    <MdClose
+                      className="cursor-pointer text-gray-600"
+                      size={24}
+                      onClick={() => setSelectedProduct(null)}
+                    />
+                  </div>
+                  <img
+                    src={selectedProduct.img}
+                    alt={selectedProduct.name}
+                    className="w-full h-64 object-contain mb-4"
+                  />
+                  <p className="text-gray-600">{selectedProduct.Description}</p>
+                  <p className="font-semibold text-red-800">
+                    Price: Rs {selectedProduct.Price}
+                  </p>
+                  <button className="mt-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700">
+                    Contact
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

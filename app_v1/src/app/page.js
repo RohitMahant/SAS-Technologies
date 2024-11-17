@@ -94,8 +94,11 @@ export default function Home() {
             <div className="flex gap-12 animate-infinite-scroll">
               <img src="cp-plus.png" alt="CP Plus CCTV in Gurgaon" className="h-44 md:h-72 transition-transform duration-300 hover:scale-110" />
               <img src="Hikvision.svg" alt="Hikvision cameras in Gurgaon" className="h-44 md:h-72 transition-transform duration-300 hover:scale-110" />
-              <img src="dahua.png" alt="Dahua products in Gurgaon" className="h-44 md:h-72 transition-transform duration-300 hover:scale-110" />
+            
               {/* Repeat logos */}
+              <img src="cp-plus.png" alt="CP Plus CCTV in Gurgaon" className="h-44 md:h-72 transition-transform duration-300 hover:scale-110" />
+              <img src="Hikvision.svg" alt="Hikvision cameras in Gurgaon" className="h-44 md:h-72 transition-transform duration-300 hover:scale-110" />
+            
             </div>
           </div>
         </div>
@@ -146,7 +149,7 @@ export default function Home() {
           <IoIosCall size={30} color="white" />
         </button>
         <button
-          onClick={() => (window.location.href = "mailto:info@securitygurgaon.com")}
+          onClick={() => {router.push('/contact')}}
           className="w-14 h-14 rounded-full bg-red-800 flex mt-2 items-center justify-center shadow-lg hover:bg-green-600 transition-all duration-300"
         >
           <IoIosMail size={30} color="white" />
