@@ -2,6 +2,7 @@
     {
         "id":1,
         "productType":"CCTV",
+        "company":"CP Plus",
         "cameraType":"HD",
         "megaPixels":"2.4MP",
         "name":"CP-URC-DC24PL2-V3",
@@ -11,6 +12,7 @@
     },
     {
         "id":2,
+        "company":"CP Plus",
         "productType":"CCTV",
         "cameraType":"HD",
         "megaPixels":"INDIGO 2.4MP",
@@ -21,6 +23,7 @@
     },
     {
         "id":3,
+        "company":"CP Plus",
         "productType":"CCTV",
         "cameraType":"HD",
         "megaPixels":"INDIGO 2.4MP",
@@ -31,6 +34,7 @@
     },
     {
         "id":4,
+        "company":"CP Plus",
         "productType":"CCTV",
         "cameraType":"HD",
         "megaPixels":"INDIGO 2.4MP",
@@ -51,6 +55,7 @@
     },
     {
         "id":6,
+        "company":"CP Plus",
         "productType":"CCTV",
         "cameraType":"HD",
         "megaPixels":"2.4MP",
@@ -61,6 +66,7 @@
     },
     {
         "id":7,
+        "company":"CP Plus",
         "productType":"CCTV",
         "cameraType":"HD",
         "megaPixels":"2.4MP",
@@ -71,6 +77,7 @@
     },
     {
         "id":8,
+        "company":"CP Plus",
         "productType":"CCTV",
         "cameraType":"HD",
         "megaPixels":"2.4MP",
@@ -81,6 +88,7 @@
     },
     {
         "id":9,
+        "company":"CP Plus",
         "productType":"CCTV",
         "cameraType":"HD",
         "megaPixels":"2.4MP",
@@ -91,6 +99,7 @@
     },
     {
         "id":10,
+        "company":"CP Plus",
         "productType":"XVR",
         "XVRType":"H.264",
         "channels":"4",
@@ -111,6 +120,7 @@
     },
     {
         "id":12,
+        "company":"CP Plus",
         "productType":"XVR",
         "XVRType":"H.265",
         "channels":"8",
@@ -131,6 +141,7 @@
     },
     {
         "id":14,
+        "company":"CP Plus",
         "productType":"XVR",
         "XVRType":"H.265",
         "channels":"16",
@@ -141,6 +152,7 @@
     },
     {
         "id":15,
+        "company":"CP Plus",
         "productType":"XVR",
         "XVRType":"H.265",
         "channels":"32",
@@ -161,6 +173,7 @@
     },
     {
         "id":17,
+        "company":"CP Plus",
         "productType":"CCTV",
         "cameraType":"HD",
         "megaPixels":"5MP",
@@ -171,6 +184,7 @@
     },
     {
         "id":18,
+        "company":"CP Plus",
         "productType":"CCTV",
         "cameraType":"HD",
         "megaPixels":"5MP",
@@ -181,6 +195,7 @@
     },
     {
         "id":19,
+        "company":"CP Plus",
         "productType":"CCTV",
         "cameraType":"HD",
         "megaPixels":"5MP",
@@ -191,6 +206,7 @@
     },
     {
         "id":20,
+        "company":"CP Plus",
         "productType":"CCTV",
         "cameraType":"HD",
         "megaPixels":"5MP",
@@ -211,6 +227,7 @@
     },
     {
         "id":22,
+        "company":"CP Plus",
         "productType":"CCTV",
         "cameraType":"HD",
         "megaPixels":"5MP",
@@ -231,6 +248,7 @@
     },
     {
         "id":24,
+        "company":"CP Plus",
         "productType":"CCTV",
         "cameraType":"HD",
         "megaPixels":"5MP",
@@ -241,6 +259,7 @@
     },
     {
         "id":25,
+        "company":"CP Plus",
         "productType":"CCTV",
         "cameraType":"HD",
         "megaPixels":"5MP",
@@ -251,6 +270,7 @@
     },
     {
         "id":26,
+        "company":"CP Plus",
         "productType":"XVR",
         "XVRType":"H.265",
         "channels":"4",
@@ -261,6 +281,7 @@
     },
     {
         "id":27,
+        "company":"CP Plus",
         "productType":"XVR",
         "XVRType":"H.265",
         "channels":"8",
@@ -272,16 +293,18 @@
     
     {
         "id":28,
+        "company":"CP Plus",
         "productType":"XVR",
         "XVRType":"H.265",
         "channels":"16",
         "name":"CP-UVR-1601F1-IC ",
         "Price":"8440",
         "Description":"5MP Supported",
-        "img":"CP-UVR-1601F1-IC .jpg"
+        "img":"CP-UVR-1601F1-IC.jpg"
     },
     {
         "id":29,
+        "company":"CP Plus",
         "productType":"XVR",
         "XVRType":"H.265",
         "channels":"32",
@@ -292,6 +315,7 @@
     },
     {
         "id":30,
+        "company":"CP Plus",
         "productType":"XVR",
         "XVRType":"H.265",
         "channels":"8",
@@ -299,6 +323,5 @@
         "Price":"7900",
         "Description":"5MP Supported",
         "img":"CP-UVR-0801L1-4KH Indigo.jpg"  
-    }
-    
+    }   
 ]

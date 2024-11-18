@@ -14,6 +14,7 @@ export default function Header() {
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
+    setIsDropdownOpen(false);
   };
 
   const toggleDropdown = () => {
@@ -59,8 +60,8 @@ export default function Header() {
             <li className={getNavItemClasses("/retail")} onClick={() => handleNavClick("/retail")}>
               RETAIL
             </li>
-            <li className={getNavItemClasses("/blogs")} onClick={() => handleNavClick("/blogs")}>
-              BLOGS
+            <li className={getNavItemClasses("/solutions")} onClick={() => handleNavClick("/solutions")}>
+              SOLUTIONS
             </li>
             <li className={getNavItemClasses("/wholesale")} onClick={() => handleNavClick("/wholesale")}>
               WHOLESALE
@@ -68,6 +69,46 @@ export default function Header() {
             <li className={getNavItemClasses("/contact")} onClick={() => handleNavClick("/contact")}>
               CONTACT US
             </li>
+            <li className="relative group">
+  <button 
+    className="w-full text-left flex justify-between items-center   transition duration-300 rounded-md" 
+    onClick={toggleDropdown}
+  >
+    <span className="font-semibold text-gray-800">OUR PRODUCTS</span>
+    <span className="text-gray-600 ml-3">{isDropdownOpen ? "▲" : "▼"}</span>
+  </button>
+  {isDropdownOpen && (
+    <ul 
+      className="absolute bg-[#0096C7]/70 text-sm left-0 w-[250px] shadow-lg p-4 mt-2   border-gray-200 z-10 space-y-2 max-h-[550px] overflow-y-auto scrollbar-none scrollbar-thumb-gray-300 scrollbar-track-gray-100"
+    >
+      <h2 className="text-lg font-bold text-white mb-3">Explore Our Range of Products</h2>
+      {[
+        { href: "/retail", label: "IP Cameras" },
+        { href: "/retail", label: "HD Cameras" },
+        { href: "/retail", label: "WiFi Cameras" },
+        { href: "/retail", label: "Network Video Recorders (NVR)" },
+        { href: "/retail", label: "Digital Video Recorders (DVR)" },
+        { href: "/retail", label: "Video Door Phones (VDP)" },
+        { href: "/retail", label: "Hard Drives" },
+        { href: "/retail", label: "Switch Mode Power Supplies (SMPS)" },
+        { href: "/retail", label: "Cables" },
+        { href: "/retail", label: "POE Switches" },
+        { href: "/retail", label: "Routers" },
+        { href: "/retail", label: "OEM Accessories" },
+      ].map((item, index) => (
+        <li key={index} className="border-b last:border-b-0">
+          <Link 
+            href={item.href} 
+            className="block py-2 text-white transition duration-300"
+          >
+            {item.label}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  )}
+</li>
+
           </ul>
         </div>
       </nav>
@@ -93,16 +134,57 @@ export default function Header() {
         <div className="flex justify-end items-center p-4">
           <IoCloseSharp size={40} color="#03045E" className="cursor-pointer hover:text-textColor" onClick={toggleSidebar} />
         </div>
-
+     
         <ul className="font-cocoRegular text-1xl text-textColor space-y-12 p-6">
           <li className={getNavItemClasses("/")} onClick={() => handleNavClick("/")}>
             HOME
           </li>
+          <li className="relative group">
+  <button 
+    className="w-full text-left flex justify-between items-center   hover:bg-gray-200 transition duration-300 rounded-md" 
+    onClick={toggleDropdown}
+  >
+    <span className="font-semibold text-gray-800">OUR PRODUCTS</span>
+    <span className="text-gray-600">{isDropdownOpen ? "▲" : "▼"}</span>
+  </button>
+  {isDropdownOpen && (
+    <ul 
+      className="absolute bg-white text-sm left-0 w-full shadow-lg p-4 mt-2   border-gray-200 z-10 space-y-2 max-h-[550px] overflow-y-auto scrollbar-none scrollbar-thumb-gray-300 scrollbar-track-gray-100"
+    >
+      <h2 className="text-lg font-bold text-gray-700 mb-3">Explore Our Range of Products</h2>
+      {[
+        { href: "/ip-cameras", label: "IP Cameras" },
+        { href: "/hd-cameras", label: "HD Cameras" },
+        { href: "/wifi-cameras", label: "WiFi Cameras" },
+        { href: "/nvr", label: "Network Video Recorders (NVR)" },
+        { href: "/dvr", label: "Digital Video Recorders (DVR)" },
+        { href: "/vdp", label: "Video Door Phones (VDP)" },
+        { href: "/hard-drives", label: "Hard Drives" },
+        { href: "/smps", label: "Switch Mode Power Supplies (SMPS)" },
+        { href: "/cables", label: "Cables" },
+        { href: "/poe-switch", label: "POE Switches" },
+        { href: "/routers", label: "Routers" },
+        { href: "/oem-accessories", label: "OEM Accessories" },
+      ].map((item, index) => (
+        <li key={index} className="border-b last:border-b-0">
+          <Link 
+            href={item.href} 
+            className="block py-2 text-gray-700 hover:text-blue-500 transition duration-300"
+          >
+            {item.label}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  )}
+</li>
+
+
           <li className={getNavItemClasses("/retail")} onClick={() => handleNavClick("/retail")}>
             RETAIL
           </li>
-          <li className={getNavItemClasses("/blogs")} onClick={() => handleNavClick("/blogs")}>
-            BLOGS
+          <li className={getNavItemClasses("/solutions")} onClick={() => handleNavClick("/solutions")}>
+            SOLUTIONS
           </li>
           <li className={getNavItemClasses("/wholesale")} onClick={() => handleNavClick("/wholesale")}>
             WHOLESALE
@@ -111,22 +193,8 @@ export default function Header() {
             CONTACT US
           </li>
 
-          {/* Dropdown for Products */}
-          <li className="relative">
-            <button className="w-full text-left flex justify-between items-center" onClick={toggleDropdown}>
-              <span className="font-bold">PRODUCTS</span>
-              <span>{isDropdownOpen ? "▲" : "▼"}</span>
-            </button>
-            {isDropdownOpen && (
-              <ul className="absolute text-sm left-0 w-full shadow-lg p-4 space-y-2">
-                <li><Link href="/ip-cameras">IP Cameras</Link></li>
-                <li><Link href="/hd-cameras">HD Cameras</Link></li>
-                <li><Link href="/nvr">NVR</Link></li>
-                <li><Link href="/dvr">DVR</Link></li>
-                <li><Link href="/hard-drives">Hard Drives</Link></li>
-              </ul>
-            )}
-          </li>
+      
+         
         </ul>
       </div>
 

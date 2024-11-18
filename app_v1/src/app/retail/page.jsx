@@ -210,7 +210,7 @@ export default function Retail() {
 
           {/* Main Section */}
           <div className="flex-1 flex flex-col">
-            <div className="p-4 flex items-center gap-3 bg-transparent">
+            <div className="p-4 flex items-center justify-center gap-3 bg-transparent">
                 {/* Filter Icon */}
 
                 <button
@@ -221,7 +221,7 @@ export default function Retail() {
           
               </button>
               {/* Search Bar */}
-              <form className="relative flex md:justify-center">
+              <form className="relative lg:ml-5 flex md:justify-center">
                 <div className="flex">
                   <input
                     type="text"
@@ -230,7 +230,10 @@ export default function Retail() {
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className="md:w-96 w-56 pl-3 pr-4 py-2 border rounded focus:outline-none "
                   />
-                  <FaMagnifyingGlass className="relative top-3 left-3 text-gray-500" />
+                  <button className="flex items-center justify-center  p-3 ml-5 rounded-full bg-red-700">
+                  <FaMagnifyingGlass className="relative text-white" />
+                  </button>
+                  
                 </div>
               </form>
             </div>
@@ -246,7 +249,7 @@ export default function Retail() {
                   <img
                     src={product.img}
                     alt={product.name}
-                    className="w-full md:h-72 transition-all duration-500 hover:lg:h-72 lg:h-64 h-32 object-contain"
+                    className="w-full md:h-72 transition-all duration-500 hover:lg:h-72 lg:h-64 h-28 p-2 object-contain"
                   />
                   <div className="md:p-4 p-1 text-gray-600 text-center">
                     <h3 className="md:text-[18px] text-[12px] font-semibold">
@@ -276,8 +279,8 @@ export default function Retail() {
               >
                 <GrPrevious/>
               </button>
-              <span className="self-center font-cocoRegular">
-                Page <span className="font-serif">{currentPage}</span> of <span className="font-serif">{totalPages}</span>
+              <span className="self-center font-sans">
+                Page <span className="">{currentPage}</span> of <span className="font-serif">{totalPages}</span>
               </span>
               <button
                 onClick={handleNextPage}
@@ -285,7 +288,7 @@ export default function Retail() {
                 className={`px-4 py-2 rounded ${
                   currentPage === totalPages
                     ? "bg-gray-300 text-gray-500"
-                    : " text-black hover:bg-red-900"
+                    : " text-black "
                 }`}
               >
                 <MdOutlineNavigateNext />

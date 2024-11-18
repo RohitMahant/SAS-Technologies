@@ -16,28 +16,28 @@ const ServicesData = [
   },
   {
     id: 2,
-    cardName: "DVR, NVR, and XVRs",
+    cardName: "DVR and NVRs",
     images: ["CP-UVR-3201-E2H.jpg"],
     desc:
       "We offer the finest selection of NVR, DVR, and XVR systems for all your security needs.",
   },
   {
     id: 3,
-    cardName: "DVR, NVR, and XVRs",
+    cardName: "DVRs and NVRs",
     images: ["CP-UVR-3201-E2H.jpg"],
     desc:
       "We offer the finest selection of NVR, DVR, and XVR systems for all your security needs.",
   },
   {
     id: 4,
-    cardName: "DVR, NVR, and XVRs",
+    cardName: "DVRs and NVRs",
     images: ["CP-UVR-3201-E2H.jpg"],
     desc:
       "We offer the finest selection of NVR, DVR, and XVR systems for all your security needs.",
   },
   {
     id: 5,
-    cardName: "DVR, NVR, and XVRs",
+    cardName: "DVRs and NVRs",
     images: ["CP-UVR-3201-E2H.jpg"],
     desc:
       "We offer the finest selection of NVR, DVR, and XVR systems for all your security needs.",
@@ -48,27 +48,27 @@ export default function ProductCards() {
   const router = useRouter();
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 p-4 mt-12 w-full place-items-center">
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-4 mt-12 w-full place-items-center">
       {ServicesData.map((service) => (
         <div
           key={service.id}
-          className="relative w-full lg:w-4/5 h-64 lg:h-56 shadow-lg overflow-hidden group"
+          className="relative w-full lg:w-4/5 h-56 lg:h-56 shadow-lg overflow-hidden group"
         >
           {/* Background Image */}
           <div className="absolute inset-0 w-full h-full overflow-hidden">
             <img
               src={service.images[0]}
               alt={service.cardName}
-              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+              className="w-full h-full md:object-cover object-contain transition-transform duration-300 group-hover:scale-110"
             />
           </div>
 
           {/* Expandable Content */}
           <div
-            className="absolute bottom-0 w-full bg-[#0096C7]/80 text-white p-4 transition-all duration-500 ease-in-out group-hover:h-full h-16 flex flex-col hover:justify-center"
+            className="absolute bottom-0 w-full bg-[#0096C7]/80 text-white md:p-4 p-2 transition-all duration-500 ease-in-out group-hover:h-full h-14 md:h-16 flex flex-col hover:justify-center"
           >
             <div className="flex justify-between items-center">
-            <h3 className="text-lg flex font-semibold">{service.cardName} 
+            <h3 className="md:text-lg  text-sm flex font-semibold">{service.cardName} 
 
             </h3>
     

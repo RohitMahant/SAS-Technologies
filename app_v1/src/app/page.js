@@ -10,19 +10,22 @@ import { useRouter } from "next/navigation";
 export default function Home() {
   const router = useRouter();
   return (
-    <div className="font-cocoRegular">
+    <div className=" font-cocoRegular">
+      {/* <div className=" md:hidden relative h-20 bg-[#0096C7]/70 text-white">
+        <h1 className="text-center p-4 text-2xl font-cocoBold bg-">Welcome to SAS Technologies</h1>
+      </div> */}
       {/* Hero Section */}
       <Carousel />
       <div className="mt-12 m-4 md:mt-56 max-w-screen-lg mx-auto px-4">
-  <h1 className="text-center text-gray-800 text-3xl md:text-5xl font-cocoBold">
+  <h1 className=" text-gray-800 text-center text-3xl md:text-5xl font-cocoBold">
     Explore What We Offer in Gurgaon
   </h1>
-  <p className="text-center md:text-2xl m-4">
-    At our Gurgaon-based store, we specialize in providing **advanced CCTV
-    systems**, top-tier **biometric solutions**, and high-performance alarm systems.  
+  <p className=" md:text-2xl m-4">
+    At our Gurgaon-based store, we specialize in providing advanced CCTV
+    systems, top-tier biometric solutions, and high-performance alarm systems.  
     Secure your premises with reliable, cutting-edge technology that’s designed for your safety and convenience.
   </p>
-  <p className="text-center md:text-2xl m-4">
+  <p className=" md:text-2xl m-4">
     Discover an extensive selection of CCTV cameras, biometric access control systems,  
     premium quality cables, and robust connectors—all tailored to meet your security needs in Gurgaon and beyond.
   </p>
