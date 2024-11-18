@@ -215,7 +215,7 @@ export default function Retail() {
 
                 <button
                 onClick={() => setFilterBar(true)}
-                className="flex md:hidden items-center gap-2 bg-transparent rounded-full text-white px-2 justify-center py-2  hover:bg-red-900"
+                className="flex md:hidden items-center gap-2 bg-transparent rounded-full text-white px-2 justify-center py-2"
               >
                 <FaFilter size={20} className="text-textColor" />
           

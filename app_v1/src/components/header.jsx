@@ -141,7 +141,7 @@ export default function Header() {
           </li>
           <li className="relative group">
   <button 
-    className="w-full text-left flex justify-between items-center   hover:bg-gray-200 transition duration-300 rounded-md" 
+    className="w-full text-left flex justify-between items-center  transition duration-300 rounded-md" 
     onClick={toggleDropdown}
   >
     <span className="font-semibold text-gray-800">OUR PRODUCTS</span>
@@ -149,7 +149,7 @@ export default function Header() {
   </button>
   {isDropdownOpen && (
     <ul 
-      className="absolute bg-white text-sm left-0 w-full shadow-lg p-4 mt-2   border-gray-200 z-10 space-y-2 max-h-[550px] overflow-y-auto scrollbar-none scrollbar-thumb-gray-300 scrollbar-track-gray-100"
+      className="absolute bg-white text-sm left-0 w-full shadow-lg p-4 mt-2   border-gray-200 z-10 space-y-2 max-h-[500px] overflow-y-auto scrollbar-none scrollbar-thumb-gray-300 scrollbar-track-gray-100"
     >
       <h2 className="text-lg font-bold text-gray-700 mb-3">Explore Our Range of Products</h2>
       {[
