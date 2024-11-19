@@ -1,7 +1,7 @@
 "use client";
 
 import { IoMenuSharp, IoCloseSharp } from "react-icons/io5";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
@@ -10,7 +10,7 @@ export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const router = useRouter();
   const pathname = usePathname(); // Get the current pathname
-
+  const dropdownRef = useRef(null); // Ref for detecting outside clicks
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -18,7 +18,7 @@ export default function Header() {
   };
 
   const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+    setIsDropdownOpen((prev) => !prev);
   };
 
   const handleNavClick = (path) => {
@@ -30,6 +30,20 @@ export default function Header() {
     `cursor-pointer ${
       pathname === path ? "font-cocoBold text-red-800" : "hover:text-textColor"
     }`;
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   // Disable scrolling when sidebar is open
   useEffect(() => {
@@ -50,65 +64,90 @@ export default function Header() {
       {/* Desktop Navbar */}
       <nav className="hidden w-full border lg:flex sticky z-10 bg-white md:h-16 lg:h-20 items-center justify-center md:gap-x-12 lg:gap-x-16 md:flex">
         <div>
-          <img onClick={()=>{router.push('/')}} src="logo.png" alt="sas-technologiesLogo" className="md:h-14 lg:h-20 cursor-pointer" />
+          <img
+            onClick={() => {
+              router.push("/");
+            }}
+            src="logo.png"
+            alt="sas-technologiesLogo"
+            className="md:h-14 lg:h-20 cursor-pointer"
+          />
         </div>
         <div>
           <ul className="flex font-cocoRegular md:text-[18px] lg:text-1xl md:gap-x-16 lg:gap-x-20 justify-center">
-            <li className={getNavItemClasses("/")} onClick={() => handleNavClick("/")}>
+            <li
+              className={getNavItemClasses("/")}
+              onClick={() => handleNavClick("/")}
+            >
               HOME
             </li>
-            <li className={getNavItemClasses("/retail")} onClick={() => handleNavClick("/retail")}>
+            <li
+              className={getNavItemClasses("/retail")}
+              onClick={() => handleNavClick("/retail")}
+            >
               RETAIL
             </li>
-            <li className={getNavItemClasses("/solutions")} onClick={() => handleNavClick("/solutions")}>
+            <li
+              className={getNavItemClasses("/solutions")}
+              onClick={() => handleNavClick("/solutions")}
+            >
               SOLUTIONS
             </li>
-            <li className={getNavItemClasses("/wholesale")} onClick={() => handleNavClick("/wholesale")}>
+            <li
+              className={getNavItemClasses("/wholesale")}
+              onClick={() => handleNavClick("/wholesale")}
+            >
               WHOLESALE
             </li>
-            <li className={getNavItemClasses("/contact")} onClick={() => handleNavClick("/contact")}>
+            <li
+              className={getNavItemClasses("/contact")}
+              onClick={() => handleNavClick("/contact")}
+            >
               CONTACT US
             </li>
-            <li className="relative group">
-  <button 
-    className="w-full text-left flex justify-between items-center   transition duration-300 rounded-md" 
-    onClick={toggleDropdown}
-  >
-    <span className="font-semibold text-gray-800">OUR PRODUCTS</span>
-    <span className="text-gray-600 ml-3">{isDropdownOpen ? "▲" : "▼"}</span>
-  </button>
-  {isDropdownOpen && (
-    <ul 
-      className="absolute bg-[#0096C7]/70 text-sm left-0 w-[250px] shadow-lg p-4 mt-2   border-gray-200 z-10 space-y-2 max-h-[550px] overflow-y-auto scrollbar-none scrollbar-thumb-gray-300 scrollbar-track-gray-100"
-    >
-      <h2 className="text-lg font-bold text-white mb-3">Explore Our Range of Products</h2>
-      {[
-        { href: "/retail", label: "IP Cameras" },
-        { href: "/retail", label: "HD Cameras" },
-        { href: "/retail", label: "WiFi Cameras" },
-        { href: "/retail", label: "Network Video Recorders (NVR)" },
-        { href: "/retail", label: "Digital Video Recorders (DVR)" },
-        { href: "/retail", label: "Video Door Phones (VDP)" },
-        { href: "/retail", label: "Hard Drives" },
-        { href: "/retail", label: "Switch Mode Power Supplies (SMPS)" },
-        { href: "/retail", label: "Cables" },
-        { href: "/retail", label: "POE Switches" },
-        { href: "/retail", label: "Routers" },
-        { href: "/retail", label: "OEM Accessories" },
-      ].map((item, index) => (
-        <li key={index} className="border-b last:border-b-0">
-          <Link 
-            href={item.href} 
-            className="block py-2 text-white transition duration-300"
-          >
-            {item.label}
-          </Link>
-        </li>
-      ))}
-    </ul>
-  )}
-</li>
-
+            <li className="relative group" ref={dropdownRef}>
+              <button
+                className="w-full text-left flex justify-between items-center transition duration-300 rounded-md"
+                onClick={toggleDropdown}
+              >
+                <span className="font-semibold text-gray-800">OUR PRODUCTS</span>
+                <span className="text-gray-600 ml-3">
+                  {isDropdownOpen ? "▲" : "▼"}
+                </span>
+              </button>
+              <div
+                className={`absolute bg-[#0096C7]/70 text-sm left-0 w-[250px] shadow-lg p-4 mt-2 border-gray-200 z-10 space-y-2 max-h-[550px] overflow-y-auto scrollbar-none scrollbar-thumb-gray-300 scrollbar-track-gray-100 transition-all duration-300 ${
+                  isDropdownOpen ? "opacity-100 scale-100" : "opacity-0 scale-95"
+                }`}
+              >
+                <h2 className="text-lg font-bold text-white mb-3">
+                  Explore Our Range of Products
+                </h2>
+                {[
+                  { href: "/retail", label: "IP Cameras" },
+                  { href: "/retail", label: "HD Cameras" },
+                  { href: "/retail", label: "WiFi Cameras" },
+                  { href: "/retail", label: "Network Video Recorders (NVR)" },
+                  { href: "/retail", label: "Digital Video Recorders (DVR)" },
+                  { href: "/retail", label: "Video Door Phones (VDP)" },
+                  { href: "/retail", label: "Door Locks" },
+                  { href: "/retail", label: "Switch Mode Power Supplies (SMPS)" },
+                  { href: "/retail", label: "Cables" },
+                  { href: "/retail", label: "POE Switches" },
+                  { href: "/retail", label: "Routers" },
+                  { href: "/retail", label: "All Accessories" },
+                ].map((item, index) => (
+                  <li key={index} className="border-b last:border-b-0">
+                    <Link
+                      href={item.href}
+                      className="block py-2 text-white transition duration-300"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </div>
+            </li>
           </ul>
         </div>
       </nav>
@@ -116,12 +155,25 @@ export default function Header() {
       {/* Mobile Navbar */}
       <nav className="md:hidden lg:hidden relative w-full h-16 border-b-2 border-textColor bg-white flex items-center justify-between">
         <div className="m-4" onClick={toggleSidebar}>
-          {isSidebarOpen ? "" : <IoMenuSharp size={30} color="#03045E" className="cursor-pointer hover:text-textColor" />}
+          {isSidebarOpen ? (
+            ""
+          ) : (
+            <IoMenuSharp
+              size={30}
+              color="#03045E"
+              className="cursor-pointer hover:text-textColor"
+            />
+          )}
         </div>
         <div>
-          <img 
-          onClick={()=>{router.push('/')}}
-          src="logo.png" alt="sas-technologiesLogo" className="h-14 m-6" />
+          <img
+            onClick={() => {
+              router.push("/");
+            }}
+            src="logo.png"
+            alt="sas-technologiesLogo"
+            className="h-14 m-6"
+          />
         </div>
       </nav>
 
@@ -132,11 +184,19 @@ export default function Header() {
         } transition-transform duration-300 w-3/4 sm:w-2/3 md:w-1/2 z-50`}
       >
         <div className="flex justify-end items-center p-4">
-          <IoCloseSharp size={40} color="#03045E" className="cursor-pointer hover:text-textColor" onClick={toggleSidebar} />
+          <IoCloseSharp
+            size={40}
+            color="#03045E"
+            className="cursor-pointer hover:text-textColor"
+            onClick={toggleSidebar}
+          />
         </div>
-     
+
         <ul className="font-cocoRegular text-1xl text-textColor space-y-12 p-6">
-          <li className={getNavItemClasses("/")} onClick={() => handleNavClick("/")}>
+          <li
+            className={getNavItemClasses("/")}
+            onClick={() => handleNavClick("/")}
+          >
             HOME
           </li>
           <li className="relative group">
@@ -153,18 +213,18 @@ export default function Header() {
     >
       <h2 className="text-lg font-bold text-gray-700 mb-3">Explore Our Range of Products</h2>
       {[
-        { href: "/ip-cameras", label: "IP Cameras" },
-        { href: "/hd-cameras", label: "HD Cameras" },
-        { href: "/wifi-cameras", label: "WiFi Cameras" },
-        { href: "/nvr", label: "Network Video Recorders (NVR)" },
-        { href: "/dvr", label: "Digital Video Recorders (DVR)" },
-        { href: "/vdp", label: "Video Door Phones (VDP)" },
-        { href: "/hard-drives", label: "Hard Drives" },
-        { href: "/smps", label: "Switch Mode Power Supplies (SMPS)" },
-        { href: "/cables", label: "Cables" },
-        { href: "/poe-switch", label: "POE Switches" },
-        { href: "/routers", label: "Routers" },
-        { href: "/oem-accessories", label: "OEM Accessories" },
+        { href: "/retail", label: "IP Cameras" },
+        { href: "/retail", label: "HD Cameras" },
+        { href: "/retail", label: "WiFi Cameras" },
+        { href: "/retail", label: "Network Video Recorders (NVR)" },
+        { href: "/retail", label: "Digital Video Recorders (DVR)" },
+        { href: "/retail", label: "Video Door Phones (VDP)" },
+        { href: "/retail", label: "Door Locks" },
+        { href: "/retail", label: "Switch Mode Power Supplies (SMPS)" },
+        { href: "/retail", label: "Cables" },
+        { href: "/retail", label: "POE Switches" },
+        { href: "/retail", label: "Routers" },
+        { href: "/retail", label: "All Accessories" },
       ].map((item, index) => (
         <li key={index} className="border-b last:border-b-0">
           <Link 
@@ -193,13 +253,17 @@ export default function Header() {
             CONTACT US
           </li>
 
-      
-         
+          {/* Add more mobile menu items */}
         </ul>
       </div>
 
       {/* Overlay when sidebar is open */}
-      {isSidebarOpen && <div className="md:hidden lg:hidden fixed inset-0 bg-black opacity-50 z-40" onClick={toggleSidebar}></div>}
+      {isSidebarOpen && (
+        <div
+          className="md:hidden lg:hidden fixed inset-0 bg-black opacity-50 z-40"
+          onClick={toggleSidebar}
+        ></div>
+      )}
     </>
   );
 }
