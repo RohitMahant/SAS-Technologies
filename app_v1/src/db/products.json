@@ -1022,7 +1022,7 @@
         "type":"POE Switch 8 Port",
         "name":"CP-ANW-HP8H1-96",
         "description":"8 Port 10x100 (10x100) 1 uplink",
-        "price":1600
+        "Price":1600
     },
     {
         "id":100,
@@ -1031,7 +1031,7 @@
         "type":"POE Switch 8 Port",
         "name":"CP-ANW-DNW-HP8H2-96",
         "description":"8 Port 10x100 (10x100) 2 uplink",
-        "price":1650
+        "Price":1650
     },
     {
         "id":101,
@@ -1040,7 +1040,7 @@
         "type":"POE Switch 8 Port",
         "name":"CP-ANW-HPU8G2-96",
         "description":"8 Port 10x100x1000 Full Giga (2 uplink)",
-        "price":2690
+        "Price":2690
     },
     {
         "id":102,
@@ -1049,7 +1049,7 @@
         "accessoryType":"POE Switch 8 Port",
         "name":"CP-ANW-GPU8G2-96",
         "description":"8 Port 10x100x1000 Full Giga (2 uplink)",
-        "price":3490
+        "Price":3490
     },
     {
         "id":103,
@@ -1058,7 +1058,7 @@
         "type":"POE Switch 16 Port",
         "name":"CP-ANW-HP16G2F1-N30",
         "description":"16 Port 10/100 with 2Giga & 15FP Uplink Ports",
-        "price":6550
+        "Price":6550
     },
     {
         "id":104,
@@ -1067,7 +1067,7 @@
         "accessoryType":"POE Switch 24 Port",
         "name":"CP-ANW-HP24G2F1-T25",
         "description":"24 Port 10/100, 2Giga+1SEP link",
-        "price":7520
+        "Price":7520
     },
     {
         "id":105,
@@ -1076,7 +1076,7 @@
         "accessoryType":"Non POE Giga Switch",
         "name":"CP-ANW-GS105T",
         "description":"5 Port Non POE Giga",
-        "price":750
+        "Price":750
     },
     {
         "id":106,
@@ -1085,7 +1085,7 @@
         "accessoryType":"Non POE Giga Switch",
         "name":"CP-ANW-GS108T",
         "description":"8 Port Non POE Giga",
-        "price":1180
+        "Price":1180
     },
     {
         "id":107,
@@ -1094,7 +1094,7 @@
         "accessoryType":"4G Router",
         "name":"CP-XR-DE21-S",
         "description":"4G Router",
-        "price":1455
+        "Price":1455
     },
     {
         "id":108,
@@ -1103,7 +1103,7 @@
         "accessoryType":"VDP",
         "name":"CP-UVX-701A",
         "description":"Without Memory",
-        "price":3975
+        "Price":3975
     },
     {
         "id":109,
@@ -1112,7 +1112,7 @@
         "accessoryType":"VDP",
         "name":"CP-UVX-701MTA",
         "description":"With Memory",
-        "price":4910
+        "Price":4910
     },
     {
         "id":110,
@@ -1121,7 +1121,7 @@
         "accessoryType":"VDP",
         "name":"CP-PVM-70T",
         "description":"7\" Indoor Unit",
-        "price":4100
+        "Price":4100
     },
     {
         "id":111,
@@ -1129,8 +1129,9 @@
         "productType":"Accessories",
         "accessoryType":"VDP",
         "name":"CP-PAV-C341",
+        "img":"CP-PAV-C341.jpg",
         "description":"4 Bell Panel (Outdoor Unit)",
-        "price":5250
+        "Price":5250
     },
     {
         "id":112,
@@ -1139,7 +1140,8 @@
         "accessoryType":"VDP",
         "name":"CP-L23",
         "description":"Smart Wi-Fi Doorbell",
-        "price":4790
+        "img":"CP-L23.jpg",
+        "Price":4790
     },
     {
         "id":113,
@@ -1148,7 +1150,8 @@
         "accessoryType":"VDP",
         "name":"CP-UVX-711M",
         "description":"IP VDP Kit with Mobile App Support",
-        "price":12950
+        "img":"CP-UVX-711M.jpg",
+        "Price":12950
     },
     {
 
@@ -1158,7 +1161,7 @@
         "accessoryType":"Rim Lock",
         "name":"CP Electronix Lock",
         "description":"EM Lock",
-        "price":0
+        "Price":0
     },
     {
         "id":115,
@@ -1167,7 +1170,7 @@
         "accessoryType":"LED Monitor",
         "name":"CP UEM 19AH",
         "description":"LED Monitor",
-        "price":4700
+        "Price":4700
     },
     {
         "id":116,
@@ -1176,7 +1179,7 @@
         "accessoryType":"LED Monitor",
         "name":"CP UEM 22AH",
         "description":"LED Monitor",
-        "price":5390
+        "Price":5390
     },
     {
         "id":117,
@@ -1185,7 +1188,7 @@
         "accessoryType":"Memory Card",
         "name":"CP-NM64",
         "description":"Memory Card",
-        "price":435
+        "Price":435
     }
     
     

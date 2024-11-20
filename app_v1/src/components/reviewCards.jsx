@@ -39,7 +39,7 @@ export default function ReviewCards() {
       {reviews.map((review) => (
         <div
           key={review.id}
-          className="bg-gradient-to-br from-[#0096C7] via-gray-300 to-gray-100 md:flex-col  text-gray-700 shadow-lg overflow-hidden w-full sm:w-72 md:w-60 lg:w-64 xl:w-72 p-4 flex justify-between items-center rounded-md transform transition duration-300 hover:scale-105 hover:shadow-2xl hover:bg-gradient-to-br hover:from-purple-300 hover:via-blue-200 hover:to-green-300"
+          className="bg-gradient-to-br from-[#0096C7] via-gray-300 to-gray-100 md:flex-col  text-gray-700 shadow-lg overflow-hidden w-full sm:w-72 md:w-60 lg:w-64 xl:w-72 p-4 flex justify-between items-center rounded-md transform transition duration-300 hover:scale-105 hover:shadow-2xl "
         >
           <div className="flex justify-center items-center mb-3">
             <FaUser size={50} className="text-primary transition duration-300 hover:text-green-600" />

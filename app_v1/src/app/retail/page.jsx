@@ -14,9 +14,10 @@ export default function Retail() {
   const [filteredProducts, setFilteredProducts] = useState(Products);
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedProduct, setSelectedProduct] = useState(null); // For dialog box
+  const [isProductVisible, setIsProductVisible] = useState(false); // To trigger animation
   const itemsPerPage = 8;
 
-  const productTypes = ["CCTV", "Recorders", "Biometrics", "Cables", "Racks", "SMPS", "POE","Hardrives","Other"];
+  const productTypes = ["CCTV", "DVR","NVR", "Biometrics", "Cables", "Racks", "SMPS", "POE","Hardrives","Other"];
   const companies = ["CP Plus", "Hikvision", "HawkVision","WD Surveillance","I-Range"];
 
   const toggleSelection = (value, selectionType) => {
@@ -48,13 +49,13 @@ export default function Retail() {
       const matchesType =
         selectedType.length === 0 ||
         selectedType.some((type) =>
-          product.category?.toLowerCase().includes(type.toLowerCase())
+          product.productType?.toLowerCase().includes(type.toLowerCase())
         );
 
       const matchesCompany =
         selectedCompany.length === 0 ||
         selectedCompany.some((company) =>
-          product.product_name?.toLowerCase().includes(company.toLowerCase())
+          product.company?.toLowerCase().includes(company.toLowerCase())
         );
 
       const productPrice = parseInt(product.price, 10);
@@ -98,6 +99,13 @@ export default function Retail() {
   const handlePreviousPage = () => {
     if (currentPage > 1) setCurrentPage(currentPage - 1);
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsProductVisible(true); // Start animating the content
+    }, 800); // 2 seconds delay
+    return () => clearTimeout(timer); 
+  }, [filteredProducts]); // Ensure it runs when filtered products change
 
   return (
     <>
@@ -243,7 +251,11 @@ export default function Retail() {
               {paginatedProducts.map((product) => (
                 <div
                   key={product.id}
-                  className="flex-none md:h-96 w-[calc(50%-1.2rem)] sm:w-[calc(33.33%-1.5rem)] md:w-[calc(25%-1.5rem)] bg-white shadow-md border overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
+                  className={`flex-none md:h-96 w-[calc(50%-1.2rem)] sm:w-[calc(33.33%-1.5rem)] md:w-[calc(25%-1.5rem)] bg-white shadow-md border overflow-hidden hover:shadow-lg transition-all duration-500 transform ${
+                    isProductVisible
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-6"
+                  }`}
                   onClick={() => setSelectedProduct(product)} // Open dialog
                 >
                   <img

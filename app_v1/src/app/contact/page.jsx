@@ -58,7 +58,7 @@ export default function Contact() {
   return (
     <div
     style={{
-      backgroundImage: "url('contact_bg_img.jpeg')", // Replace with your image URL
+      backgroundImage: "url('/contact_bg_img.jpeg')", // Replace with your image URL
       backgroundSize: "cover", // Ensures the image covers the entire container
       backgroundPosition: "center", // Centers the image
       backgroundRepeat: "no-repeat", // Prevents repetition
@@ -90,7 +90,7 @@ export default function Contact() {
               placeholder="Phone Number"
               value={phoneNo}
               onChange={(e) => setPhoneNo(e.target.value)}
-              className="w-full border h-10 p-2 rounded placeholder:text-sm outline-none focus:ring-0"
+              className="w-full border h-10 p-2 font-sans  placeholder:text-sm outline-none focus:ring-0"
               required
               style={{ boxShadow: "none" }}
             />
@@ -99,13 +99,13 @@ export default function Contact() {
               placeholder="Email Address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full border h-10 mt-2 p-2 rounded placeholder:text-sm outline-none focus:ring-0"
+              className="w-full border h-10 mt-2 p-2 font-sans placeholder:text-sm  border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0096C7]/80"
               style={{ boxShadow: "none" }}
             />
             <select
               value={queryType}
               onChange={(e) => setQueryType(e.target.value)}
-              className="mt-2 w-full border h-10 p-2 placeholder:text-sm outline-none focus:ring-0"
+              className="mt-2 w-full border font-sans h-10 p-2 placeholder:text-sm outline-none focus:ring-0"
               required
             >
               <option value="" disabled>
@@ -122,14 +122,14 @@ export default function Contact() {
               placeholder="Your query"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              className="mt-2 border w-full h-32 p-2 rounded placeholder:text-sm outline-none focus:ring-0 resize-none"
+              className="mt-2 border w-full h-32 p-2  placeholder:text-sm outline-none focus:ring-0 font-sans resize-none"
               required
               style={{ boxShadow: "none" }}
             />
             <div className="justify-between items-center mt-4">
               <button
                 type="submit"
-                className="w-full md:w-full h-10 gap-x-3 flex justify-center items-center bg-white text-gray-700 border rounded hover:bg-[#0096C7]/80 hover:text-white  transition-all duration-500"
+                className="w-full md:w-full h-10 gap-x-3 flex justify-center items-center bg-white text-gray-700 border  hover:bg-[#0096C7]/80 hover:text-white  transition-all duration-500"
               >
                 <span>Send</span>
                 <IoSend size={25} />
@@ -139,7 +139,7 @@ export default function Contact() {
               <h1 className="text-center m-2">or</h1>
               <button
                 type="button"
-                className="w-full md:w-full h-10 gap-x-3 flex justify-center items-center bg-white text-gray-700 border rounded hover:bg-[#0096C7]/80  hover:text-white transition-all duration-500"
+                className="w-full md:w-full h-10 gap-x-3 flex justify-center items-center bg-white text-gray-700 border  hover:bg-[#0096C7]/80  hover:text-white transition-all duration-500"
                 onClick={handleCall}
               >
                 Call
@@ -183,7 +183,7 @@ export default function Contact() {
           <div className="bg-white rounded-lg p-6 shadow-lg text-center">
             <h2 className="text-lg font-semibold mb-4">Call Us</h2>
             <p className="text-sm mb-6">
-              Call us here: <strong>8756385493</strong>
+              Call us here: <strong className="font-sans">8756385493</strong>
             </p>
             <button
               className="px-4 py-2 bg-red-800 text-white rounded hover:bg-red-900 transition"

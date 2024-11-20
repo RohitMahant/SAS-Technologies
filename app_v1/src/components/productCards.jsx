@@ -13,6 +13,7 @@ const ServicesData1 = [
     ],
     desc:
       "We offer the finest selection of IP Cameras of the finest Brands",
+    href:"/products/cctv/ip_cameras"  
   },
   {
     id: 6,
@@ -24,14 +25,24 @@ const ServicesData1 = [
     ],
     desc:
       "We offer the finest selection of HD Cameras of the finest Brands",
+      href:"/products/cctv/hd_cameras"  
   },
   
   {
     id: 2,
-    cardName: "DVRs and NVRs",
+    cardName: "NVRs",
     images: ["CP-UVR-3201-E2H.jpg"],
     desc:
       "We offer the finest selection of NVR, DVR, and XVR systems for all your security needs.",
+      href:"/products/recorders/nvr"  
+  },
+  {
+    id: 7,
+    cardName: "DVRs",
+    images: ["CP-UVR-3201-E2H.jpg"],
+    desc:
+      "We offer the finest selection of NVR, DVR, and XVR systems for all your security needs.",
+      href:"/products/recorders/dvr"  
   },
   {
     id: 3,
@@ -39,6 +50,7 @@ const ServicesData1 = [
     images: ["CP-R33G.png"],
     desc:
       "Wifi Cameras available at most affordable prices",
+      href:"/products/cctv/wifi_cameras"  
   },
   {
     id: 4,
@@ -46,6 +58,7 @@ const ServicesData1 = [
     images: ["CP-VTA-T2324-U.jpg"],
     desc:
       "State of the art Biometric locks and Attendance systems",
+      href:"/products/biometrics"  
   },
   {
     id: 5,
@@ -53,6 +66,7 @@ const ServicesData1 = [
     images: ["video_door_phones.png"],
     desc:
       "Best quality video door phones satisfying your security needs.",
+      href:"/products/door_devices/vdp" 
   },
 ];
 
@@ -67,6 +81,7 @@ const ServicesData2 = [
     ],
     desc:
       "We offer the finest selection of IP Cameras of the finest Brands",
+      href:"/products/accessories/racks" 
   },
   {
     id: 6,
@@ -78,6 +93,7 @@ const ServicesData2 = [
     ],
     desc:
       "We offer the finest selection of HD Cameras of the finest Brands",
+      href:"/products/accessories/routers" 
   },
   
   {
@@ -86,6 +102,7 @@ const ServicesData2 = [
     images: ["CP-DPS-PD04V2-12D.jpg"],
     desc:
       "We offer the finest selection of NVR, DVR, and XVR systems for all your security needs.",
+      href:"/products/accessories/smps" 
   },
   {
     id: 3,
@@ -93,6 +110,7 @@ const ServicesData2 = [
     images: ["CP-ANW-GPU8G2-F2.jpg"],
     desc:
       "Wifi Cameras available at most affordable prices",
+      href:"/products/accessories/poe_switches" 
   },
   {
     id: 4,
@@ -107,6 +125,7 @@ const ServicesData2 = [
     images: ["CP-WCC-90R.jpg"],
     desc:
       "Best quality video door phones satisfying your security needs.",
+      href:"/products/accessories/cables" 
   },
 ];
 
@@ -145,7 +164,7 @@ export  function ProductCards1() {
               {service.desc}
             </p>
             <button
-              onClick={() => router.push("/retail")}
+              onClick={() => router.push(service.href)}
               className="mt-3 py-2 px-4 bg-transparent border text-white rounded opacity-0 group-hover:opacity-100 hover:bg-primary hover:text-gray-700 transition-all duration-300"
             >
               View More
@@ -193,7 +212,7 @@ export  function ProductCards2() {
               {service.desc}
             </p>
             <button
-              onClick={() => router.push("/retail")}
+              onClick={() => router.push(service.href)}
               className="mt-3 py-2 px-4 bg-transparent border text-white rounded opacity-0 group-hover:opacity-100 hover:bg-primary hover:text-gray-700 transition-all duration-300"
             >
               View More

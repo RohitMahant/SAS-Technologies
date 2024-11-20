@@ -17,7 +17,7 @@ const slides = [
 export default function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
-  const slideInterval = 5000; // 5 seconds
+  const slideInterval = 3000; // 5 seconds
 
   // Filter slides based on screen type
   const filteredSlides = slides.filter((slide) =>

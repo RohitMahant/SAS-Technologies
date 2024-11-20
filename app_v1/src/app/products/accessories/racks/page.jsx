@@ -14,7 +14,7 @@ export default function HdCameras() {
   // Filter products to show only "CCTV" with "HD" camera type
   const filteredProducts = Products.filter(
     (product) =>
-      product.productType === "DVR"
+      product.productType === "Accessories" && product.accessoryType?.includes('Rack')
   );
 
   // Search functionality

@@ -68,7 +68,7 @@ export default function Home() {
           {/* Pricing Cards */}
           <div className="mt-4 items-center justify-center">
             <div className="w-full md:flex justify-center">
-              <div className="md:h-36 h-24 w-72 md:w-96 lg:w-[650px] lg:h-40 md:m-4 ml-[35px] bg-tertiary">
+              <div className="md:h-36 h-32 w-80 md:w-96 lg:w-[650px] lg:h-40 md:m-4 ml-[35px] bg-tertiary">
                 <img
                   src="/prices_card1.png"
                   alt="Affordable CCTV prices"
@@ -77,7 +77,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full md:flex justify-center">
-              <div className="md:h-36 h-24 w-72 md:w-96 lg:w-[650px] lg:h-40 md:m-4 ml-[35px] mt-2 bg-tertiary">
+              <div className="md:h-36 h-32 w-80  md:w-96 lg:w-[650px] lg:h-40 md:m-4 ml-[35px] mt-2 bg-tertiary">
                 <img
                   src="/prices_card2.png"
                   alt="Biometric system prices"
@@ -86,7 +86,7 @@ export default function Home() {
               </div>
             </div>
             <div className="md:flex justify-center w-full">
-              <div className="md:h-36 h-24 w-72 md:w-96 lg:w-[650px] lg:h-40 md:m-4 ml-[35px] mt-2 bg-tertiary">
+              <div className="md:h-36 h-32 w-80  md:w-96 lg:w-[650px] lg:h-40 md:m-4 ml-[35px] mt-2 bg-tertiary">
                 <img
                   src="/prices_card3.png"
                   alt="Accessory prices in Gurgaon"
@@ -102,9 +102,9 @@ export default function Home() {
           <h1 className="text-2xl md:text-5xl font-cocoBold">
             Premium Brands for Unmatched Security Solutions
           </h1>
-          <p className="text-lg md:text-2xl mt-4 text-center">
+          <p className="text-lg md:text-2xl mt-4">
             We are proud to be authorized resellers of globally trusted brands
-            like **Hikvision**, **CP Plus**, and **Dahua**. Our extensive range
+            like Hikvision, CP Plus, and Hawkvision. Our extensive range
             ensures that every customer gets the best security solutions
             tailored to their requirements in Gurgaon.
           </p>
@@ -199,14 +199,16 @@ export default function Home() {
           Got Questions? <br /> We’re Here to Help
         </h1>
         <div className="flex justify-center mt-8">
-          <button className="flex items-center justify-center w-48 h-12 rounded-md bg-white text-green-600 font-semibold shadow-md hover:bg-green-500 hover:text-white transition-all duration-300 transform hover:scale-105 gap-x-2">
+          <button 
+          onClick={()=>{router.push('/contact')}}
+          className="flex items-center justify-center w-48 h-12 rounded-md bg-white text-green-600 font-semibold shadow-md hover:bg-green-500 hover:text-white transition-all duration-300 transform hover:scale-105 gap-x-2">
             Contact Us
           </button>
         </div>
       </div>
 
       {/* Mobile Quick Action Buttons */}
-      <div className="md:hidden fixed bottom-4 right-4 z-50">
+      <div className="md:hidden fixed bottom-4 right-4 z-30">
         <button
           onClick={() => (window.location.href = "tel:+1234567890")}
           className="w-14 h-14 rounded-full bg-green-500 flex items-center justify-center shadow-lg hover:bg-green-600 transition-all duration-300"

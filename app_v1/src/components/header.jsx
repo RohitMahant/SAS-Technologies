@@ -3,10 +3,12 @@
 import { IoMenuSharp, IoCloseSharp } from "react-icons/io5";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { startTransition } from 'react';  // Start React transition
 import { usePathname, useRouter } from "next/navigation";
 
 export default function Header() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const router = useRouter();
   const pathname = usePathname(); // Get the current pathname
@@ -24,7 +26,10 @@ export default function Header() {
   const handleNavClick = (path) => {
     setIsSidebarOpen(false);
     setIsDropdownOpen(false);
-    router.push(path); // Navigate programmatically
+    startTransition(() => {
+      setIsLoading(true); // Show loading spinner
+      router.push(path); // Navigate programmatically
+    });
   };
 
   const getNavItemClasses = (path) =>
@@ -32,21 +37,15 @@ export default function Header() {
       pathname === path ? "font-cocoBold text-red-800" : "hover:text-textColor"
     }`;
 
-  // // Close dropdown on outside click
-  // useEffect(() => {
-  //   const handleClickOutside = (event) => {
-  //     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-  //       setIsDropdownOpen(false);
-  //     }
-  //   };
+ // Listen to Next.js router events to manage the loading state
+ useEffect(() => {
+  const timer = setTimeout(() => {
+    setIsLoading(false); // Hide loading spinner after a short delay
+  }, 800); // Delay can be adjusted to match the typical loading time
 
-  //   document.addEventListener("mousedown", handleClickOutside);
-  //   return () => {
-  //     document.removeEventListener("mousedown", handleClickOutside);
-  //   };
-  // }, []);
+  return () => clearTimeout(timer); // Clean up the timer
+}, [pathname]);
 
-  // Disable scrolling when sidebar is open
   useEffect(() => {
     if (isSidebarOpen) {
       document.body.style.overflow = "hidden";
@@ -62,6 +61,12 @@ export default function Header() {
 
   return (
     <>
+    {/* Loading spinner */}
+      {isLoading && (
+        <div className="fixed inset-0 bg-white flex justify-center items-center z-50">
+          <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-red-800"></div>
+        </div>
+      )}
       {/* Desktop Navbar */}
       <nav className="hidden w-full border lg:flex sticky z-10 bg-white md:h-16 lg:h-20 items-center justify-center md:gap-x-12 lg:gap-x-16 md:flex">
         <div>
@@ -119,7 +124,7 @@ export default function Header() {
 
 {isDropdownOpen && (
   <ul
-    className={`absolute bg-[#0096C7]/70 text-sm left-0 top-full  w-[250px] shadow-lg p-4 mt-2`}
+    className={`absolute bg-[#0096C7]/70 text-sm left-0 top-full transition-opacity duration-500  w-[250px] shadow-lg p-4 mt-2`}
     ref={dropdownRef}
   >
     <h2 className="text-lg font-bold text-white mb-3">
@@ -130,13 +135,13 @@ export default function Header() {
       { href: "/products/cctv/hd_cameras", label: "HD Cameras" },
       { href: "/products/cctv/wifi_cameras", label: "WiFi Cameras" },
         { href: "/products/recorders/nvr", label: "Network Video Recorders (NVR)" },
-        { href: "/retail", label: "Digital Video Recorders (DVR)" },
-        { href: "/retail", label: "Video Door Phones (VDP)" },
-        { href: "/retail", label: "Door Locks" },
-        { href: "/retail", label: "Switch Mode Power Supplies (SMPS)" },
-        { href: "/retail", label: "Cables" },
-        { href: "/retail", label: "POE Switches" },
-        { href: "/retail", label: "Routers" },
+        { href: "/products/recorders/dvr", label: "Digital Video Recorders (DVR)" },
+        { href: "/products/door_devices/vdp", label: "Video Door Phones (VDP)" },
+        { href: "/products/door_devices/door_locks", label: "Door Locks" },
+        { href: "/products/accessories/smps", label: "Switch Mode Power Supplies (SMPS)" },
+        { href: "/products/accessories/cables", label: "Cables" },
+        { href: "/products/accessories/poe_switches", label: "POE Switches" },
+        { href: "/products/accessories/routers", label: "Routers" },
         { href: "/retail", label: "All Accessories" },
     ].map((item, index) => (
       <li key={index} className="border-b last:border-b-0">
@@ -220,19 +225,20 @@ export default function Header() {
         { href: "/products/cctv/ip_cameras", label: "IP Cameras" },
         { href: "/products/cctv/hd_cameras", label: "HD Cameras" },
         { href: "/products/cctv/wifi_cameras", label: "WiFi Cameras" },
-        { href: "/products/recorders/nvr", label: "Network Video Recorders (NVR)" },
-        { href: "/retail", label: "Digital Video Recorders (DVR)" },
-        { href: "/retail", label: "Video Door Phones (VDP)" },
-        { href: "/retail", label: "Door Locks" },
-        { href: "/retail", label: "Switch Mode Power Supplies (SMPS)" },
-        { href: "/retail", label: "Cables" },
-        { href: "/retail", label: "POE Switches" },
-        { href: "/retail", label: "Routers" },
-        { href: "/retail", label: "All Accessories" },
+          { href: "/products/recorders/nvr", label: "Network Video Recorders (NVR)" },
+          { href: "/products/recorders/dvr", label: "Digital Video Recorders (DVR)" },
+          { href: "/products/door_devices/vdp", label: "Video Door Phones (VDP)" },
+          { href: "/products/door_devices/door_locks", label: "Door Locks" },
+          { href: "/products/accessories/smps", label: "Switch Mode Power Supplies (SMPS)" },
+          { href: "/products/accessories/cables", label: "Cables" },
+          { href: "/products/accessories/poe_switches", label: "POE Switches" },
+          { href: "/products/accessories/routers", label: "Routers" },
+          { href: "/retail", label: "All Accessories" },
       ].map((item, index) => (
         <li key={index} className="border-b last:border-b-0">
           <Link 
             href={item.href} 
+            onClick={() => handleNavClick(item.href)}
             className="block py-2 text-gray-700 hover:text-blue-500 transition duration-300"
           >
             {item.label}
