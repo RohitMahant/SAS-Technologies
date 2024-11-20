@@ -157,7 +157,7 @@ export default function Wholesale() {
       ) : (
         <div className={`bg-[#0096C7]/60 shadow-lg p-6 w-full max-w-md text-white text-center transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <h1 className="text-2xl font-bold mb-4">Thank You!</h1>
-          <p className="mb-4">We'll contact you soon.</p>
+          <p className="mb-4">We&apos;ll contact you soon.</p>
           <p className="mb-6">Would you like to call us?</p>
           <a
             href="tel:+1234567890"
