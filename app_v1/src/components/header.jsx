@@ -23,6 +23,7 @@ export default function Header() {
 
   const handleNavClick = (path) => {
     setIsSidebarOpen(false);
+    setIsDropdownOpen(false);
     router.push(path); // Navigate programmatically
   };
 
@@ -31,19 +32,19 @@ export default function Header() {
       pathname === path ? "font-cocoBold text-red-800" : "hover:text-textColor"
     }`;
 
-  // Close dropdown on outside click
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsDropdownOpen(false);
-      }
-    };
+  // // Close dropdown on outside click
+  // useEffect(() => {
+  //   const handleClickOutside = (event) => {
+  //     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+  //       setIsDropdownOpen(false);
+  //     }
+  //   };
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  //   document.addEventListener("mousedown", handleClickOutside);
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  // }, []);
 
   // Disable scrolling when sidebar is open
   useEffect(() => {
@@ -68,7 +69,7 @@ export default function Header() {
             onClick={() => {
               router.push("/");
             }}
-            src="logo.png"
+            src="/logo.png"
             alt="sas-technologiesLogo"
             className="md:h-14 lg:h-20 cursor-pointer"
           />
@@ -105,49 +106,52 @@ export default function Header() {
             >
               CONTACT US
             </li>
-            <li className="relative group" ref={dropdownRef}>
-              <button
-                className="w-full text-left flex justify-between items-center transition duration-300 rounded-md"
-                onClick={toggleDropdown}
-              >
-                <span className="font-semibold text-gray-800">OUR PRODUCTS</span>
-                <span className="text-gray-600 ml-3">
-                  {isDropdownOpen ? "▲" : "▼"}
-                </span>
-              </button>
-              <div
-                className={`absolute bg-[#0096C7]/70 text-sm left-0 w-[250px] shadow-lg p-4 mt-2 border-gray-200 z-10 space-y-2 max-h-[550px] overflow-y-auto scrollbar-none scrollbar-thumb-gray-300 scrollbar-track-gray-100 transition-all duration-300 ${
-                  isDropdownOpen ? "opacity-100 scale-100" : "opacity-0 scale-95"
-                }`}
-              >
-                <h2 className="text-lg font-bold text-white mb-3">
-                  Explore Our Range of Products
-                </h2>
-                {[
-                  { href: "/retail", label: "IP Cameras" },
-                  { href: "/retail", label: "HD Cameras" },
-                  { href: "/retail", label: "WiFi Cameras" },
-                  { href: "/retail", label: "Network Video Recorders (NVR)" },
-                  { href: "/retail", label: "Digital Video Recorders (DVR)" },
-                  { href: "/retail", label: "Video Door Phones (VDP)" },
-                  { href: "/retail", label: "Door Locks" },
-                  { href: "/retail", label: "Switch Mode Power Supplies (SMPS)" },
-                  { href: "/retail", label: "Cables" },
-                  { href: "/retail", label: "POE Switches" },
-                  { href: "/retail", label: "Routers" },
-                  { href: "/retail", label: "All Accessories" },
-                ].map((item, index) => (
-                  <li key={index} className="border-b last:border-b-0">
-                    <Link
-                      href={item.href}
-                      className="block py-2 text-white transition duration-300"
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </div>
-            </li>
+            <li className="cursor-pointer group relative">
+  <button
+    className="w-full text-left flex justify-between items-center transition duration-300 rounded-md"
+    onClick={toggleDropdown}
+  >
+    <span className="font-semibold text-gray-800">OUR PRODUCTS</span>
+    <span className="text-gray-600 ml-3">
+      {isDropdownOpen ? "▲" : "▼"}
+    </span>
+  </button>
+
+{isDropdownOpen && (
+  <ul
+    className={`absolute bg-[#0096C7]/70 text-sm left-0 top-full  w-[250px] shadow-lg p-4 mt-2`}
+    ref={dropdownRef}
+  >
+    <h2 className="text-lg font-bold text-white mb-3">
+      Explore Our Range of Products
+    </h2>
+    {[
+      { href: "/products/cctv/ip_cameras", label: "IP Cameras" },
+      { href: "/products/cctv/hd_cameras", label: "HD Cameras" },
+      { href: "/products/cctv/wifi_cameras", label: "WiFi Cameras" },
+        { href: "/products/recorders/nvr", label: "Network Video Recorders (NVR)" },
+        { href: "/retail", label: "Digital Video Recorders (DVR)" },
+        { href: "/retail", label: "Video Door Phones (VDP)" },
+        { href: "/retail", label: "Door Locks" },
+        { href: "/retail", label: "Switch Mode Power Supplies (SMPS)" },
+        { href: "/retail", label: "Cables" },
+        { href: "/retail", label: "POE Switches" },
+        { href: "/retail", label: "Routers" },
+        { href: "/retail", label: "All Accessories" },
+    ].map((item, index) => (
+      <li key={index} className="border-b last:border-b-0">
+        <Link
+          href={item.href}
+          className="block py-2 text-white transition duration-300"
+        >
+          {item.label}
+        </Link>
+      </li>
+    ))}
+  </ul>
+)}
+</li>
+
           </ul>
         </div>
       </nav>
@@ -170,7 +174,7 @@ export default function Header() {
             onClick={() => {
               router.push("/");
             }}
-            src="logo.png"
+            src="/logo.png"
             alt="sas-technologiesLogo"
             className="h-14 m-6"
           />
@@ -213,10 +217,10 @@ export default function Header() {
     >
       <h2 className="text-lg font-bold text-gray-700 mb-3">Explore Our Range of Products</h2>
       {[
-        { href: "/retail", label: "IP Cameras" },
-        { href: "/retail", label: "HD Cameras" },
-        { href: "/retail", label: "WiFi Cameras" },
-        { href: "/retail", label: "Network Video Recorders (NVR)" },
+        { href: "/products/cctv/ip_cameras", label: "IP Cameras" },
+        { href: "/products/cctv/hd_cameras", label: "HD Cameras" },
+        { href: "/products/cctv/wifi_cameras", label: "WiFi Cameras" },
+        { href: "/products/recorders/nvr", label: "Network Video Recorders (NVR)" },
         { href: "/retail", label: "Digital Video Recorders (DVR)" },
         { href: "/retail", label: "Video Door Phones (VDP)" },
         { href: "/retail", label: "Door Locks" },

@@ -127,7 +127,7 @@
         "name":"CP-UVR-0801E1-HC/IC ",
         "Price":"3150",
         "Description":"2MP Supported",
-        "img":""  
+        "img":null
     },
     {
         "id":13,
@@ -137,7 +137,7 @@
         "name":"CP-UVR-1601E1-HC/IC",
         "Price":"5140",
         "Description":"2MP Supported",
-        "img":""  
+        "img":null
     },
     {
         "id":14,
@@ -323,5 +323,870 @@
         "Price":"7900",
         "Description":"5MP Supported",
         "img":"CP-UVR-0801L1-4KH Indigo.jpg"  
-    }   
+    }  ,
+    {
+        "id":31,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP",
+        "megaPixels":"2MP",
+        "name":"CP-UNC-DA21PL3",
+        "Price":"1780",
+        "Description":"Normal Gold , Plastic Dome 25fps",
+        "img":"CP-UNC-DA21PL3.jpg"  
+    } , 
+    {
+        "id":32,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP",
+        "megaPixels":"2MP",
+        "name":"CP-UNC-TA21PL3",
+        "Price":"1845",
+        "Description":"Normal Gold , Plastic Bullet 25fps",
+        "img":"CP-UNC-TA21PL3.jpg"  
+    } , 
+    {
+        "id":33,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP",
+        "megaPixels":"2MP",
+        "name":"CP-UNC-DA21L2 GP",
+        "Price":"2115",
+        "Description":"Color Gold",
+        "img":"CP-UNC-DA21L2 GP.jpg"  
+    } , 
+    {
+        "id":34,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP",
+        "megaPixels":"2MP",
+        "name":"CP-UNC-TA21L2 GP ",
+        "Price":"2165",
+        "Description":"Color Gold , ",
+        "img":"CP-UNC-TA21L2 GP.jpg"  
+    } , 
+    {
+        "id":35,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP",
+        "megaPixels":"2MP",
+        "name":"CP-UNC-TA21PL3C ",
+        "Price":"1950",
+        "Description":"Normal Audio , Bullet with Audio",
+        "img":"CP-UNC-TA21PL3C.jpg"  
+    } , 
+    {
+        "id":36,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP",
+        "megaPixels":"4MP",
+        "name":"CP-UNC-VD41L3-VMD J ",
+        "Price":"2850",
+        "Description":"Normal , Plastic Dome 25fps",
+        "img":"CP-UNC-VD41L3-VMD J.jpg"  
+    } , 
+    {
+        "id":37,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP",
+        "megaPixels":"4MP",
+        "name":"CP-UNC-DA41PL3-D",
+        "Price":"2880",
+        "Description":"Normal , Plastic Dome 25fps",
+        "img":"CP-UNC-DA41PL3-D.jpg"  
+    } , 
+    {
+        "id":38,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP",
+        "megaPixels":"4MP",
+        "name":"CP-UNC-TA41PL3C-D",
+        "Price":"3330",
+        "Description":"Normal Audio , Plastic Bullet 25fps",
+        "img":"CP-UNC-TA41PL3C-D.jpg"  
+    } , 
+    {
+        "id":39,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP",
+        "megaPixels":"4MP",
+        "name":"CP-UNC-DA41PL3C-D",
+        "Price":"3010",
+        "Description":"Normal Audio , Plastic Dome 25fps",
+        "img":"CP-UNC-DA41PL3C-D.jpg"  
+    } , 
+    {
+        "id":40,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP",
+        "megaPixels":"4MP",
+        "name":"CP-UNC-DA41L2C-GP ",
+        "Price":"3900",
+        "Description":"Color with Audio , Dome with Audio",
+        "img":"CP-UNC-DA41L2C-GP.jpg"  
+    } , 
+    {
+        "id":41,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP",
+        "megaPixels":"5MP",
+        "name":"CP-UNC-TA51L3C ",
+        "Price":"4250",
+        "Description":"Audio Bullet 25fps",
+        "img":"CP-UNC-TA51L3C.jpg"  
+    } , 
+    {
+        "id":42,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP",
+        "megaPixels":"5MP",
+        "name":"CP-UNC-DA51L3C ",
+        "Price":"4225",
+        "Description":"Audio Dome 25fps",
+        "img":"CP-UNC-DA51L3C.jpg"  
+    } , 
+    {
+        "id":43,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP",
+        "megaPixels":"8MP",
+        "name":"CP-UNC-TA81L3C ",
+        "Price":"7300",
+        "Description":"Audio Bullet 25fps",
+        "img":"CP-UNC-TA81L3C.jpg"  
+    } , 
+    {
+        "id":44,
+        "company":"CP Plus",
+        "productType":"NVR",
+        "channels":"4",
+        "sata":"1",
+        "name":"CP-UNR-104 F1 ",
+        "Price":"3060",
+        "Description":"80 Mbps",
+        "img":"CP-UNR-104 F1.jpg"  
+    } , 
+    {
+        "id":45,
+        "company":"CP Plus",
+        "productType":"NVR",
+        "channels":"8",
+        "sata":"1",
+        "name":"CP-UNR-108 F1 ",
+        "Price":"3540",
+        "Description":"80 Mbps",
+        "img":"CP-UNR-108 F1.jpg"  
+    } , 
+    {
+        "id":46,
+        "company":"CP Plus",
+        "productType":"NVR",
+        "channels":"16",
+        "sata":"1",
+        "name":"CP-UNR-4K216F1-V2 ",
+        "Price":"5240",
+        "Description":"80 Mbps",
+        "img":"CP-UNR-4K216F1-V2.jpg"  
+    } , 
+    {
+        "id":47,
+        "company":"CP Plus",
+        "productType":"NVR",
+        "channels":"16",
+        "sata":"2",
+        "name":"CP-UNR-4K2162-V2 ",
+        "Price":"6400",
+        "Description":"144 Mbps",
+        "img":"CP-UNR-4K2162-V2.jpg"  
+    } , 
+    {
+        "id":48,
+        "company":"CP Plus",
+        "productType":"NVR",
+        "channels":"32",
+        "sata":"2",
+        "name":"CP-UNR-4K4322-V2 ",
+        "Price":"10400",
+        "Description":"200 Mbps",
+        "img":"CP-UNR-4K4322-V2.jpg"  
+    } ,
+    {
+        "id":49,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP",
+        "megaPixels":"2MP",
+        "name":"CP-UNC-DA21PL3-Y ",
+        "Price":"1395",
+        "Description":"Silver line IP Camera",
+        "img":"CP-UNC-DA21PL3-Y.jpg"  
+    } ,  
+    {
+        "id":50,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP",
+        "megaPixels":"2MP",
+        "name":"CP-UNC-TA21PL3-Y ",
+        "Price":"1455",
+        "Description":"Silver line IP Camera",
+        "img":"CP-UNC-TA21PL3-Y.jpg"  
+    } ,  
+    {
+        "id":51,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP",
+        "megaPixels":"2MP",
+        "name":"CP-UNC-DA21PL3C-L-Y ",
+        "Price":"1935",
+        "Description":"Silver Dual",
+        "img":"CP-UNC-DA21PL3C-L-Y.jpg"  
+    } ,
+    {
+        "id":52,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP",
+        "megaPixels":"4MP",
+        "name":"CP-UNC-DA21PL3C-L-Y ",
+        "Price":"1935",
+        "Description":"Color with Audio , Bullet",
+        "img":"CP-UNC-DA21PL3C-L-Y.jpg"  
+    } ,
+    {
+        "id":53,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP",
+        "megaPixels":"4MP",
+        "name":"CP-UNC-TA41PL3C-L-Y",
+        "Price":"1935",
+        "Description":"Color with Audio , Dome",
+        "img":"CP-UNC-TA41PL3C-L-Y.jpg"  
+    } ,
+    {
+        "id":54,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP EZYCAM Wifi",
+        "megaPixels":"2MP",
+        "name":"E-24A",
+        "Price":"1100",
+        "Description":"Wi-Fi Camera",
+        "img":"E-24A.jpg"  
+    } ,
+    {
+        "id":55,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP EZYCAM Wifi",
+        "megaPixels":"2MP",
+        "name":"E-28A",
+        "Price":"1175",
+        "Description":"Wi-Fi Camera ALXA",
+        "img":"E-28A.jpg"  
+    } ,
+    {
+        "id":56,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP EZYCAM Wifi",
+        "megaPixels":"2MP",
+        "name":"E-29A",
+        "Price":"1020",
+        "Description":"Wi-Fi Camera ALXA",
+        "img":"E-29A.jpg"  
+    } ,
+    {
+        "id":57,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP EZYCAM Wifi",
+        "megaPixels":"3MP",
+        "name":"E-31A",
+        "Price":"1220",
+        "Description":"Wi-Fi Camera ALXA",
+        "img":"E-31A.jpg"  
+    } ,
+    {
+        "id":58,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP EZYCAM Wifi",
+        "megaPixels":"3MP",
+        "name":"V31A",
+        "Price":"2000",
+        "Description":"Bullet Wi-Fi Camera ",
+        "img":"V31A.jpg"  
+    } ,
+    {
+        "id":59,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP EZYCAM Wifi",
+        "megaPixels":"3MP",
+        "name":"T31A",
+        "Price":"975",
+        "Description":" Wi-Fi Camera ",
+        "img":"T31A.jpg"  
+    } ,
+    {
+        "id":60,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP EZYCAM Wifi",
+        "megaPixels":"4MP",
+        "name":"E-44A/E-41A",
+        "Price":"2090",
+        "Description":" Wi-Fi Camera ALXA ",
+        "img":"E-44A.jpg"  
+    } ,
+    {
+        "id":61,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP EZYCAM Wifi",
+        "megaPixels":"4MP",
+        "name":"E-48A",
+        "Price":"1900",
+        "Description":"Dome Wi-Fi Camera  ",
+        "img":"E-48A.jpg"  
+    } ,
+    {
+        "id":62,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP EZYCAM Wifi",
+        "megaPixels":"4MP",
+        "name":"V41A",
+        "Price":"2380",
+        "Description":"Bullet Wi-Fi Camera  ",
+        "img":"V41A.jpg"  
+    } ,
+    {
+        "id":63,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP EZYCAM Wifi",
+        "megaPixels":"4MP",
+        "name":"V47A",
+        "Price":"2985",
+        "Description":"Bullet Wi-Fi Camera  ",
+        "img":"V47A.jpg"  
+    } ,
+    {
+        "id":64,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP EZYCAM Wifi",
+        "megaPixels":"4MP",
+        "name":"V48A",
+        "Price":"2515",
+        "Description":"Bullet Wi-Fi Camera  ",
+        "img":"V48A.jpg"  
+    } ,
+    {
+        "id":65,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP EZYCAM Wifi",
+        "megaPixels":"4MP",
+        "name":"EZ-P51",
+        "Price":"2050",
+        "Description":" Wi-Fi Camera  ",
+        "img":"EZ-P51.jpg"  
+    } ,
+    {
+        "id":66,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP EZYCAM PT",
+        "megaPixels":"4MP",
+        "name":"CP-Z43A",
+        "Price":"2575",
+        "Description":" Full color PT camera  ",
+        "img":"CP-Z43A.jpg"  
+    } ,
+    {
+        "id":67,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP EZYCAM ",
+        "megaPixels":"4G",
+        "name":"CP-Z32G",
+        "Price":"3230",
+        "Description":"  PT camera  ",
+        "img":"CP-Z32G.jpg"  
+    } ,
+    {
+        "id":68,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP EZYCAM ",
+        "megaPixels":"4G",
+        "name":"CP-V32G",
+        "Price":"1650",
+        "Description":"  Bullet 4G  ",
+        "img":"CP-V32G.jpg"  
+    } ,
+    {
+        "id":69,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP EZYCAM ",
+        "megaPixels":"4G",
+        "name":"CP-V33GN",
+        "Price":"1725",
+        "Description":"4G Camera ",
+        "img":"CP-V33GN.jpg"  
+    } ,
+    {
+        "id":70,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP EZYCAM ",
+        "megaPixels":"4G",
+        "name":"CP D31G",
+        "Price":"2135",
+        "Description":"Dome 4G  ",
+        "img":"CP D31G.jpg"  
+    } ,
+    {
+        "id":71,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP EZYCAM ",
+        "megaPixels":"4G",
+        "name":"CP-R33G",
+        "Price":"1988",
+        "Description":"Dome 4G  ",
+        "img":"CP-R33G.jpg"  
+    } ,
+    {
+        "id":72,
+        "company":"CP Plus",
+        "productType":"CCTV",
+        "cameraType":"IP EZYCAM Solar-Camera",
+        "megaPixels":"4MP",
+        "name":"CP-Z44R",
+        "Price":"6090",
+        "Description":"Solar Camera  ",
+        "img":"CP-Z44R.jpg"  
+    } ,
+    {
+        "id":73,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "type":"SMPS",
+        "name":"CP-DPS-MD50-12D",
+        "Description":"4 CH Metal Case",
+        "Price":385
+    },
+    {
+        "id":74,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"SMPS",
+        "name":"CP-DPS-MD100-12D",
+        "Description":"8 CH Metal Case",
+        "Price":535
+    },
+    {
+        "id":75,
+        "productType":"Accessories",
+        "accessoryType":"SMPS",
+        "name":"CP-DPS-MD200-12D",
+        "Description":"16 CH Metal Case",
+        "Price":1025
+    },
+    {
+        "id":76,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"SMPS",
+        "name":"CP-DPS-PD04V2-12D",
+        "Description":"4 CH Plastic Housing",
+        "Price":340
+    },
+    {
+        "id":77,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"SMPS",
+        "name":"CP-DPS-PD08V2-12D",
+        "Description":"8 CH Plastic Housing",
+        "Price":385
+    },
+    {
+        "id":78,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"SMPS",
+        "name":"CP-DPS-PD16V2-12D",
+        "Description":"16 CH Plastic Housing",
+        "Price":795
+    },
+    {
+        "id":79,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"Rack",
+        "name":"CP-HA-RK3535VM-2U",
+        "Description":"2U Rack",
+        "Price":545
+    },
+    {
+        "id":80,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"Rack",
+        "name":"CP-HA-RK3535T-2U (ECO)",
+        "Description":"2U Rack",
+        "Price":460
+    },
+    {
+        "id":81,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"Rack",
+        "name":"CP-HA-RK4535VM-2U",
+        "Description":"2U Rack",
+        "Price":710
+    },
+    {
+        "id":82,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"3+1 Cables",
+        "name":"CP-HCC-180R",
+        "Description":"Copper Cable 90M",
+        "Price":1925
+    },
+    {
+        "id":83,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"3+1 Cables",
+        "name":"CP-WCC-90RSO",
+        "Description":"Copper Cable 90M Outdoor",
+        "Price":1080
+    },
+    {
+        "id":84,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"3+1 Cables",
+        "name":"CP-WCC-180RSO",
+        "Description":"Copper Cable 180M Outdoor",
+        "Price":2270
+    },
+    {
+        "id":85,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"3+1 Cables",
+        "name":"CP-WCC-90RS",
+        "Description":"Copper Cable 90M (3+1)",
+        "Price":960
+    },
+    {
+        "id":86,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"3+1 Cables",
+        "name":"CP-WCC-90R",
+        "Description":"Copper Cable 90M (3+1)",
+        "Price":930
+    },
+    {
+        "id":87,
+        "productType":"Accessories",
+        "accessoryType":"3+1 Cables",
+        "name":"CP-WCC-7OR",
+        "Description":"Copper Cable 7+R430M",
+        "Price":810
+    },
+    {
+        "id":88,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"CAT 6 Cables",
+        "name":"CP-EUT-6TGL-100",
+        "Description":"CAT-6 Cable Copper",
+        "Price":2060
+    },
+    {
+        "id":89,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"CAT 6 Cables",
+        "name":"CP-EUT-6TGL-305",
+        "Description":"CAT-6 Cable Copper",
+        "Price":6190
+    },
+    {
+        "id":90,
+        "productType":"Accessories",
+        "accessoryType":"CAT 6 Cables",
+        "name":"CP-EUT-6TGD-305",
+        "Description":"CAT-6 Cable Outdoor",
+        "Price":7065
+    },
+    {
+        "id":91,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"CAT 6 Cables",
+        "name":"CP-EUT-6TSRH-305 (ECO)",
+        "Description":"CAT-6 Cable Alloy",
+        "Price":2580
+    },
+    {
+        "id":92,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"CAT 6 Cables",
+        "name":"CP-EUT-6TSRH-100 (ECO)",
+        "Description":"CAT-6 Cable Alloy",
+        "Price":940
+    },
+    {
+        "id":93,
+        "productType":"Accessories",
+        "accessoryType":"Biometric",
+        "name":"CP-VTA-M1143",
+        "Description":"Face/Finger Reader",
+        "Price":5725
+    },
+    {
+        "id":94,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"Biometric",
+        "name":"CP-VTA-M1043",
+        "Description":"Face/Finger Reader",
+        "Price":3975
+    },
+    {
+        "id":95,
+        "productType":"Accessories",
+        "accessoryType":"Biometric",
+        "name":"CP-VTA-T2324-U",
+        "Description":"Finger Reader",
+        "Price":2390
+    },
+    {
+        "id":96,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"POE Switch 4 Port",
+        "name":"CP-DNW-HPU4H2-48",
+        "Description":"4 Port 10x100 (10/100) 2 Uplink",
+        "Price":950
+    },
+    {
+        "id":97,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"POE Switch 4 Port",
+        "name":"CP-DNW-GPU4G2-48",
+        "Description":"4 Port 10x100x1000 Full Giga (2 Uplink)",
+        "Price":2290
+    },
+    {
+        "id":98,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"POE Switch 4 Port",
+        "name":"CP-DNW-GPU4F2-48",
+        "Description":"4 Port 10x100x1000 Full Giga (2 Uplink)",
+        "Price":2450
+    },
+    {
+        "id":99,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "type":"POE Switch 8 Port",
+        "name":"CP-ANW-HP8H1-96",
+        "description":"8 Port 10x100 (10x100) 1 uplink",
+        "price":1600
+    },
+    {
+        "id":100,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "type":"POE Switch 8 Port",
+        "name":"CP-ANW-DNW-HP8H2-96",
+        "description":"8 Port 10x100 (10x100) 2 uplink",
+        "price":1650
+    },
+    {
+        "id":101,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "type":"POE Switch 8 Port",
+        "name":"CP-ANW-HPU8G2-96",
+        "description":"8 Port 10x100x1000 Full Giga (2 uplink)",
+        "price":2690
+    },
+    {
+        "id":102,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"POE Switch 8 Port",
+        "name":"CP-ANW-GPU8G2-96",
+        "description":"8 Port 10x100x1000 Full Giga (2 uplink)",
+        "price":3490
+    },
+    {
+        "id":103,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "type":"POE Switch 16 Port",
+        "name":"CP-ANW-HP16G2F1-N30",
+        "description":"16 Port 10/100 with 2Giga & 15FP Uplink Ports",
+        "price":6550
+    },
+    {
+        "id":104,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"POE Switch 24 Port",
+        "name":"CP-ANW-HP24G2F1-T25",
+        "description":"24 Port 10/100, 2Giga+1SEP link",
+        "price":7520
+    },
+    {
+        "id":105,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"Non POE Giga Switch",
+        "name":"CP-ANW-GS105T",
+        "description":"5 Port Non POE Giga",
+        "price":750
+    },
+    {
+        "id":106,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"Non POE Giga Switch",
+        "name":"CP-ANW-GS108T",
+        "description":"8 Port Non POE Giga",
+        "price":1180
+    },
+    {
+        "id":107,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"4G Router",
+        "name":"CP-XR-DE21-S",
+        "description":"4G Router",
+        "price":1455
+    },
+    {
+        "id":108,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"VDP",
+        "name":"CP-UVX-701A",
+        "description":"Without Memory",
+        "price":3975
+    },
+    {
+        "id":109,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"VDP",
+        "name":"CP-UVX-701MTA",
+        "description":"With Memory",
+        "price":4910
+    },
+    {
+        "id":110,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"VDP",
+        "name":"CP-PVM-70T",
+        "description":"7\" Indoor Unit",
+        "price":4100
+    },
+    {
+        "id":111,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"VDP",
+        "name":"CP-PAV-C341",
+        "description":"4 Bell Panel (Outdoor Unit)",
+        "price":5250
+    },
+    {
+        "id":112,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"VDP",
+        "name":"CP-L23",
+        "description":"Smart Wi-Fi Doorbell",
+        "price":4790
+    },
+    {
+        "id":113,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"VDP",
+        "name":"CP-UVX-711M",
+        "description":"IP VDP Kit with Mobile App Support",
+        "price":12950
+    },
+    {
+
+        "id":114,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"Rim Lock",
+        "name":"CP Electronix Lock",
+        "description":"EM Lock",
+        "price":0
+    },
+    {
+        "id":115,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"LED Monitor",
+        "name":"CP UEM 19AH",
+        "description":"LED Monitor",
+        "price":4700
+    },
+    {
+        "id":116,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"LED Monitor",
+        "name":"CP UEM 22AH",
+        "description":"LED Monitor",
+        "price":5390
+    },
+    {
+        "id":117,
+        "company":"CP Plus",
+        "productType":"Accessories",
+        "accessoryType":"Memory Card",
+        "name":"CP-NM64",
+        "description":"Memory Card",
+        "price":435
+    }
+    
+    
 ]

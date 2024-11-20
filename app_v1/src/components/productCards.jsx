@@ -123,7 +123,7 @@ export  function ProductCards1() {
           {/* Background Image */}
           <div className="absolute inset-0 w-full h-full overflow-hidden">
             <img
-              src={service.images[0]}
+              src={`/${service.images[0]}`}
               alt={service.cardName}
               className="w-full h-full md:object-contain object-contain transition-transform duration-300 group-hover:scale-110"
             />
@@ -171,7 +171,7 @@ export  function ProductCards2() {
           {/* Background Image */}
           <div className="absolute inset-0 w-full h-full overflow-hidden">
             <img
-              src={service.images[0]}
+             src={`/${service.images[0]}`}
               alt={service.cardName}
               className="w-full h-full md:object-cover object-contain transition-transform duration-300 group-hover:scale-110"
             />

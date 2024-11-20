@@ -70,7 +70,7 @@ export default function Home() {
             <div className="w-full md:flex justify-center">
               <div className="md:h-36 h-24 w-72 md:w-96 lg:w-[650px] lg:h-40 md:m-4 ml-[35px] bg-tertiary">
                 <img
-                  src="prices_card1.png"
+                  src="/prices_card1.png"
                   alt="Affordable CCTV prices"
                   className="h-full"
                 />
@@ -79,7 +79,7 @@ export default function Home() {
             <div className="w-full md:flex justify-center">
               <div className="md:h-36 h-24 w-72 md:w-96 lg:w-[650px] lg:h-40 md:m-4 ml-[35px] mt-2 bg-tertiary">
                 <img
-                  src="prices_card2.png"
+                  src="/prices_card2.png"
                   alt="Biometric system prices"
                   className="h-full"
                 />
@@ -88,7 +88,7 @@ export default function Home() {
             <div className="md:flex justify-center w-full">
               <div className="md:h-36 h-24 w-72 md:w-96 lg:w-[650px] lg:h-40 md:m-4 ml-[35px] mt-2 bg-tertiary">
                 <img
-                  src="prices_card3.png"
+                  src="/prices_card3.png"
                   alt="Accessory prices in Gurgaon"
                   className="h-full"
                 />
@@ -112,47 +112,47 @@ export default function Home() {
           <div className="relative overflow-hidden mt-24">
             <div className="flex gap-12 animate-infinite-scroll">
               <img
-                src="Hikvision.svg"
+                src="/Hikvision.svg"
                 alt="Hikvision cameras in Gurgaon"
                 className="h-44 md:h-72 transition-transform duration-300 hover:scale-110"
               />
 
               <img
-                src="cp-plus.png"
+                src="/cp-plus.png"
                 alt="CP Plus CCTV in Gurgaon"
                 className="h-44 md:h-72 transition-transform duration-300 hover:scale-110"
               />
               <img
-                src="wdsurveillance.png"
+                src="/wdsurveillance.png"
                 alt="WD Surveillance hardrives in Gurgaon"
                 className="h-44 md:h-72 transition-transform duration-300 hover:scale-110"
               />
               <img
-                src="hawkvision.png"
+                src="/hawkvision.png"
                 alt="Hawkvision cameras in Gurgaon"
                 className="h-44 md:h-72 transition-transform duration-300 hover:scale-110"
               />
 
               {/* Repeat logos */}
-              
+
               <img
-                src="wdsurveillance.png"
+                src="/wdsurveillance.png"
                 alt="WD Surveillance hardrives in Gurgaon"
                 className="h-44 md:h-72 transition-transform duration-300 hover:scale-110"
               />
 
               <img
-                src="Hikvision.svg"
+                src="/Hikvision.svg"
                 alt="Hikvision cameras in Gurgaon"
                 className="h-44 md:h-72 transition-transform duration-300 hover:scale-110"
               />
               <img
-                src="cp-plus.png"
+                src="/cp-plus.png"
                 alt="CP Plus CCTV in Gurgaon"
                 className="h-44 md:h-72 transition-transform duration-300 hover:scale-110"
               />
               <img
-                src="hawkvision.png"
+                src="/hawkvision.png"
                 alt="Hawkvision cameras in Gurgaon"
                 className="h-44 md:h-72 transition-transform duration-300 hover:scale-110"
               />
@@ -171,7 +171,7 @@ export default function Home() {
         <div className="mt-12 m-6">
           <div className="w-full flex justify-center">
             <img
-              src="logo.png"
+              src="/logo.png"
               alt="Gurgaon security systems logo"
               className=""
             />

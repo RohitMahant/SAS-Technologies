@@ -41,6 +41,19 @@ export default async function SolutionDetail({ params }) {
           "Cloud storage support",
         ],
       },
+      {
+        id: "4",
+        title: "Smart Video Doorbell",
+        description:
+          "A video doorbell that allows you to see, hear, and speak to visitors at your door from your smartphone.",
+        image: "/images/video_doorbell.jpg",
+        features: [
+          "Two-way audio",
+          "HD video",
+          "Mobile notifications",
+          "Cloud storage support",
+        ],
+      },
     ];
   
     const solution = solutionsData.find((item) => item.id === id);

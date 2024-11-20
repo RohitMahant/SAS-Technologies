@@ -23,6 +23,13 @@ const solutionsData = [
       "A video doorbell that allows you to see, hear, and speak to visitors at your door from your smartphone.",
     image: "/images/video_doorbell.jpg",
   },
+  {
+    id: "4",
+    title: "Smart Video Doorbell",
+    description:
+      "A video doorbell that allows you to see, hear, and speak to visitors at your door from your smartphone.",
+    image: "/images/video_doorbell.jpg",
+  },
 ];
 
 export default function Solutions() {

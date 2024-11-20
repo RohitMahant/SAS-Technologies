@@ -16,8 +16,8 @@ export default function Retail() {
   const [selectedProduct, setSelectedProduct] = useState(null); // For dialog box
   const itemsPerPage = 8;
 
-  const productTypes = ["CCTV", "IP", "HD", "DOME", "BULLET", "NVR", "AUDIO"];
-  const companies = ["CP Plus", "Hikvision", "NEC", "SYNTEL", "I-Range"];
+  const productTypes = ["CCTV", "Recorders", "Biometrics", "Cables", "Racks", "SMPS", "POE","Hardrives","Other"];
+  const companies = ["CP Plus", "Hikvision", "HawkVision","WD Surveillance","I-Range"];
 
   const toggleSelection = (value, selectionType) => {
     const setSelection =
@@ -247,7 +247,7 @@ export default function Retail() {
                   onClick={() => setSelectedProduct(product)} // Open dialog
                 >
                   <img
-                    src={product.img}
+                    src={`/${product.img}`}
                     alt={product.name}
                     className="w-full md:h-72 transition-all duration-500 hover:lg:h-72 lg:h-64 h-28 p-2 object-contain"
                   />
