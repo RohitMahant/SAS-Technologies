@@ -6,6 +6,8 @@ import Footer from "@/components/footer";
 import ReviewCards from "@/components/reviewCards";
 import { IoIosCall, IoIosMail } from "react-icons/io";
 import { useRouter } from "next/navigation";
+import PricingCards from "@/components/pricingCards";
+
 
 export default function Home() {
   const router = useRouter();
@@ -54,19 +56,21 @@ export default function Home() {
             Affordable Prices, Unbeatable Value in Gurgaon
           </h1>
           <h1 className="text-center font-cocoRegular md:text-3xl m-2 md:m-6">
-            Shop confidently with us, knowing we offer **competitive prices**
+            Shop confidently with us, knowing we offer competitive prices
             for both retail and wholesale buyers in Gurgaon and nearby areas.
           </h1>
-          <div className="w-full flex justify-center mt-4">
-            <button
-              onClick={() => router.push("/wholesale")}
-              className="mt-auto py-2 px-4 transition-all duration-500 bg-white border text-gray-700 rounded font-cocoRegular3 hover:bg-primary hover:text-gray-700"
-            >
-              <span>View Wholesale Pricing</span>
-            </button>
-          </div>
+          <div className="flex justify-center mt-8">
+          <button
+            onClick={() => {
+              router.push("/wholesale");
+            }}
+            className="flex items-center justify-center w-48 h-12 rounded-md bg-white text-green-600 font-semibold shadow-md hover:bg-green-500 hover:text-white transition-all duration-300 transform hover:scale-105 gap-x-2"
+          >
+            Go to Wholesale
+          </button>
+        </div>
           {/* Pricing Cards */}
-          <div className="mt-4 items-center justify-center">
+          {/* <div className="mt-4 items-center justify-center">
             <div className="w-full md:flex justify-center">
               <div className="md:h-36 h-32 w-80 md:w-96 lg:w-[650px] lg:h-40 md:m-4 ml-[35px] bg-tertiary">
                 <img
@@ -94,7 +98,8 @@ export default function Home() {
                 />
               </div>
             </div>
-          </div>
+          </div> */}
+          <PricingCards/>
         </div>
 
         {/* Exclusive Brands Section */}
@@ -104,12 +109,13 @@ export default function Home() {
           </h1>
           <p className="text-lg md:text-2xl mt-4">
             We are proud to be authorized resellers of globally trusted brands
-            like Hikvision, CP Plus, and Hawkvision. Our extensive range
-            ensures that every customer gets the best security solutions
-            tailored to their requirements in Gurgaon.
+            like Hikvision, CP Plus, and Hawkvision. Our extensive range ensures
+            that every customer gets the best security solutions tailored to
+            their requirements in Gurgaon.
           </p>
-          {/* Scrolling Brand Logos */}
-          <div className="relative overflow-hidden mt-24">
+          <div className="relative overflow-hidden ">
+           {/* Scrolling Brand Logos */}
+       
             <div className="flex gap-12 animate-infinite-scroll">
               <img
                 src="/Hikvision.svg"
@@ -158,8 +164,9 @@ export default function Home() {
               />
             </div>
           </div>
+          </div>
         </div>
-      </div>
+ 
 
       {/* About Us Section */}
       <div className="md:mt-20">
@@ -199,9 +206,12 @@ export default function Home() {
           Got Questions? <br /> We’re Here to Help
         </h1>
         <div className="flex justify-center mt-8">
-          <button 
-          onClick={()=>{router.push('/contact')}}
-          className="flex items-center justify-center w-48 h-12 rounded-md bg-white text-green-600 font-semibold shadow-md hover:bg-green-500 hover:text-white transition-all duration-300 transform hover:scale-105 gap-x-2">
+          <button
+            onClick={() => {
+              router.push("/contact");
+            }}
+            className="flex items-center justify-center w-48 h-12 rounded-md bg-white text-green-600 font-semibold shadow-md hover:bg-green-500 hover:text-white transition-all duration-300 transform hover:scale-105 gap-x-2"
+          >
             Contact Us
           </button>
         </div>
