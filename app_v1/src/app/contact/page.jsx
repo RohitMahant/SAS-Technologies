@@ -1,8 +1,7 @@
 "use client";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
 import { useState } from "react";
 import { IoCall, IoSend } from "react-icons/io5";
+import Link from "next/link";
 
 export default function Contact() {
   const [phoneNo, setPhoneNo] = useState("");
@@ -10,12 +9,15 @@ export default function Contact() {
   const [queryType, setQueryType] = useState("");
   const [query, setQuery] = useState("");
   const [showDialog, setShowDialog] = useState(false);
+  const [showSuccessDialog, setShowSuccessDialog] = useState(false);
+  const [showErrorDialog, setShowErrorDialog] = useState(false);
+  const [loading, setLoading] = useState(false); // Loading state
 
   const isMobile = () => /Mobi|Android/i.test(navigator.userAgent);
 
   const handleCall = () => {
     if (isMobile()) {
-      window.location.href = `tel:${phoneNo || "8756385493"}`;
+      window.location.href = `tel:${phoneNo || "9802012042"}`;
     } else {
       setShowDialog(true); // Show dialog for desktop users
     }
@@ -23,11 +25,16 @@ export default function Contact() {
 
   const closeDialog = () => setShowDialog(false);
 
+  const closeSuccessDialog = () => setShowSuccessDialog(false);
+  const closeErrorDialog = () => setShowErrorDialog(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // Show loading state when the form is being submitted
 
     const data = {
       phoneNo,
+      email,
       queryType,
       query,
     };
@@ -42,34 +49,36 @@ export default function Contact() {
       });
 
       if (response.ok) {
-        alert("Query sent successfully!");
+        setShowSuccessDialog(true);
         setPhoneNo("");
+        setEmail("");
         setQueryType("");
         setQuery("");
       } else {
-        alert("Failed to send query.");
+        setShowErrorDialog(true);
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("An error occurred. Please try again.");
+      setShowErrorDialog(true);
+    } finally {
+      setLoading(false); // Hide loading state after submission
     }
   };
 
   return (
     <div
-    style={{
-      backgroundImage: "url('/contact_bg_img.jpeg')", // Replace with your image URL
-      backgroundSize: "cover", // Ensures the image covers the entire container
-      backgroundPosition: "center", // Centers the image
-      backgroundRepeat: "no-repeat", // Prevents repetition
-      backgroundColor: "rgba(0, 0, 0, 0.6)", // Adds a dark overlay
-      backgroundBlendMode: "overlay", // Blends the overlay with the image
-    }}
-    className="relative min-h-screen flex flex-col items-center justify-center font-cocoRegular text-gray-600"
-  >
-      {/* Flex container for form and image side by side on lg screens */}
+      style={{
+        backgroundImage: "url('/contact_bg_img.jpeg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundColor: "rgba(0, 0, 0, 0.6)",
+        backgroundBlendMode: "overlay",
+      }}
+      className="relative min-h-screen flex flex-col items-center justify-center font-cocoRegular text-gray-600"
+    >
       <div className="flex flex-col lg:flex-row items-center justify-center mt-8 lg:mt-32 m-4 lg:px-0 lg:space-x-8">
-        <div>
+        <div className="w-full lg:w-2/3"> {/* Adjusted the width of the form container */}
           <div className="text-center px-4 lg:px-0">
             <h1 className="text-3xl lg:text-5xl text-white font-cocoRegular">
               CONTACT US
@@ -83,14 +92,14 @@ export default function Contact() {
           </div>
           <form
             onSubmit={handleSubmit}
-            className="bg-transparent mt-6  w-full  max-w-lg p-6 lg:p-8  font-cocoRegular"
+            className="bg-transparent mt-6 w-full max-w-lg p-6 lg:p-8 font-cocoRegular"
           >
             <input
               type="text"
               placeholder="Phone Number"
               value={phoneNo}
               onChange={(e) => setPhoneNo(e.target.value)}
-              className="w-full border h-10 p-2 font-sans  placeholder:text-sm outline-none focus:ring-0"
+              className="w-full border h-10 p-2 font-sans placeholder:text-sm outline-none focus:ring-0"
               required
               style={{ boxShadow: "none" }}
             />
@@ -99,7 +108,7 @@ export default function Contact() {
               placeholder="Email Address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full border h-10 mt-2 p-2 font-sans placeholder:text-sm  border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0096C7]/80"
+              className="w-full border h-10 mt-2 p-2 font-sans placeholder:text-sm border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0096C7]/80"
               style={{ boxShadow: "none" }}
             />
             <select
@@ -111,9 +120,7 @@ export default function Contact() {
               <option value="" disabled>
                 Query related to
               </option>
-              <option value="product_not_available">
-                Product not available
-              </option>
+              <option value="product_not_available">Product not available</option>
               <option value="price">Price</option>
               <option value="other">Other doubts</option>
             </select>
@@ -122,53 +129,60 @@ export default function Contact() {
               placeholder="Your query"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              className="mt-2 border w-full h-32 p-2  placeholder:text-sm outline-none focus:ring-0 font-sans resize-none"
+              className="mt-2 border w-full h-32 p-2 placeholder:text-sm outline-none focus:ring-0 font-sans resize-none"
               required
               style={{ boxShadow: "none" }}
             />
             <div className="justify-between items-center mt-4">
               <button
                 type="submit"
-                className="w-full md:w-full h-10 gap-x-3 flex justify-center items-center bg-white text-gray-700 border  hover:bg-[#0096C7]/80 hover:text-white  transition-all duration-500"
+                className="w-full md:w-full h-10 gap-x-3 flex justify-center items-center bg-white text-gray-700 border hover:bg-[#0096C7]/80 hover:text-white transition-all duration-500"
+                disabled={loading} // Disable button when loading
               >
                 <span>Send</span>
                 <IoSend size={25} />
               </button>
-              {/* Call Button */}
-
               <h1 className="text-center m-2">or</h1>
               <button
                 type="button"
-                className="w-full md:w-full h-10 gap-x-3 flex justify-center items-center bg-white text-gray-700 border  hover:bg-[#0096C7]/80  hover:text-white transition-all duration-500"
+                className="w-full md:w-full h-10 gap-x-3 flex justify-center items-center bg-white text-gray-700 border hover:bg-[#0096C7]/80 hover:text-white transition-all duration-500"
                 onClick={handleCall}
               >
                 Call
                 <IoCall size={25} />
               </button>
-
-              {/* Send Button */}
             </div>
           </form>
         </div>
-
-        {/* <div className="md:mt-16 m-10 mb-4 w-full lg:mt-0 lg:w-1/2 flex justify-center">
-          <img
-            src="https://lh3.googleusercontent.com/p/AF1QipMvNRvaSVLUgJOfRNBMMKEWxrwCXPAQ6kyvXPOj=s680-w680-h510"
-            alt="Company Building"
-            className="h-52 w-[700px] lg:h-[500px] md:h-[300px] lg:w-[700px] md:w-[700px] rounded-md shadow-lg"
-          />
-        </div> */}
+        <div 
+          style={{
+            backgroundImage: "url('/map.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            backgroundColor: "rgba(0, 0, 0, 0.4)",
+            backgroundBlendMode: "overlay",
+          }}
+          className="h-56 w-full lg:w-2/3 lg:h-80 m-6 rounded-lg flex justify-center items-end" 
+        >
+          <Link
+          target="_blank"
+            href="https://www.google.com/maps/search/X%2F508,First+Floor,Ashok+Puri,Near+Bagga+Sales,New+Railway+Road,Gurugram+-+122+001/@28.4712229,77.0192435,17z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTExOS4wIKXMDSoASAFQAw%3D%3D"
+            className="flex items-center justify-center w-48 h-12 rounded-md bg-white text-green-600 font-semibold shadow-md hover:bg-[#0096C7]/80 hover:text-white transition-all duration-500 border border-white gap-x-2 m-4"
+          >
+          
+            Visit
+         
+         
+          </Link>
+        </div>
       </div>
 
-      {/* Address and Business Hours */}
-      <div className="flex flex-col items-center font-sans lg:mt-20 px-6 m-10 lg:px-0 text-center text-white">
-        <h2 className="text-2xl lg:text-3xl  mb-4">
-          Our Address
-        </h2>
-        <p>1234 Technology Drive,</p>
-        <p>Building 4, Suite 300,</p>
-        <p>Innovation City, CA 90210, USA</p>
-
+      <div className="flex flex-col items-center font-sans lg:mt-20 m-10 lg:px-0 text-center text-white">
+        <h2 className="text-2xl lg:text-3xl mb-4">Our Address</h2>
+        <p>X/508,First Floor,Ashok Puri,</p>
+        <p>Near Bagga Sales,New Railway Road,</p>
+        <p>Gurugram - 122 001 (Haryana)</p>
         <h2 className="text-2xl lg:text-3xl font-cocoRegular mt-8 mb-4">
           Business Hours
         </h2>
@@ -177,14 +191,46 @@ export default function Contact() {
         <p>Sunday: Closed</p>
       </div>
 
-      {/* Modal Dialog */}
+      {/* Success Dialog */}
+      {showSuccessDialog && (
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="bg-white rounded-lg p-6 shadow-lg text-center">
+            <p className="text-lg text-green-600">Query sent successfully!</p>
+            <button
+              className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
+              onClick={closeSuccessDialog}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Error Dialog */}
+      {showErrorDialog && (
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="bg-white rounded-lg p-6 shadow-lg text-center">
+            <p className="text-lg text-red-600">Failed to send query. Please try again.</p>
+            <button
+              className="px-4 py-2 bg-red-800 text-white rounded hover:bg-red-900 transition"
+              onClick={closeErrorDialog}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Call Dialog */}
       {showDialog && (
         <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-50">
           <div className="bg-white rounded-lg p-6 shadow-lg text-center">
-            <h2 className="text-lg font-semibold mb-4">Call Us</h2>
-            <p className="text-sm mb-6">
-              Call us here: <strong className="font-sans">8756385493</strong>
-            </p>
+            <a
+              href="tel:+919802012042"
+              className="bg-green-600 text-white py-3 px-10 rounded-md hover:bg-green-700 transition"
+            >
+              Call Us
+            </a>
             <button
               className="px-4 py-2 bg-red-800 text-white rounded hover:bg-red-900 transition"
               onClick={closeDialog}

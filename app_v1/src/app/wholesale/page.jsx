@@ -12,16 +12,40 @@ export default function Wholesale() {
 
   const [submitted, setSubmitted] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [loading, setLoading] = useState(false); // Loading state
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Data Submitted:", formData);
-    setSubmitted(true);
+    
+    setLoading(true); // Show loading spinner when the form is submitted
+
+    try {
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitted(true); // Set submitted state to true if email is sent successfully
+      } else {
+        // If there's an error (non-2xx status code)
+        console.log(data.error);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    } finally {
+      setLoading(false); // Hide loading spinner after request completes
+    }
   };
 
   useEffect(() => {
@@ -56,6 +80,13 @@ export default function Wholesale() {
         </h1>
       </div>
 
+      {/* Show loading animation */}
+      {loading && (
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-700 bg-opacity-50 z-10">
+          <div className="spinner-border animate-spin border-t-transparent border-red-800 border-4 rounded-full w-16 h-16"></div>
+        </div>
+      )}
+
       {!submitted ? (
         <form
           onSubmit={handleSubmit}
@@ -77,7 +108,7 @@ export default function Wholesale() {
               value={formData.firmName}
               onChange={handleChange}
               required
-              className="w-full p-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0096C7]/80"
+              className="w-full font-sans p-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0096C7]/80"
             />
           </div>
           <div className={`mb-4 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
@@ -160,7 +191,7 @@ export default function Wholesale() {
           <p className="mb-4">We&apos;ll contact you soon.</p>
           <p className="mb-6">Would you like to call us?</p>
           <a
-            href="tel:+1234567890"
+            href="tel:+919802012042"
             className="bg-green-600 text-white py-3 px-10 rounded-md hover:bg-green-700 transition"
           >
             Call Us
