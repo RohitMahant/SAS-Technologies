@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react"
 
 
 const mergeOne = localFont({
@@ -37,6 +38,7 @@ export default function RootLayout({ children }) {
       <body className="relative bg-primary">
         <Header/>
         {children}
+        <Analytics />
         <Footer/>
       </body>
     </html>
