@@ -13,6 +13,7 @@ export default function Wholesale() {
   const [submitted, setSubmitted] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [loading, setLoading] = useState(false); // Loading state
+  const [showErrorDialog, setShowErrorDialog] = useState(false); // Error state
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,7 +22,7 @@ export default function Wholesale() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     setLoading(true); // Show loading spinner when the form is submitted
 
     try {
@@ -38,21 +39,27 @@ export default function Wholesale() {
       if (response.ok) {
         setSubmitted(true); // Set submitted state to true if email is sent successfully
       } else {
-        // If there's an error (non-2xx status code)
+        // If there's an error (non-2xx status code), show the error dialog
+        setShowErrorDialog(true);
         console.log(data.error);
       }
     } catch (error) {
+      setShowErrorDialog(true); // Show error if there's an issue with the request
       console.error("Error:", error);
     } finally {
       setLoading(false); // Hide loading spinner after request completes
     }
   };
 
+  const closeErrorDialog = () => {
+    setShowErrorDialog(false); // Close error dialog
+  };
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true); // Start animating the content
     }, 800); // 2 seconds delay
-    return () => clearTimeout(timer); 
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -65,7 +72,11 @@ export default function Wholesale() {
       }}
     >
       {/* Content and animations */}
-      <div className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+      <div
+        className={`transition-all duration-1000 ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <h1 className="text-center text-xl font-semibold m-3 text-white">
           Are you a dealer looking to place a bulk order?
         </h1>
@@ -87,14 +98,82 @@ export default function Wholesale() {
         </div>
       )}
 
+      {/* Error Dialog */}
+      {showErrorDialog && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-40">
+          <div className="bg-red-600 text-white rounded-lg p-4 shadow-md w-full max-w-xs text-center opacity-100 scale-100 transition-all duration-300">
+            <p className="text-sm font-medium">Oops! Something went wrong.</p>
+            <p className="mt-1 text-xs">
+              We couldn't send your query. Please Check your details.
+            </p>
+            <button
+              className="mt-4 px-4 py-2 bg-transparent border-2 border-white text-white rounded-full hover:bg-white hover:text-red-600 transition"
+              onClick={closeErrorDialog}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Success Dialog */}
+      {submitted && (
+        // <div className={`bg-[#0096C7]/60 shadow-lg p-6 w-full max-w-md text-white text-center transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+        //   <h1 className="text-2xl font-bold mb-4">Thank You!</h1>
+        //   <p className="mb-4">We&apos;ll contact you soon.</p>
+        //   <p className="mb-6">Would you like to call us?</p>
+        //   <a
+        //     href="tel:+919802012042"
+        //     className="bg-green-600 text-white py-3 px-10 rounded-md hover:bg-green-700 transition"
+        //   >
+        //     Call Us
+        //   </a>
+        // </div>
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-40">
+          <div className="bg-[#0096C7]/80 text-white rounded-lg p-4 shadow-md w-full max-w-xs text-center opacity-100 scale-100 transition-all duration-300">
+            <h1 className="text-2xl font-bold mb-4">Thank You!</h1>
+            <p className="mt-1 text-xs">We&apos;ll contact you soon.</p>
+            <p className="mt-1 text-xs">Would you like to call us?</p>
+            <div className="flex flex-col">
+            <button
+              className="mt-4 px-3 py-2 bg-transparent border-2 border-white text-white rounded-full hover:bg-white  transition"
+            >
+              <a
+                href="tel:+919802012042"
+                className=" text-white hover:text-black py-3 px-10 rounded-md transition"
+              >
+                Call Us
+              </a>
+            </button>
+            <button
+              className="mt-4 px-3 py-2 bg-transparent border-2 border-white text-white rounded-full hover:bg-white hover:text-black transition"
+              onClick={setSubmitted(false)}
+            >
+             Close
+            </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {!submitted ? (
         <form
           onSubmit={handleSubmit}
-          className={`bg-white shadow-lg p-6 mt-12 w-full max-w-md transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          className={`bg-white shadow-lg p-6 mt-12 w-full max-w-md transition-all duration-1000 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
         >
-          <h1 className="text-2xl font-bold mb-2 text-center">Wholesale Inquiry</h1>
+          <h1 className="text-2xl font-bold mb-2 text-center">
+            Wholesale Inquiry
+          </h1>
           <hr className="mb-3" />
-          <div className={`mb-4 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+          <div
+            className={`mb-4 transition-all duration-1000 ${
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
+            }`}
+          >
             <label
               htmlFor="firmName"
               className="block text-sm font-medium text-gray-700 mb-1"
@@ -111,7 +190,13 @@ export default function Wholesale() {
               className="w-full font-sans p-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0096C7]/80"
             />
           </div>
-          <div className={`mb-4 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+          <div
+            className={`mb-4 transition-all duration-1000 ${
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
+            }`}
+          >
             <label
               htmlFor="firmAddress"
               className="block text-sm font-medium text-gray-700 mb-1"
@@ -128,7 +213,13 @@ export default function Wholesale() {
               className="w-full p-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0096C7]/80"
             />
           </div>
-          <div className={`mb-4 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+          <div
+            className={`mb-4 transition-all duration-1000 ${
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
+            }`}
+          >
             <label
               htmlFor="phoneNumber"
               className="block text-sm font-medium text-gray-700 mb-1"
@@ -145,7 +236,13 @@ export default function Wholesale() {
               className="w-full p-2 border border-gray-300 font-serif focus:outline-none focus:ring-2 focus:ring-[#0096C7]/80"
             />
           </div>
-          <div className={`mb-4 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+          <div
+            className={`mb-4 transition-all duration-1000 ${
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
+            }`}
+          >
             <label
               htmlFor="email"
               className="block text-sm font-medium text-gray-700 mb-1"
@@ -162,7 +259,13 @@ export default function Wholesale() {
               className="w-full p-2 border border-gray-300 font-serif focus:outline-none focus:ring-2 focus:ring-[#0096C7]/80"
             />
           </div>
-          <div className={`mb-6 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+          <div
+            className={`mb-6 transition-all duration-1000 ${
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
+            }`}
+          >
             <label
               htmlFor="products"
               className="block text-sm font-medium text-gray-700 mb-1"
@@ -186,17 +289,7 @@ export default function Wholesale() {
           </button>
         </form>
       ) : (
-        <div className={`bg-[#0096C7]/60 shadow-lg p-6 w-full max-w-md text-white text-center transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-          <h1 className="text-2xl font-bold mb-4">Thank You!</h1>
-          <p className="mb-4">We&apos;ll contact you soon.</p>
-          <p className="mb-6">Would you like to call us?</p>
-          <a
-            href="tel:+919802012042"
-            className="bg-green-600 text-white py-3 px-10 rounded-md hover:bg-green-700 transition"
-          >
-            Call Us
-          </a>
-        </div>
+        ""
       )}
     </div>
   );

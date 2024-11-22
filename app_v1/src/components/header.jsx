@@ -24,12 +24,19 @@ export default function Header() {
   };
 
   const handleNavClick = (path) => {
-    setIsSidebarOpen(false);
-    setIsDropdownOpen(false);
-    startTransition(() => {
-      setIsLoading(true); // Show loading spinner
-      router.push(path); // Navigate programmatically
-    });
+    if(path===pathname){
+      setIsSidebarOpen(false);
+      setIsDropdownOpen(false);
+    }
+    else{
+      setIsSidebarOpen(false);
+      setIsDropdownOpen(false);
+      startTransition(() => {
+        setIsLoading(true); // Show loading spinner
+        router.push(path); // Navigate programmatically
+      });
+    }
+    
   };
 
   const getNavItemClasses = (path) =>

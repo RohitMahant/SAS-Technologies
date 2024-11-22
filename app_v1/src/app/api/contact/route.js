@@ -1,10 +1,5 @@
 import nodemailer from "nodemailer";
 
-// Regex pattern for validating email
-const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
-// Basic phone number validation (assuming a standard 10-digit number)
-const phoneRegex = /^\d{10}$/;
 
 export  async function POST(req) {
     const formData = await req.json(); 
@@ -12,13 +7,21 @@ export  async function POST(req) {
     const { phoneNo, email, queryType, query } = formData;
 
     // Validate Email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      return new Response(JSON.stringify({ error: "Invalid email address." }));
+      return new Response(
+        JSON.stringify({ error: 'Invalid email address.' }),
+        { status: 400, headers: { 'Content-Type': 'application/json' } }
+      );
     }
 
-    // Validate Phone Number
-    if (!phoneRegex.test(phoneNo)) {
-      return new Response(JSON.stringify({ error: "Invalid phone number. It should be 10 digits." }));
+    // Validate Phone Number (basic validation for example)
+    const phoneRegex = /^[0-9]{10}$/;
+    if (!phoneRegex.test(phoneNumber)) {
+      return new Response(
+        JSON.stringify({ error: 'Invalid phone number. It should be 10 digits.' }),
+        { status: 400, headers: { 'Content-Type': 'application/json' } }
+      );
     }
 
     // Validate Query: Ensure it's not empty or gibberish
@@ -53,8 +56,11 @@ export  async function POST(req) {
      return new Response( JSON.stringify({ message: 'Email sent successfully!' }),
       { status: 200, headers: { 'Content-Type': 'application/json' } })
     } catch (error) {
-      console.error("Error sending email:", error);
-      return new Response(JSON.stringify({ error: "Failed to send email" }));
+      console.error('Error sending email or SMS:', error);
+      return new Response(
+        JSON.stringify({ error: 'There was an issue submitting your query . Please try again later' }),
+        { status: 500, headers: { 'Content-Type': 'application/json' } }
+      );
     }
 
 }

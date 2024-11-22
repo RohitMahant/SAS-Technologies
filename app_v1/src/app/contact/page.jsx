@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState ,useEffect} from "react";
 import { IoCall, IoSend } from "react-icons/io5";
 import Link from "next/link";
 
@@ -12,6 +12,8 @@ export default function Contact() {
   const [showSuccessDialog, setShowSuccessDialog] = useState(false);
   const [showErrorDialog, setShowErrorDialog] = useState(false);
   const [loading, setLoading] = useState(false); // Loading state
+  const [isVisible, setIsVisible] = useState(false);
+
 
   const isMobile = () => /Mobi|Android/i.test(navigator.userAgent);
 
@@ -65,6 +67,13 @@ export default function Contact() {
     }
   };
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true); // Start animating the content
+    }, 800); // 2 seconds delay
+    return () => clearTimeout(timer); 
+  }, []);
+
   return (
     <div
       style={{
@@ -77,7 +86,7 @@ export default function Contact() {
       }}
       className="relative min-h-screen flex flex-col items-center justify-center font-cocoRegular text-gray-600"
     >
-      <div className="flex flex-col lg:flex-row items-center justify-center mt-8 lg:mt-32 m-4 lg:px-0 lg:space-x-8">
+      <div className={`flex flex-col lg:flex-row items-center justify-center mt-8 lg:mt-32 m-4 lg:px-0 lg:space-x-8 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
         <div className="w-full lg:w-2/3"> {/* Adjusted the width of the form container */}
           <div className="text-center px-4 lg:px-0">
             <h1 className="text-3xl lg:text-5xl text-white font-cocoRegular">
@@ -90,6 +99,13 @@ export default function Contact() {
               We’re here to assist you
             </p>
           </div>
+
+      {/* Show loading animation */}
+      {loading && (
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-700 bg-opacity-50 z-10">
+          <div className="spinner-border animate-spin border-t-transparent border-red-800 border-4 rounded-full w-16 h-16"></div>
+        </div>
+      )}
           <form
             onSubmit={handleSubmit}
             className="bg-transparent mt-6 w-full max-w-lg p-6 lg:p-8 font-cocoRegular"
@@ -206,20 +222,22 @@ export default function Contact() {
         </div>
       )}
 
-      {/* Error Dialog */}
-      {showErrorDialog && (
-        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="bg-white rounded-lg p-6 shadow-lg text-center">
-            <p className="text-lg text-red-600">Failed to send query. Please try again.</p>
-            <button
-              className="px-4 py-2 bg-red-800 text-white rounded hover:bg-red-900 transition"
-              onClick={closeErrorDialog}
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
+     {/* Error Dialog */}
+{showErrorDialog && (
+  <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-40 transition-opacity duration-300">
+    <div className="bg-red-600 text-white rounded-lg p-4 shadow-md w-full max-w-xs text-center opacity-100 scale-100 transition-all duration-300 transform">
+      <p className="text-sm font-medium">Something went wrong!</p>
+      <p className="mt-1 text-xs">We couldn't send your query. Please check your details.</p>
+      <button
+        className="mt-4 px-4 py-2 bg-transparent border-2 border-white text-white rounded-full hover:bg-white hover:text-red-600 transition"
+        onClick={closeErrorDialog}
+      >
+        Close
+      </button>
+    </div>
+  </div>
+)}
+
 
       {/* Call Dialog */}
       {showDialog && (

@@ -1,17 +1,33 @@
 "use client";
-import Header from "@/components/header";
+
 import Carousel from "@/components/heroCarousel";
 import { ProductCards1, ProductCards2 } from "@/components/productCards";
-import Footer from "@/components/footer";
+import { useState } from "react";
 import ReviewCards from "@/components/reviewCards";
 import { IoIosCall, IoIosMail } from "react-icons/io";
 import { useRouter } from "next/navigation";
 import PricingCards from "@/components/pricingCards";
+import { startTransition } from 'react'; 
 
 
 export default function Home() {
+
   const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleNavClick = (path) => {
+    startTransition(() => {
+      setIsLoading(true); // Show loading spinner
+      router.push(path); // Navigate programmatically
+    });
+  };
   return (
+    <> {/* Loading spinner */}
+    {isLoading && (
+      <div className="fixed inset-0 bg-white flex justify-center items-center z-50">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-red-800"></div>
+      </div>
+    )}
     <div className=" font-cocoRegular">
       {/* <div className=" md:hidden relative h-20 bg-[#0096C7]/70 text-white">
         <h1 className="text-center p-4 text-2xl font-cocoBold bg-">Welcome to SAS Technologies</h1>
@@ -61,9 +77,7 @@ export default function Home() {
           </h1>
           <div className="flex justify-center mt-8">
           <button
-            onClick={() => {
-              router.push("/wholesale");
-            }}
+            onClick={() => handleNavClick("/wholesale")}
             className="flex items-center justify-center w-48 h-12 rounded-md bg-white text-green-600 font-semibold shadow-md hover:bg-green-500 hover:text-white transition-all duration-300 transform hover:scale-105 gap-x-2"
           >
             Go to Wholesale
@@ -116,7 +130,7 @@ export default function Home() {
           <div className="relative overflow-hidden ">
            {/* Scrolling Brand Logos */}
        
-            <div className="flex gap-12 animate-infinite-scroll">
+            <div className="flex gap-12 md:animate-infinite-scroll animate-infinite-scroll-mobile">
               <img
                 src="/Hikvision.svg"
                 alt="Hikvision cameras in Gurgaon"
@@ -235,5 +249,6 @@ export default function Home() {
         </button>
       </div>
     </div>
+    </>
   );
 }
