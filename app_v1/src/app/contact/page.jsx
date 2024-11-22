@@ -227,7 +227,7 @@ export default function Contact() {
   <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-40 transition-opacity duration-300">
     <div className="bg-red-600 text-white rounded-lg p-4 shadow-md w-full max-w-xs text-center opacity-100 scale-100 transition-all duration-300 transform">
       <p className="text-sm font-medium">Something went wrong!</p>
-      <p className="mt-1 text-xs">We couldn't send your query. Please check your details.</p>
+      <p className="mt-1 text-xs">We couldn&apos;t send your query. Please check your details.</p>
       <button
         className="mt-4 px-4 py-2 bg-transparent border-2 border-white text-white rounded-full hover:bg-white hover:text-red-600 transition"
         onClick={closeErrorDialog}
