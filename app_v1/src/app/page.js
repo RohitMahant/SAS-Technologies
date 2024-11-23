@@ -71,10 +71,10 @@ export default function Home() {
           <h1 className="text-center font-cocoBold text-2xl md:text-5xl">
             Affordable Prices, Unbeatable Value in Gurgaon
           </h1>
-          <h1 className="text-center font-cocoRegular md:text-3xl m-2 md:m-6">
+          <p className="text-center font-cocoRegular md:text-3xl m-2 md:m-6 ">
             Shop confidently with us, knowing we offer competitive prices
             for both retail and wholesale buyers in Gurgaon and nearby areas.
-          </h1>
+          </p>
           <div className="flex justify-center mt-8">
           <button
             onClick={() => handleNavClick("/wholesale")}
@@ -130,52 +130,30 @@ export default function Home() {
           <div className="relative overflow-hidden ">
            {/* Scrolling Brand Logos */}
        
-            <div className="flex gap-12 md:animate-infinite-scroll animate-infinite-scroll-mobile">
+            <div className="grid md:grid-cols-4 grid-cols-2">
               <img
                 src="/Hikvision.svg"
                 alt="Hikvision cameras in Gurgaon"
-                className="h-44 md:h-72 transition-transform duration-300 hover:scale-110"
+                className="h-44 md:h-72 transition-transform animate-pulse duration-300 hover:scale-110"
               />
 
               <img
                 src="/cp-plus.png"
                 alt="CP Plus CCTV in Gurgaon"
-                className="h-44 md:h-72 transition-transform duration-300 hover:scale-110"
+                className="h-44 md:h-72 transition-transform  animate-pulse duration-300 hover:scale-110"
               />
               <img
                 src="/wdsurveillance.png"
                 alt="WD Surveillance hardrives in Gurgaon"
-                className="h-44 md:h-72 transition-transform duration-300 hover:scale-110"
+                className="h-30 md:h-72 transition-transform animate-pulse duration-300 hover:scale-110"
               />
               <img
                 src="/hawkvision.png"
                 alt="Hawkvision cameras in Gurgaon"
-                className="h-44 md:h-72 transition-transform duration-300 hover:scale-110"
+                className="h-30 md:h-72 transition-transform  animate-pulse duration-300 hover:scale-110"
               />
 
-              {/* Repeat logos */}
-
-              <img
-                src="/wdsurveillance.png"
-                alt="WD Surveillance hardrives in Gurgaon"
-                className="h-44 md:h-72 transition-transform duration-300 hover:scale-110"
-              />
-
-              <img
-                src="/Hikvision.svg"
-                alt="Hikvision cameras in Gurgaon"
-                className="h-44 md:h-72 transition-transform duration-300 hover:scale-110"
-              />
-              <img
-                src="/cp-plus.png"
-                alt="CP Plus CCTV in Gurgaon"
-                className="h-44 md:h-72 transition-transform duration-300 hover:scale-110"
-              />
-              <img
-                src="/hawkvision.png"
-                alt="Hawkvision cameras in Gurgaon"
-                className="h-44 md:h-72 transition-transform duration-300 hover:scale-110"
-              />
+              
             </div>
           </div>
           </div>
@@ -183,7 +161,7 @@ export default function Home() {
  
 
       {/* About Us Section */}
-      <div className="md:mt-20">
+      <div className="md:mt-20 mt-24">
         <h1 className="text-center text-gray-800 text-3xl md:text-5xl font-cocoBold">
           About Us: Leaders in Security Systems in Gurgaon
         </h1>
@@ -202,10 +180,10 @@ export default function Home() {
           </h1>
           <p className="text-center md:text-2xl m-4">
             Operating since{" "}
-            <span className="font-serif text-4xl font-bold">**2001**</span>,
+            <span className="font-serif text-4xl font-bold">2001</span>,
             we’ve been trusted by thousands of satisfied customers in Gurgaon
-            and beyond. Join our growing family of over **
-            <span className="font-serif text-4xl font-bold">1000+</span>** happy
+            and beyond. Join our growing family of over 
+            <span className="font-serif text-4xl font-bold">1000+</span>happy
             clients.
           </p>
         </div>

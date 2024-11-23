@@ -118,6 +118,7 @@ const ServicesData2 = [
     images: ["CP UEM 19AH.jpg"],
     desc:
       "State of the art Biometric locks and Attendance systems",
+      href:"/products/accessories/monitors" 
   },
   {
     id: 5,

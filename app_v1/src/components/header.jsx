@@ -150,6 +150,7 @@ export default function Header() {
         { href: "/products/accessories/racks", label: "Racks" },
         { href: "/products/accessories/poe_switches", label: "POE Switches" },
         { href: "/products/accessories/routers", label: "Routers" },
+        { href: "/products/accessories/biometrics", label: " Biometric Systems" },
         { href: "/retail", label: "All Accessories" },
     ].map((item, index) => (
       <li key={index} className="border-b last:border-b-0">
@@ -227,7 +228,7 @@ export default function Header() {
   </button>
   {isDropdownOpen && (
     <ul 
-      className="absolute bg-white text-sm left-0 w-full shadow-lg p-4 mt-2   border-gray-200 z-10 space-y-2 max-h-[500px] overflow-y-auto scrollbar-none scrollbar-thumb-gray-300 scrollbar-track-gray-100"
+      className="absolute duration-500 bg-white text-sm left-0 w-full shadow-lg p-4 mt-2   border-gray-200 z-10 space-y-2 max-h-[500px] overflow-y-auto scrollbar-none scrollbar-thumb-gray-300 scrollbar-track-gray-100"
     >
       <h2 className="text-lg font-bold text-gray-700 mb-3">Explore Our Range of Products</h2>
       {[
@@ -241,7 +242,9 @@ export default function Header() {
           { href: "/products/accessories/smps", label: "Switch Mode Power Supplies (SMPS)" },
           { href: "/products/accessories/cables", label: "Cables" },
           { href: "/products/accessories/poe_switches", label: "POE Switches" },
+
           { href: "/products/accessories/routers", label: "Routers" },
+          { href: "/products/accessories/biometrics", label: " Biometric Systems" },
           { href: "/retail", label: "All Accessories" },
       ].map((item, index) => (
         <li key={index} className="border-b last:border-b-0">
