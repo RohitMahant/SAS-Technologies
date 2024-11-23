@@ -20,13 +20,33 @@ export async function POST(req) {
     }
 
     // Validate Phone Number (basic validation for example)
-    const phoneRegex = /^[0-9]{10}$/;
+    const phoneRegex = /^[7-9][0-9]{9}$/;
     if (!phoneRegex.test(phoneNumber)) {
       return new Response(
         JSON.stringify({ error: 'Invalid phone number. It should be 10 digits.' }),
         { status: 400, headers: { 'Content-Type': 'application/json' } }
       );
     }
+
+      // Validate Phone Number (basic validation for example)
+      const firmNameRegex = /^[A-Za-z0-9&\.\-\s]{3,50}$/;
+
+      if (!firmNameRegex.test(firmName)) {
+        return new Response(
+          JSON.stringify({ error: 'Invalid firmName' }),
+          { status: 400, headers: { 'Content-Type': 'application/json' } }
+        );
+      }
+     
+      const addressRegex = /^[A-Za-z0-9\s,.\-#]+(\s[A-Za-z0-9\s,.\-#]+)*$/;
+
+
+      if (!addressRegex.test(firmAddress)) {
+        return new Response(
+          JSON.stringify({ error: 'Invalid firmAddress' }),
+          { status: 400, headers: { 'Content-Type': 'application/json' } }
+        );
+      }
 
     // Send email using Nodemailer
     const transporter = nodemailer.createTransport({

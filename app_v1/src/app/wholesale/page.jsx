@@ -14,6 +14,7 @@ export default function Wholesale() {
   const [isVisible, setIsVisible] = useState(false);
   const [loading, setLoading] = useState(false); // Loading state
   const [showErrorDialog, setShowErrorDialog] = useState(false); // Error state
+  const [showSuccessDialog, setShowSuccessDialog] = useState(false); // Success state
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -37,7 +38,8 @@ export default function Wholesale() {
       const data = await response.json();
 
       if (response.ok) {
-        setSubmitted(true); // Set submitted state to true if email is sent successfully
+        setSubmitted(true); 
+        setShowSuccessDialog(true) // Set submitted state to true if email is sent successfully
       } else {
         // If there's an error (non-2xx status code), show the error dialog
         setShowErrorDialog(true);
@@ -53,6 +55,18 @@ export default function Wholesale() {
 
   const closeErrorDialog = () => {
     setShowErrorDialog(false); // Close error dialog
+  };
+
+  const closeSuccessDialog = () => {
+    setShowSuccessDialog(false);
+    setSubmitted(false); // Close success dialog
+    setFormData({ // Reset form fields to initial empty values
+      firmName: "",
+      firmAddress: "",
+      phoneNumber: "",
+      email: "",
+      products: "",
+    });
   };
 
   useEffect(() => {
@@ -104,7 +118,7 @@ export default function Wholesale() {
           <div className="bg-red-600 text-white rounded-lg p-4 shadow-md w-full max-w-xs text-center opacity-100 scale-100 transition-all duration-300">
             <p className="text-sm font-medium">Oops! Something went wrong.</p>
             <p className="mt-1 text-xs">
-              We couldn&apos;t send your query. Please Check your details.
+              We couldn&apos;t submit your form. Please Check your details.
             </p>
             <button
               className="mt-4 px-4 py-2 bg-transparent border-2 border-white text-white rounded-full hover:bg-white hover:text-red-600 transition"
@@ -117,40 +131,29 @@ export default function Wholesale() {
       )}
 
       {/* Success Dialog */}
-      {submitted && (
-        // <div className={`bg-[#0096C7]/60 shadow-lg p-6 w-full max-w-md text-white text-center transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-        //   <h1 className="text-2xl font-bold mb-4">Thank You!</h1>
-        //   <p className="mb-4">We&apos;ll contact you soon.</p>
-        //   <p className="mb-6">Would you like to call us?</p>
-        //   <a
-        //     href="tel:+919802012042"
-        //     className="bg-green-600 text-white py-3 px-10 rounded-md hover:bg-green-700 transition"
-        //   >
-        //     Call Us
-        //   </a>
-        // </div>
+      {showSuccessDialog && (
         <div className="fixed inset-0 flex items-center justify-center w-full h-screen z-50 bg-black bg-opacity-40">
           <div className="bg-[#0096C7]/80 text-white rounded-lg p-4 shadow-md w-full max-w-xs text-center opacity-100 scale-100 transition-all duration-300">
             <h1 className="text-2xl font-bold mb-4">Thank You!</h1>
             <p className="mt-1 text-xs">We&apos;ll contact you soon.</p>
             <p className="mt-1 text-xs">Would you like to call us?</p>
             <div className="flex flex-col">
-            <button
-              className="mt-4 px-3 py-2 bg-transparent border-2 border-white text-white rounded-full hover:bg-white  transition"
-            >
-              <a
-                href="tel:+919802012042"
-                className=" text-white hover:text-black py-3 px-10 rounded-md transition"
+              <button
+                className="mt-4 px-3 py-2 bg-transparent border-2 border-white text-white rounded-full hover:bg-white  transition"
               >
-                Call Us
-              </a>
-            </button>
-            <button
-              className="mt-4 px-3 py-2 bg-transparent border-2 border-white text-white rounded-full hover:bg-white hover:text-black transition"
-              onClick={setSubmitted(false)}
-            >
-             Close
-            </button>
+                <a
+                  href="tel:+919802012042"
+                  className=" text-white hover:text-black py-3 px-10 rounded-md transition"
+                >
+                  Call Us
+                </a>
+              </button>
+              <button
+                onClick={closeSuccessDialog}
+                className="mt-4 px-3 py-2 bg-transparent border-2 border-white text-white rounded-full hover:bg-white hover:text-black transition"
+              >
+                Close
+              </button>
             </div>
           </div>
         </div>

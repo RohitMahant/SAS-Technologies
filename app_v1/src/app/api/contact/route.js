@@ -16,7 +16,7 @@ export  async function POST(req) {
     }
 
     // Validate Phone Number (basic validation for example)
-    const phoneRegex = /^[0-9]{10}$/;
+    const phoneRegex = /^[7-9][0-9]{9}$/;
     if (!phoneRegex.test(phoneNo)) {
       return new Response(
         JSON.stringify({ error: 'Invalid phone number. It should be 10 digits.' }),

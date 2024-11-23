@@ -102,7 +102,7 @@ export default function Contact() {
 
       {/* Show loading animation */}
       {loading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-700 bg-opacity-50 z-10">
+        <div className="absolute inset-0 flex items-center justify-center md:bg-transparent z-10">
           <div className="spinner-border animate-spin border-t-transparent border-red-800 border-4 rounded-full w-16 h-16"></div>
         </div>
       )}
@@ -222,13 +222,13 @@ export default function Contact() {
         </div>
       )} */}
       {showSuccessDialog && (
-  <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-40 transition-opacity duration-300">
+  <div className="fixed inset-0 flex items-center justify-center z-50 ">
     <div className="bg-[#0096C7]/80 text-white rounded-lg p-4 shadow-md w-full max-w-xs text-center opacity-100 scale-100 transition-all duration-300 transform">
       <p className="text-sm font-medium">Query Sent Successfully</p>
       <p className="mt-1 text-xs">We will contact you soon !</p>
       <button
         className="mt-4 px-4 py-2 bg-transparent border-2 border-white text-white rounded-full hover:bg-white hover:text-black transition"
-        onClick={closeErrorDialog}
+        onClick={closeSuccessDialog}
       >
         Close
       </button>
