@@ -1,0 +1,9 @@
+# Allow all search engines to crawl the entire website
+User-agent: *
+Allow: /
+
+# Host
+Host: https://sastechnologies.net
+
+# Sitemap
+Sitemap: https://sastechnologies.net/sitemap.xml

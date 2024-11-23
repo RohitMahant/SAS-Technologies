@@ -25,9 +25,10 @@ const cocoRegular = localFont({
 });
 
 export const metadata = {
-  title: "sastechnologies",
-  description: "CCTV Camera sellers in Gurgaon",
+  title: "SAS Technologies - CCTV Camera & Security Solutions in Gurgaon",
+  description: "SAS Technologies offers high-quality CCTV cameras, IP cameras, and security solutions in Gurgaon. Explore our products for home, business, and industrial security needs.",
 };
+
 
 export default function RootLayout({ children }) {
   return (
