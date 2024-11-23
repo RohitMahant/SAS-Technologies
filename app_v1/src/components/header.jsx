@@ -147,6 +147,7 @@ export default function Header() {
         { href: "/products/door_devices/door_locks", label: "Door Locks" },
         { href: "/products/accessories/smps", label: "Switch Mode Power Supplies (SMPS)" },
         { href: "/products/accessories/cables", label: "Cables" },
+        { href: "/products/accessories/racks", label: "Racks" },
         { href: "/products/accessories/poe_switches", label: "POE Switches" },
         { href: "/products/accessories/routers", label: "Routers" },
         { href: "/retail", label: "All Accessories" },
@@ -154,6 +155,7 @@ export default function Header() {
       <li key={index} className="border-b last:border-b-0">
         <Link
           href={item.href}
+          onClick={() => handleNavClick("/wholesale")}
           className="block py-2 text-white transition duration-300"
         >
           {item.label}

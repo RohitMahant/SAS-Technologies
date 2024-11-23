@@ -5,11 +5,27 @@ import { MdClose, MdOutlineNavigateNext } from "react-icons/md";
 import Products from "@/db/products.json";
 import { GrPrevious } from "react-icons/gr";
 
-export default function HdCameras() {
+export default function DoorLocks() {
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedProduct, setSelectedProduct] = useState(null); // For dialog box
   const itemsPerPage = 8;
+
+
+  const [showDialog,setShowDialog] = useState(false)
+
+  const isMobile = () => /Mobi|Android/i.test(navigator.userAgent);
+  const handleCall = () => {
+    if (isMobile()) {
+      window.location.href = `tel:${ "9802012042"}`;
+      setShowDialog(false)
+    } else {
+      setShowDialog(true); // Show dialog for desktop users
+    }
+  };
+
+  const closeDialog = () =>{setShowDialog(false)}
+
 
   // Filter products to show only "CCTV" with "HD" camera type
   const filteredProducts = Products.filter(
@@ -29,11 +45,20 @@ export default function HdCameras() {
   );
 
   const handleNextPage = () => {
-    if (currentPage < totalPages) setCurrentPage(currentPage + 1);
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+      // Smooth scroll to the top
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
+  // Handle Previous Page
   const handlePreviousPage = () => {
-    if (currentPage > 1) setCurrentPage(currentPage - 1);
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+      // Smooth scroll to the top
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
   return (
@@ -119,7 +144,7 @@ export default function HdCameras() {
 
             {/* Dialog Box */}
             {selectedProduct && (
-              <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+              <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-40">
                 <div className="bg-white p-6 rounded-lg shadow-lg w-[90%] md:w-1/2">
                   <div className="flex justify-between items-center mb-4">
                     <h2 className="text-lg font-semibold">
@@ -132,18 +157,47 @@ export default function HdCameras() {
                     />
                   </div>
                   <img
-                    src={selectedProduct.img}
+                    src={`/${selectedProduct.img}`}
                     alt={selectedProduct.name}
                     className="w-full h-64 object-contain mb-4"
                   />
-                  <p className="text-gray-600">{selectedProduct.Description}</p>
+                  {/* Bullet Point Description */}
+                  <div className="text-gray-600 mb-4">
+                    <p className="font-semibold mb-2">Description:</p>
+                    <ul className="list-disc pl-5 space-y-1">
+                      <li>
+                        High-quality surveillance for your security needs.
+                      </li>
+                      <li>Durable and reliable for long-term use.</li>
+                      <li>Easy installation and setup.</li>
+                      <li>Comes with a one-year warranty.</li>
+                    </ul>
+                  </div>
                   <p className="font-semibold text-red-800">
                     Price: Rs {selectedProduct.Price}
                   </p>
-                  <button className="mt-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700">
-                    Contact
+                  <button
+                    onClick={handleCall}
+                    className="mt-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
+                  >
+                    Get best Price
                   </button>
                 </div>
+                {showDialog && (
+                  <div className="fixed inset-0 flex items-center justify-center z-50 ">
+                    <div className="bg-[#0096C7]/80 text-white rounded-lg p-4 shadow-md w-full max-w-xs text-center opacity-100 scale-100 transition-all duration-300 transform">
+                      <p className="text-sm font-medium">Want to call us ?</p>
+                      <p className="mt-1 text-xs">Dial this</p>
+                      <h1 className="text-md font-sans mt-1">9802012042</h1>
+                      <button
+                        className="mt-4 px-4 py-2 bg-transparent border-2 border-white text-white rounded-full hover:bg-white hover:text-black transition"
+                        onClick={closeDialog}
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                )}
               </div>
             )}
           </div>

@@ -236,6 +236,22 @@ export default function Contact() {
   </div>
 )}
 
+{showDialog && (
+  <div className="fixed inset-0 flex items-center justify-center z-50 ">
+    <div className="bg-[#0096C7]/80 text-white rounded-lg p-4 shadow-md w-full max-w-xs text-center opacity-100 scale-100 transition-all duration-300 transform">
+      <p className="text-sm font-medium">Want to call us ?</p>
+      <p className="mt-1 text-xs">Dial this</p>
+      <h1 className="text-md font-sans mt-1">9802012042</h1>
+      <button
+        className="mt-4 px-4 py-2 bg-transparent border-2 border-white text-white rounded-full hover:bg-white hover:text-black transition"
+        onClick={closeDialog}
+      >
+        Close
+      </button>
+    </div>
+  </div>
+)}
+
      {/* Error Dialog */}
 {showErrorDialog && (
   <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-40 transition-opacity duration-300">

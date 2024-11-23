@@ -5,13 +5,13 @@ import { MdClose, MdOutlineNavigateNext } from "react-icons/md";
 import Products from "@/db/products.json";
 import { GrPrevious } from "react-icons/gr";
 
-export default function HdCameras() {
+
+export default function Router() {
   const [searchTerm, setSearchTerm] = useState("");
+
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedProduct, setSelectedProduct] = useState(null); // For dialog box
   const itemsPerPage = 8;
-
-
   const [showDialog,setShowDialog] = useState(false)
 
   const isMobile = () => /Mobi|Android/i.test(navigator.userAgent);
@@ -27,11 +27,9 @@ export default function HdCameras() {
   const closeDialog = () =>{setShowDialog(false)}
 
 
-
   // Filter products to show only "CCTV" with "HD" camera type
   const filteredProducts = Products.filter(
-    (product) =>
-      product.productType === "Accessories" && product.accessoryType?.includes('Rack')
+    (product) => product.productType === "Router" 
   );
 
   // Search functionality
@@ -45,7 +43,7 @@ export default function HdCameras() {
     currentPage * itemsPerPage
   );
 
- const handleNextPage = () => {
+  const handleNextPage = () => {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
       // Smooth scroll to the top
@@ -91,7 +89,7 @@ export default function HdCameras() {
               {paginatedProducts.map((product) => (
                 <div
                   key={product.id}
-                  className="flex-none md:h-96 h-52 w-[calc(50%-1.2rem)] sm:w-[calc(33.33%-1.5rem)] md:w-[calc(25%-1.5rem)] bg-white shadow-md border overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
+                  className="flex-none md:h-96  h-52 w-[calc(50%-1.2rem)] sm:w-[calc(33.33%-1.5rem)] md:w-[calc(25%-1.5rem)] bg-white shadow-md border overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
                   onClick={() => setSelectedProduct(product)} // Open dialog
                 >
                   <img
@@ -143,8 +141,8 @@ export default function HdCameras() {
               </button>
             </div>
 
-             {/* Dialog Box */}
-             {selectedProduct && (
+            {/* Dialog Box */}
+            {selectedProduct && (
               <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-40">
                 <div className="bg-white p-6 rounded-lg shadow-lg w-[90%] md:w-1/2">
                   <div className="flex justify-between items-center mb-4">

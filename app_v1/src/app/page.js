@@ -234,7 +234,7 @@ export default function Home() {
       {/* Mobile Quick Action Buttons */}
       <div className="md:hidden fixed bottom-4 right-4 z-30">
         <button
-          onClick={() => (window.location.href = "tel:+1234567890")}
+          onClick={() => (window.location.href = "tel:+9802012042")}
           className="w-14 h-14 rounded-full bg-green-500 flex items-center justify-center shadow-lg hover:bg-green-600 transition-all duration-300"
         >
           <IoIosCall size={30} color="white" />
