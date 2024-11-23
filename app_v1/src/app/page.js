@@ -78,7 +78,7 @@ export default function Home() {
           <div className="flex justify-center mt-8">
           <button
             onClick={() => handleNavClick("/wholesale")}
-            className="flex items-center justify-center w-48 h-12 rounded-md bg-white text-green-600 font-semibold shadow-md hover:bg-green-500 hover:text-white transition-all duration-300 transform hover:scale-105 gap-x-2"
+          className="flex items-center justify-center w-48 h-12 rounded-md bg-white text-green-600 font-semibold shadow-md hover:bg-[#0096C7]/80 hover:text-white transition-all duration-500 border hover:scale-110 border-white gap-x-2 m-4"
           >
             Go to Wholesale
           </button>
@@ -145,12 +145,12 @@ export default function Home() {
               <img
                 src="/wdsurveillance.png"
                 alt="WD Surveillance hardrives in Gurgaon"
-                className="h-30 md:h-72 transition-transform animate-pulse duration-300 hover:scale-110"
+                className="h-30 md:h-56 transition-transform animate-pulse duration-300 hover:scale-110"
               />
               <img
                 src="/hawkvision.png"
                 alt="Hawkvision cameras in Gurgaon"
-                className="h-30 md:h-72 transition-transform  animate-pulse duration-300 hover:scale-110"
+                className="h-30 md:h-56 transition-transform  animate-pulse duration-300 hover:scale-110"
               />
 
               
@@ -202,7 +202,7 @@ export default function Home() {
             onClick={() => {
               router.push("/contact");
             }}
-            className="flex items-center justify-center w-48 h-12 rounded-md bg-white text-green-600 font-semibold shadow-md hover:bg-green-500 hover:text-white transition-all duration-300 transform hover:scale-105 gap-x-2"
+           className="flex items-center justify-center w-48 h-12 rounded-md bg-white text-green-600 font-semibold shadow-md hover:bg-[#0096C7]/80 hover:text-white transition-all duration-500 hover:scale-110 border border-white gap-x-2 m-4"
           >
             Contact Us
           </button>
