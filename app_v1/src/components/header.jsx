@@ -122,19 +122,21 @@ export default function Header() {
   <button
     className="w-full text-left flex justify-between items-center transition duration-300 rounded-md"
     onClick={toggleDropdown}
+    onMouseEnter={toggleDropdown}
   >
     <span className="font-semibold text-gray-800">OUR PRODUCTS</span>
-    <span className="text-gray-600 ml-3">
+    {/* <span className="text-gray-600 ml-3">
       {isDropdownOpen ? "▲" : "▼"}
-    </span>
+    </span> */}
   </button>
 
 {isDropdownOpen && (
   <ul
-    className={`absolute bg-[#0096C7]/70 text-sm left-0 top-full transition-opacity duration-500  w-[250px] shadow-lg p-4 mt-2`}
+    className={`absolute bg-[#0096C7]/70 text-sm left-0 top-full transition-opacity duration-500  w-[250px] shadow-lg mt-2`}
     ref={dropdownRef}
+    onMouseLeave={toggleDropdown}
   >
-    <h2 className="text-lg font-bold text-white mb-3">
+    <h2 className="text-lg font-bold text-white mb-3 pl-4 pt-4">
       Explore Our Range of Products
     </h2>
     {[
@@ -157,7 +159,7 @@ export default function Header() {
         <Link
           href={item.href}
           onClick={() => handleNavClick("/wholesale")}
-          className="block py-2 text-white transition duration-300"
+          className="block py-2 text-white transition hover:bg-red-800/80 duration-300 pl-2 "
         >
           {item.label}
         </Link>
