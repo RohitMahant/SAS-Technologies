@@ -29,11 +29,11 @@ const PricingCards = () => {
         {/* Pricing Card 1 */}
         <div
           style={{
-            backgroundImage: "url('/CP_UNC_VD41L3E_VMD.jpg')", // Replace with a suitable URL
+            backgroundImage: "url('/hawkvision_camera.png')", // Replace with a suitable URL
             backgroundBlendMode: "overlay",
             backgroundColor: "rgba(0, 0, 0, 0.6)", // Adds transparency
           }}
-          className="md:h-36 h-32 w-80 md:w-96 lg:w-[700px]  lg:h-56 md:m-4 mt-6 bg-cover bg-center bg-no-repeat rounded-lg shadow-lg p-4 flex items-center justify-center hover:scale-110 transition-all duration-500"
+          className="md:h-36 h-32 w-80 md:w-96 lg:w-[700px]  lg:h-56 md:m-4 mt-6 bg-contain bg-center bg-no-repeat rounded-lg shadow-lg p-4 flex items-center justify-center hover:scale-110 transition-all duration-500"
         >
           <div className="text-center">
             <h3 className="md:text-xl font-semibold text-white mb-2">
@@ -54,11 +54,11 @@ const PricingCards = () => {
         {/* Pricing Card 2 */}
         <div
           style={{
-            backgroundImage: "url('/CP-Z43A.jpg')", // Replace with a suitable URL
+            backgroundImage: "url('/cp_plus_image.png')", // Replace with a suitable URL
             backgroundBlendMode: "overlay",
             backgroundColor: "rgba(0, 0, 0, 0.5)", // Adds transparency
           }}
-          className="md:h-36 h-32 w-80 md:w-96 lg:w-[700px] lg:h-56 md:m-4 mt-6 bg-cover bg-center bg-no-repeat rounded-lg shadow-lg p-4 flex items-center justify-center hover:scale-110 transition-all duration-500"
+          className="md:h-36 h-32 w-80 md:w-96 lg:w-[700px] lg:h-56 md:m-4 mt-6 bg-contain bg-center bg-no-repeat rounded-lg shadow-lg p-4 flex items-center justify-center hover:scale-110 transition-all duration-500"
         >
           <div className="text-center">
             <h3 className="md:text-xl font-semibold text-white mb-2">
@@ -80,11 +80,11 @@ const PricingCards = () => {
         {/* Pricing Card 3 */}
         <div
           style={{
-            backgroundImage: "url('/CP-E44A.jpg')", // Replace with a suitable URL
+            backgroundImage: "url('/hikvision_bio.png')", // Replace with a suitable URL
             backgroundBlendMode: "overlay",
             backgroundColor: "rgba(0, 0, 0, 0.4)", // Adds transparency
           }}
-          className="md:h-36 h-32 w-80 md:w-96 lg:w-[700px] lg:h-56 md:m-4 mt-6 bg-cover bg-center bg-no-repeat rounded-lg shadow-lg p-4 flex items-center justify-center hover:scale-110 transition-all duration-500"
+          className="md:h-36 h-32 w-80 md:w-96 lg:w-[700px] lg:h-56 md:m-4 mt-6 bg-contain bg-center bg-no-repeat rounded-lg shadow-lg p-4 flex items-center justify-center hover:scale-110 transition-all duration-500"
         >
           <div className="text-center">
             <h3 className="md:text-xl font-semibold text-white mb-2">

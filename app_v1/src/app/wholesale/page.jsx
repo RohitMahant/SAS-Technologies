@@ -213,7 +213,7 @@ export default function Wholesale() {
               value={formData.firmAddress}
               onChange={handleChange}
               required
-              className="w-full p-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0096C7]/80"
+              className="w-full p-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0096C7]/80 font-sans"
             />
           </div>
           <div
@@ -281,7 +281,7 @@ export default function Wholesale() {
               value={formData.products}
               onChange={handleChange}
               required
-              className="w-full p-2 border resize-none border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0096C7]/80"
+              className="w-full p-2 border font-sans resize-none border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0096C7]/80"
             />
           </div>
           <button

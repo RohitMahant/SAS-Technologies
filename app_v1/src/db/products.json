@@ -8,6 +8,8 @@
         "name":"CP-URC-DC24PL2-V3",
         "Price":"640",
         "Description":"INDIGO DOME",
+        "list" :  ["1/2.7' 2.4MP CMOS Image Sensor (0.9407 cm)","Max 25/30fps@2.4MP", "DWDR, Day/Night (ICR), 2D-DNR, AWB, AGC, BLC, HLC"
+,"3.6mm fixed lens (2.8mm, 6mm optional)","IR Range of 20 Mtrs.","OSD Menu, control over coaxial cable, 2D-DNR","HD, SD and Two Analog format Output switchable"],
         "img":"CP-URC-DC24PL2C-V3.jpg"
     },
     {
@@ -19,6 +21,7 @@
         "name":"CP-URC-TC24PL2-V3",
         "Price":"710",
         "Description":"INDIGO BULLET",
+        "list" : ["1/2.7' 2.4MP PS CMOS Image Sensor (0.9407 centimetres)","Max. 2MP@30fps","DWDR, Day/Night (ICR), 2D DNR, AWB, AGC, BLC, HLC","DWDR, Day/Night (ICR), 2D DNR, AWB, AGC, BLC, HLC","3.6mm fixed lens (6mm optional)","IR Range of 20 Mtrs., Smart IR, IP67"],
         "img":"CP-URC-TC24PL2-V3.jpg"
     },
     {
@@ -30,6 +33,7 @@
         "name":"CP-URC-DC24PL2C-V3",
         "Price":"728",
         "Description":"INDIGO DOME(Audio)",
+         "list" : ["1/2.7” 2.4MP CMOS Image Sensor (0.9407 cm)","Max 25/30fps@2.4MP","DWDR, Day/Night (ICR), 2D-DNR, AWB, AGC, BLC, HLC","3.6mm fixed lens (2.8mm optional)","IR Range of 20 Mtrs., Smart IR","Support Built-in Mic", "OSD Menu, control over coaxial cable, 2D-DNR", "HD, SD and Two Analog format Output switchable"],
         "img":"CP-URC-DC24PL2C-V3.jpg"
     },
     {
@@ -41,6 +45,7 @@
         "name":"CP-URC-TC24PL2C-V3",
         "Price":"795",
         "Description":"INDIGO BULLET(Audio)",
+         "list" : ["","","","","",""],
         "img":"CP-URC-TC24PL2C-V3.jpg"
     },
     {
@@ -51,6 +56,7 @@
         "name":"CP-URC-DC24PL2C-L",
         "Price":"1030",
         "Description":"DUAL LIGHT DOME (Color+Audio)",
+         "list" : ["1/2.7' 2.4MP CMOS Image Sensor (0.9407 cm)","Max 25/30fps@2.4MP","DWDR, Day/Night (ICR), 2D-DNR, AWB, AGC, BLC, HLC","3.6mm fixed lens (2.8mm optional)","IR Range of 20 Mtrs., Smart IR","Support Built-in Mic", "OSD Menu, control over coaxial cable, 2D-DNR", "HD, SD and Two Analog format Output switchable"],
         "img":""
     },
     {
@@ -62,6 +68,7 @@
         "name":"CP-URC-TC24PL2C-L",
         "Price":"1095",
         "Description":"DUAL LIGHT DOME (Color+Audio)",
+         "list" : ["","","","","",""],
         "img":""
     },
     {
@@ -73,6 +80,7 @@
         "name":"CP-GPC-D24PL2C-S ",
         "Price":"1265",
         "Description":"DOME (Color+Audio)",
+         "list" : ["1/2.9' 2.4MP CMOS Image sensor (0.8758cm)","25/30fps@2.4MP","DWDR, 2D/3D-DNR, AWB, AGC, BLC","3.6mm lens (6mm Optional)","Support low illumination,warm light day night full color","Illumination Range of 20 Mtr., IP66"],
         "img":"CP-GPC-T24PL2C-S.jpg"
     },
     {
@@ -84,18 +92,8 @@
         "name":"CP-GPC-T24PL2C-S ",
         "Price":"1325",
         "Description":"BULLET (Color+Audio)",
+         "list" : ["1/2.9' 2.4MP CMOS Image sensor (0.8758cm)", "25\/30fps@2.4MP","DWDR, 2D/3D-DNR, AWB, AGC, BLC","3.6mm lens (6mm Optional)","Support low illumination,warm light day night full color","Illumination Range of 20 Mtr., IP66"],
         "img":"CP-GPC-T24PL2C-S.jpg"
-    },
-    {
-        "id":9,
-        "company":"CP Plus",
-        "productType":"CCTV",
-        "cameraType":"HD",
-        "megaPixels":"2.4MP",
-        "name":"CP-GPC-T24PL2C-S ",
-        "Price":"1325",
-        "Description":"BULLET (Color+Audio)",
-        "img":"CP-GPC-T24PL2C-S"
     },
     {
         "id":10,
@@ -106,6 +104,7 @@
         "name":"CP-UVR-0401E1-CV5 ",
         "Price":"2045",
         "Description":"COSMIC",
+         "list" : ["","","","","",""],
         "img":"CP-UVR-0401E1-CV5.jpg"  
     },
     {
@@ -116,6 +115,9 @@
         "name":"CP-UVR-0801E1-CV4 ",
         "Price":"2975",
         "Description":"COSMIC",
+         "list" : ["Supports HDCVI/AHD/TVI/CVBS/IP video inputs","Max 10 channels IP camera inputs, each channel up to 6MP; Max 40Mbps Incoming Bandwidth","Support 1 SATA HDD up to 6TB, 2 USB Ports"
+,"1 HDMI / 1 VGA Simultaneous Video Output","Instastream/H.265/H.264+/H.264 video compression","Mobile Software: iCMOB, gCMOB", "CMS Software: KVMS Pro"
+],
         "img":"CP-UVR-0801E1-CV4.jpg"  
     },
     {
@@ -127,6 +129,7 @@
         "name":"CP-UVR-0801E1-HC/IC ",
         "Price":"3150",
         "Description":"2MP Supported",
+         "list" : ["Supports HDCVI/AHD/TVI/CVBS/IP video inputs", "Max 10 channels IP camera inputs, each channel up to 6MP; Max 40Mbps Incoming Bandwidth","H.265+/H.265/H.264+/H.264 video compression", "1 HDMI / 1 VGA Simultaneous Video Output", "Support 1 SATA HDD up to 6TB, 2 USB Ports", "Mobile Software: iCMOB, gCMOB", "CMS Software: KVMS Pro" ],
         "img":null
     },
     {
@@ -137,6 +140,7 @@
         "name":"CP-UVR-1601E1-HC/IC",
         "Price":"5140",
         "Description":"2MP Supported",
+         "list" : ["Auto Adaptive HDCVI/AHD/TVI/CVBS/IP signals", "Max 18 channels IP camera inputs, each channel up to 6MP", "Max 64Mbps Incoming Bandwidth", "Instastream/H.265 dual-stream Video Compression" , "Up to 8 channels video stream (analog channel) SMD Plus" , "Support 1 SATA HDD up to 16TB, 2 USB Ports" , "HDMI / VGA Simultaneous Video Output", "Mobile Software: iCMOB, gCMOB", "CMS Software: KVMS Pro" ],
         "img":null
     },
     {
@@ -148,6 +152,7 @@
         "name":"CP-UVR-1601E2-I",
         "Price":"9595",
         "Description":"2MP Supported",
+         "list" : ["Supports HDCVI/AHD/TVI/CVBS/IP video inputs", "Max 18 channels IP camera inputs, each channel up to 6MP; Max 64 Mbps Incoming Bandwidth" , "Supports Full-channel AI-Coding" , "Instastream/H.265 video compression" , "Up to 8 channels video stream (analog channel) SMD Plus" , "Support 2 SATA HDD up to 10TB Each, 2 USB Ports", "1 HDMI / 1 VGA simultaneous video output", "Mobile Software: iCMOB, gCMOB", "CMS Software: KVMS Pro" ],
         "img":"CP-UVR-1601E2-I.jpg"  
     },
     {
@@ -159,6 +164,7 @@
         "name":"CP-UVR-3201-E2H ",
         "Price":"16550",
         "Description":"2MP Supported",
+         "list" : ["Auto Adaptive HDCVI/AHD/TVI/CVBS/IP signals" , "Support upto 6MP IP Camera" , "Max 64Mbps Incoming Bandwidth" , "H.265 dual-stream Video Compression" , "HDMI / VGA Simultaneous Video Output" , "Support 2 SATA HDD up to 10TB Each, 2 USB Ports", "Mobile Software: iCMOB, gCMOB", "CMS Software:KVMS, KVMS Pro" ],
         "img":"CP-UVR-3201-E2H.jpg"  
     },
     {
@@ -169,6 +175,7 @@
         "name":"CP-USC-DC51PL2-V3",
         "Price":"1050",
         "Description":" DOME",
+         "list" : ["1/2.7' 5MP CMOS Image Sensor (0.9407cm)" , "Max. 25fps@5MP (16:9 video output)" ,"DWDR, Day/Night (ICR), 2D-DNR, AWB, AGC, BLC, HLC", "3.6mm fixed lens (2.8mm optional)" , "IR Range of 20 Mtrs." ,"OSD Menu, control over coaxial cable, 2D-DNR", "CVI/CVBS/AHD/TVI Switchable" ],
         "img":"CP-USC-DC51PL2-V3.jpg"
     },
     {
@@ -180,6 +187,7 @@
         "name":"CP-USC-TC51PL2-V3",
         "Price":"1120",
         "Description":" BULLET",
+         "list" : ["1/2.7' 5MP CMOS Image Sensor (0.9407cm)", "Max. 25fps@5MP (16:9 video output)" , "DWDR, Day/Night (ICR), 2D-DNR, AWB, AGC, BLC, HLC" , "DWDR, Day/Night (ICR), 2D-DNR, AWB, AGC, BLC, HLC" , "IR Range of 20 Mtrs., IP67" , "OSD Menu, control over coaxial cable, 2D-DNR", "CVI/CVBS/AHD/TVI Switchable" ],
         "img":"CP-USC-TC51PL2-V3.jpg"
     },
     {
@@ -191,6 +199,7 @@
         "name":"CP-USC-TA50L3-S-0360",
         "Price":"1120",
         "Description":" BULLET 30mtr IR",
+         "list" : ["1/2.7' 5MP Progressive scan CMOS Image Sensor (0.9407 centimetres)", "Max 25fps@5MP (16:9 video output)" , "DWDR, Day/Night (ICR), 2D-DNR, AWB, AGC, BLC, HLC" , "3.6mm Fixed lens (2.8mm optional)" , "IR Range of 30Mtrs., Smart IR, IP67" , "Support Starlight Technology", "CVI/CVBS/AHD/TVI switchable" ],
         "img":"CP-USC-TA50L3-S-0360.jpg"
     },
     {
@@ -202,19 +211,10 @@
         "name":"CP-USC-DC51PL2C ",
         "Price":"1120",
         "Description":"DOME (Audio)",
+         "list" : ["1/2.7' 5MP CMOS Image Sensor (0.9407cm)", "Max. 25fps@5MP (16:9 video output)" , "DWDR, Day/Night (ICR), 2D-DNR, AWB, AGC, BLC, HLC" , "3.6mm fixed lens (2.8mm optional)" , "IR Range of 20 Mtrs." , "OSD Menu, control over coaxial cable, 2D-DNR", "CVI/CVBS/AHD/TVI Switchable" ],
         "img":"CP-USC-DC51PL2C.jpg"
     },
-    {
-        "id":20,
-        "company":"CP Plus",
-        "productType":"CCTV",
-        "cameraType":"HD",
-        "megaPixels":"5MP",
-        "name":"CP-USC-DC51PL2C ",
-        "Price":"1375",
-        "Description":"GAURD +",
-        "img":"CP-USC-DC51PL2C.jpg"
-    },
+   
     {
         "id":21,
         "productType":"CCTV",
@@ -223,6 +223,7 @@
         "name":"CP-URC-TC51PL2C-L ",
         "Price":"1440",
         "Description":"GAURD +",
+         "list" : ["1/2.7' 5MP CMOS Image Sensor (0.9407cm)", "Max. 25fps@5MP (16:9 video output)" , "DWDR, Day/Night (ICR), 2D-DNR, AWB, AGC, BLC, HLC" , "3.6mm fixed lens (2.8mm optional)" , "IR Range of 20 Mtrs., IP67" , "IR Range of 20 Mtrs., IP67" , "CVI/CVBS/AHD/TVI Switchable" , "Support Built-in Mic"],
         "img":"CP-URC-TC51PL2C-L.jpg"
     },
     {
@@ -234,6 +235,7 @@
         "name":"CP-GPC-DA50PL2-SE ",
         "Price":"1785",
         "Description":"DOME GAURD+",
+         "list" : [""],
         "img":"CP-GPC-DA50PL2-SE.jpg"
     },
     {
@@ -244,6 +246,7 @@
         "name":"CP-GPC-TA50PL2-SE ",
         "Price":"1870",
         "Description":"BULLET",
+         "list" : ["1/2.7' 5MP PS CMOS Image Sensor (0.9407cm)", "Max 25/30fps@5MP" , "DWDR, 2D-DNR, AWB, AGC, BLC, HLC" , "3.6mm Fixed Lens" , "Illumination Range of 20 Mtrs, IP67" , "CVI/CVBS/AHD/TVI switchable" ],
         "img":"CP-GPC-TA50PL2-SE.jpg"
     },
     {
@@ -255,6 +258,7 @@
         "name":"CP-GPC-DA50PL2C-SE-0360",
         "Price":"1840",
         "Description":"DOME (Audio)",
+         "list" : ["1/2.7' 5MP CMOS Image Sensor (6.858 centimeters)", "Day/Night(ICR), 2D/3D-DNR, AWB, AGC, BLC" , "3.6mm Lens (6mm optional)" , "Support low illumination,warm light day night full color" , "IR Range of 20 Mtrs, IP66" ],
         "img":"CP-GPC-DA50PL2C-SE-0360.jpg"
     },
     {
@@ -266,6 +270,7 @@
         "name":"CP-GPC-TA50PL2C-SE-0360",
         "Price":"1935",
         "Description":"BULLET (Audio)",
+         "list" : [ "1/2.7' 5MP PS CMOS Image Sensor (0.9407cm)" , "Max 25/30fps@5MP" , "DWDR, 2D-DNR, AWB, AGC, BLC, HLC" , "3.6mm Fixed Lens" , "Illumination Distance of 20 Mtrs, IP67" , "Support Built-in Mic", "CVI/CVBS/AHD/TVI switchable" ],
         "img":"CP-GPC-DA50PL2C-SE-0360.jpg"
     },
     {
@@ -277,6 +282,7 @@
         "name":"CP-UVR-0401F1-IC",
         "Price":"3225",
         "Description":"5MP Supported",
+         "list" : [ "Supports HDCVI/AHD/TVI/CVBS/IP video inputs", "Max 6 channels IP camera inputs, each channel up to 8MP; Max 36Mbps Incoming Bandwidth" , "Supports Full-channel AI-Coding" , "Instastream/H.265 dual-stream video compression" , "Up to 4 channels video stream (analog channel) SMD Plus." , "Support 1 SATA HDD up to 6TB, 2 USB Ports", "1 HDMI / 1 VGA Simultaneous Video Output", "Mobile Software: iCMOB, gCMOB" , "CMS Software: KVMS Pro"],
         "img":"CP-UVR-0401F1-IC.jpg"  
     },
     {
@@ -288,6 +294,7 @@
         "name":"CP-UVR-0801F1-IC",
         "Price":"4535",
         "Description":"5MP Supported",
+         "list" : ["Supports HDCVI/AHD/TVI/CVBS/IP video inputs", "Max 12 channels IP camera inputs, each channel up to 6MP; Max 64Mbps Incoming Bandwidth" , "Supports Full-channel AI-Coding" , "Instastream/H.265 dual-stream video compression" , "Up to 8 channels video stream (analog channel) SMD Plus", "Support 1 SATA HDD up to 6TB, 2 USB Ports", "1 HDMI / 1 VGA Simultaneous Video Output", "Mobile Software: iCMOB, gCMOB", "CMS Software: KVMS Pro"],
         "img":"CP-UVR-0801F1-IC.jpg"  
     },
     
@@ -300,6 +307,7 @@
         "name":"CP-UVR-1601F1-IC ",
         "Price":"8440",
         "Description":"5MP Supported",
+         "list" : ["Supports HDCVI/AHD/TVI/CVBS/IP video inputs", "Max 24 channels IP camera inputs, each channel up to 6MP" , "Supports Full-channel AI Instastream" , "Instastream/H.265 dual-stream video compression" , "Up to 16 channels video stream (analog channel) SMD Plus" , "Support 1 SATA HDD up to 16TB Each, 2 USB Ports", "1 HDMI / 1 VGA Simultaneous Video Output" , "Mobile Software: iCMOB, gCMOB", "CMS Software: KVMS Pro"],
         "img":"CP-UVR-1601F1-IC.jpg"
     },
     {
@@ -311,6 +319,7 @@
         "name":"CP-UVR-3201-K2-V5",
         "Price":"17525",
         "Description":"5MP Supported",
+         "list" : ["Supports HDCVI/AHD/TVI/CVBS/IP video inputs", "Max 32 channels IP camera inputs, each channel up to 4MP" , "Max 128Mbps Incoming Bandwidth" , "H.264+/H.264 dual-stream video compression" , "Support 2 SATA HDD up to 8TB Each, 2 USB Ports" , "Supports 5MP camera input", "HDMI/ VGA/ TV Simultaneous Video Output" ,"Mobile Software: iCMOB, gCMOB" , "CMS Software: KVMS Pro"],
         "img":"CP-UVR-3201-K2-V5.jpg"  
     },
     {
@@ -322,6 +331,7 @@
         "name":"CP-UVR-0801L1-4KH Indigo",
         "Price":"7900",
         "Description":"5MP Supported",
+         "list" : ["Auto Adaptive HDCVI/AHD/TVI/CVBS/IP signals", "Support upto 8MP IP Camera" , "Max 48Mbps Incoming Bandwidth" , "H.265+ /H.265 dual-stream Video Compression" , "HDMI / VGA Simultaneous Video Output" , "Support 1 SATA HDD up to 10TB, 2 USB Ports", "Mobile Software: iCMOB, gCMOB", "CMS Software:KVMS, KVMS Pro" ],
         "img":"CP-UVR-0801L1-4KH Indigo.jpg"  
     }  ,
     {
@@ -333,6 +343,7 @@
         "name":"CP-UNC-DA21PL3",
         "Price":"1780",
         "Description":"Normal Gold , Plastic Dome 25fps",
+         "list" : ["1/2.8” 2MP PS CMOS Image Sensor (0.9071 centimeters)", "25/30fps@1080P(1920×1080)" , "Instastream and Smart H.264+ dual-stream encoding" , "DWDR, Day/Night(ICR), 3D-DNR, ROI, AWB, AGC, BLC, HLC" , "3.6mm fixed lens (2.8mm optional)" , "IR Range of 30 Mtrs, IP67, PoE", "Mobile Software: iCMOB, gCMOB", "CMS Software: KVMS Pro"],
         "img":"CP-UNC-DA21PL3.jpg"  
     } , 
     {
@@ -344,6 +355,7 @@
         "name":"CP-UNC-TA21PL3",
         "Price":"1845",
         "Description":"Normal Gold , Plastic Bullet 25fps",
+         "list" : ["1/2.8” 2MP PS CMOS Image Sensor (0.9071 centimeters)", "Max. 2MP (1920 × 1080) @25/30 fps" , "Instastream and Smart H.264+ dual-stream encoding" , "DWDR, Day/Night(ICR), 3D-DNR, ROI, AWB, AGC, BLC, HLC" , "3.6mm fixed lens (2.8mm optional)" , "IR Range of 30 Mtrs, IP67, PoE", "Mobile Software: iCMOB, gCMOB", "CMS Software: KVMS Pro Lite"  ],
         "img":"CP-UNC-TA21PL3.jpg"  
     } , 
     {
@@ -355,6 +367,7 @@
         "name":"CP-UNC-DA21L2 GP",
         "Price":"2115",
         "Description":"Color Gold",
+         "list" : ["1/2.7” 2Megapixel PS CMOS Image Sensor (0.9407 centimeters)", "Max. 2MP(1920 x 1080)@25/30fps" , "Instastream and H.264+ dual-stream encoding" , "DWDR, Day/Night (ICR), 3D-DNR, ROI, AWB, AGC, BLC, HLC" , "3.6mm fixed lens (2.8mm optional)" , "Support IP67, PoE", "Built-in LEDs, max LED distance: 15 m", "Mobile Software: iCMOB, gCMOB", "CMS Software: KVMS Pro" ],
         "img":"CP-UNC-DA21L2 GP.jpg"  
     } , 
     {
@@ -366,6 +379,7 @@
         "name":"CP-UNC-TA21L2 GP ",
         "Price":"2165",
         "Description":"Color Gold , ",
+         "list" : ["1/2.7' 2Megapixel PS CMOS Image Sensor (6.858 centimeters)", "Max. 2MP(1920 x 1080)@25/30fps", "H.265+/ H.264+ dual-stream encoding" , "DWDR, Day/Night (ICR), 3D-DNR, ROI, AWB, AGC, BLC, HLC" , "3.6mm fixed lens (2.8mm optional)" , "Built-in LEDs, LED distance of 15 Mtrs., IP67, PoE", "Mobile Software: iCMOB, gCMOB", "CMS Software: KVMS Pro" ],
         "img":"CP-UNC-TA21L2 GP.jpg"  
     } , 
     {
@@ -377,6 +391,7 @@
         "name":"CP-UNC-TA21PL3C ",
         "Price":"1950",
         "Description":"Normal Audio , Bullet with Audio",
+         "list" : ["1/2.8' 2MP PS CMOS Image Sensor", "Max 25/30fps@2MP(1920×1080)", "H.265 and H.264 dual-stream encoding" , "Mobile Software: iCMOB, gCMOB" ,"CMS Software: KVMS Pro"],
         "img":"CP-UNC-TA21PL3C.jpg"  
     } , 
     {
@@ -388,6 +403,7 @@
         "name":"CP-UNC-VD41L3-VMD J ",
         "Price":"2850",
         "Description":"Normal , Plastic Dome 25fps",
+         "list" : ["1/3” 4Megapixel PS CMOS Image Sensor (0.84667cm)" , "25/30fps@4MP" , "Instastream and H.264+ triple-stream encoding" , "WDR(120dB), Day/Night (ICR), 3D-DNR, ROI, AWB, AGC, BLC, HLC" , "3.6mm fixed lens (2.8mm optional)" , "IR Range of 40 Mtrs, IP67, IK10, PoE, SD Card", "Mobile Software: iCMOB, gCMOB", "CMS Software: KVMS Pro" ],
         "img":"CP-UNC-VD41L3-VMD J.jpg"  
     } , 
     {
@@ -399,6 +415,7 @@
         "name":"CP-UNC-DA41PL3-D",
         "Price":"2880",
         "Description":"Normal , Plastic Dome 25fps",
+         "list" : ["1/3” 4MP PS CMOS Image Sensor (0.84667cm)" , "Max. 4MP (2560 × 1440)@25/30fps, and 4MP (2688 × 1520)@20fps" , "Instastream and H.264+ dual-stream encoding" , "WDR(120dB), Day/Night (ICR), 3D-DNR, ROI, AWB, AGC, BLC, HLC" , "3.6mm fixed lens (2.8mm optional)" , "IR Range of 30 Mtrs, IP67, PoE", "Mobile Software: iCMOB, gCMOB" , "CMS Software: KVMS Pro" ],
         "img":"CP-UNC-DA41PL3-D.jpg"  
     } , 
     {
@@ -410,6 +427,7 @@
         "name":"CP-UNC-TA41PL3C-D",
         "Price":"3330",
         "Description":"Normal Audio , Plastic Bullet 25fps",
+         "list" : ["1/3' 4MP PS CMOS Image Sensor (0.84667cm)" , "Max. 4MP (2560 × 1440)@25/30fps, and 4MP (2688 × 1520)@20fps", "Instastream/Smart H.264+ Dual-stream encoding" , "WDR(120dB), Day/Night (ICR), 3D-NR, ROI, AWB, AGC, BLC, HLC" ,"3.6mm fixed lens (2.8mm Optional)" , "IR Range of 30 Mtrs, IP67, PoE", "Support Built-in Mic" , "Mobile Software: iCMOB, gCMOB", "CMS Software: KVMS Pro"],
         "img":"CP-UNC-TA41PL3C-D.jpg"  
     } , 
     {
@@ -421,6 +439,7 @@
         "name":"CP-UNC-DA41PL3C-D",
         "Price":"3010",
         "Description":"Normal Audio , Plastic Dome 25fps",
+         "list" : [ "1/3' 4MP PS CMOS Image Sensor (0.84667cm)" , "Max. 4MP (2560 × 1440)@25/30fps, and 4MP (2688 × 1520)@20fps" , "Instastream and Smart H.264+ dual-stream encoding" , "WDR(120dB), Day/Night (ICR), 3D-NR, ROI, AWB, AGC, BLC, HLC" , "3.6mm fixed lens (2.8mm Optional)" , "IR Range of 30 Mtrs, IP67, PoE", "Support Built-in Mic", "Mobile Software: iCMOB, gCMOB", "CMS Software: KVMS Pro" ],
         "img":"CP-UNC-DA41PL3C-D.jpg"  
     } , 
     {
@@ -432,6 +451,7 @@
         "name":"CP-UNC-DA41L2C-GP ",
         "Price":"3900",
         "Description":"Color with Audio , Dome with Audio",
+         "list" : ["1/3” 4MP PS CMOS Image Sensor(0.84667cm)" , "Max. Output 4 MP (2560 × 1440)@25/30fps" , "Instastream; SMART H.264+ and H.264 dual-stream encoding" , "WDR(120dB), Day/Night (ICR), 3D-DNR,ROI, AWB, AGC, BLC, HLC" , "3.6mm fixed lens (2.8mm optional)" , "Built in Mic" , "lluminator Range of 15 Mtrs, IP67, PoE" , "Mobile Software: iCMOB, gCMOB", "CMS Software: KVMS Pro"],
         "img":"CP-UNC-DA41L2C-GP.jpg"  
     } , 
     {
@@ -443,6 +463,7 @@
         "name":"CP-UNC-TA51L3C ",
         "Price":"4250",
         "Description":"Audio Bullet 25fps",
+        "list" : ["1/2.7” 5MP PS CMOS Image Sensor (0.9407centimetres)" , "Max. 5MP (2880 × 1620)@20fps and supports 2688 × 1520(2688 × 1520)@25/30fps." , "Instastream and Smart H.264+ dual-stream encoding" , "DWDR, Day/Night (ICR), 3D-DNR, ROI, AWB, AGC, BLC, HLC" , "3.6mm lens (2.8mm optional)" , "IR Range of 30 Mtrs, IP67, PoE", "Support Built-in Mic", "Mobile Software: iCMOB, gCMOB", "CMS Software: KVMS Pro"   ],
         "img":"CP-UNC-TA51L3C.jpg"  
     } , 
     {
@@ -454,6 +475,7 @@
         "name":"CP-UNC-DA51L3C ",
         "Price":"4225",
         "Description":"Audio Dome 25fps",
+        "list" : ["1/2.7' 5MP PS CMOS Image Sensor (0.9407centimetres)" , "Max. 5MP (2880 × 1620)@20fps and supports 2688 × 1520(2688 × 1520)@25/30fps." , "Instastream and Smart H.264+ dual-stream encoding" , "DWDR, Day/Night (ICR), 3D-DNR, ROI, AWB, AGC, BLC, HLC" , "3.6mm lens (2.8mm optional)" , "IR Range of 30 Mtrs, IP67, PoE", "Support Built-in Mic", "Mobile Software: iCMOB, gCMOB", "CMS Software: KVMS Pro" ],
         "img":"CP-UNC-DA51L3C.jpg"  
     } , 
     {
@@ -465,6 +487,7 @@
         "name":"CP-UNC-TA81L3C ",
         "Price":"7300",
         "Description":"Audio Bullet 25fps",
+        "list" : ["1/2.7' 8MP PS CMOS Image Sensor (0.9407 centimetres)" , "Max. 8MP (3840 × 2160)@15fps and supports (2688 × 1520) @25/30fps" , "Instastream and Smart H.264+ dual-stream encoding", "DWDR, Day/Night(ICR), 3D-DNR, ROI, AWB, AGC, BLC, HLC" , "3.6mm lens (2.8mm optional)" , "IR Range of 30 Mtrs, IP67, PoE", "Support Built-in Mic", "Mobile Software: iCMOB, gCMOB", "CMS Software: KVMS Pro" ],
         "img":"CP-UNC-TA81L3C.jpg"  
     } , 
     {
@@ -476,6 +499,7 @@
         "name":"CP-UNR-104 F1 ",
         "Price":"3060",
         "Description":"80 Mbps",
+        "list" : ["Support 4 channel IP camera input" , "Instastream/H.265/Smart H.264+/H.264 codec decoding", "Up to 8MP resolution preview and playback" , "Max 80Mbps Network Bandwidth" , "Support 1 SATA HDDs up to 8TB Each, 2 USB Ports (USB2.0)" , "VGA/HDMI simultaneous video output, maximum resolution of HDMI is 1080P", "Support Multi-brand network cameras", "ONVIF Version conformance", "Mobile Software: iCMOB, gCMOB", "CMS Software: KVMS Pro"],
         "img":"CP-UNR-104 F1.jpg"  
     } , 
     {
@@ -487,6 +511,7 @@
         "name":"CP-UNR-108 F1 ",
         "Price":"3540",
         "Description":"80 Mbps",
+        "list" : ["Support 8 channel IP camera input" , "Instastream/H.265/Smart H.264+/H.264 codec decoding" , "Up to 8MP resolution preview and playback" , "Max 80Mbps Network Bandwidth" , "Support 1 SATA HDDs up to 8TB Each, 2 USB Ports (USB2.0)" , "VGA/HDMI simultaneous video output, maximum resolution of HDMI is 1080P", "Support Multi-brand network cameras", "ONVIF Version conformance", "Support 8 PoE Ports", "Mobile Software: iCMOB, gCMOB", "CMS Software: KVMS Pro", "*Only for Middle East/ Africa/ EU Region" ],
         "img":"CP-UNR-108 F1.jpg"  
     } , 
     {
@@ -498,6 +523,7 @@
         "name":"CP-UNR-4K216F1-V2 ",
         "Price":"5240",
         "Description":"80 Mbps",
+        "list" : ["","","","","",""],
         "img":"CP-UNR-4K216F1-V2.jpg"  
     } , 
     {
@@ -509,6 +535,7 @@
         "name":"CP-UNR-4K2162-V2 ",
         "Price":"6400",
         "Description":"144 Mbps",
+        "list" : ["","","","","",""],
         "img":"CP-UNR-4K2162-V2.jpg"  
     } , 
     {
@@ -520,6 +547,7 @@
         "name":"CP-UNR-4K4322-V2 ",
         "Price":"10400",
         "Description":"200 Mbps",
+        "list" : ["","","","","",""],
         "img":"CP-UNR-4K4322-V2.jpg"  
     } ,
     {
@@ -531,6 +559,7 @@
         "name":"CP-UNC-DA21PL3-Y ",
         "Price":"1395",
         "Description":"Silver line IP Camera",
+        "list" : ["","","","","",""],
         "img":"CP-UNC-DA21PL3-Y.jpg"  
     } ,  
     {
@@ -542,6 +571,7 @@
         "name":"CP-UNC-TA21PL3-Y ",
         "Price":"1455",
         "Description":"Silver line IP Camera",
+        "list" : ["","","","","",""],
         "img":"CP-UNC-TA21PL3-Y.jpg"  
     } ,  
     {
@@ -553,6 +583,7 @@
         "name":"CP-UNC-DA21PL3C-L-Y ",
         "Price":"1935",
         "Description":"Silver Dual",
+        "list" : ["","","","","",""],
         "img":"CP-UNC-DA21PL3C-L-Y.jpg"  
     } ,
     {
@@ -564,6 +595,7 @@
         "name":"CP-UNC-DA21PL3C-L-Y ",
         "Price":"1935",
         "Description":"Color with Audio , Bullet",
+        "list" : ["","","","","",""],
         "img":"CP-UNC-DA21PL3C-L-Y.jpg"  
     } ,
     {
@@ -575,6 +607,7 @@
         "name":"CP-UNC-TA41PL3C-L-Y",
         "Price":"1935",
         "Description":"Color with Audio , Dome",
+        "list" : ["","","","","",""],
         "img":"CP-UNC-TA41PL3C-L-Y.jpg"  
     } ,
     {
@@ -586,6 +619,7 @@
         "name":"E-24A",
         "Price":"1100",
         "Description":"Wi-Fi Camera",
+        "list" : ["","","","","",""],
         "img":"E-24A.jpg"  
     } ,
     {
@@ -597,6 +631,7 @@
         "name":"E-28A",
         "Price":"1175",
         "Description":"Wi-Fi Camera ALXA",
+        "list" : ["","","","","",""],
         "img":"E-28A.jpg"  
     } ,
     {
@@ -608,6 +643,7 @@
         "name":"E-29A",
         "Price":"1020",
         "Description":"Wi-Fi Camera ALXA",
+        "list" : ["","","","","",""],
         "img":"E-29A.jpg"  
     } ,
     {
@@ -619,6 +655,7 @@
         "name":"E-31A",
         "Price":"1220",
         "Description":"Wi-Fi Camera ALXA",
+        "list" : ["","","","","",""],
         "img":"E-31A.jpg"  
     } ,
     {
@@ -630,6 +667,7 @@
         "name":"V31A",
         "Price":"2000",
         "Description":"Bullet Wi-Fi Camera ",
+        "list" : ["","","","","",""],
         "img":"V31A.jpg"  
     } ,
     {
@@ -641,6 +679,7 @@
         "name":"T31A",
         "Price":"975",
         "Description":" Wi-Fi Camera ",
+        "list" : ["","","","","",""],
         "img":"T31A.jpg"  
     } ,
     {
@@ -652,6 +691,7 @@
         "name":"E-44A/E-41A",
         "Price":"2090",
         "Description":" Wi-Fi Camera ALXA ",
+        "list" : ["","","","","",""],
         "img":"E-44A.jpg"  
     } ,
     {
@@ -663,6 +703,7 @@
         "name":"E-48A",
         "Price":"1900",
         "Description":"Dome Wi-Fi Camera  ",
+        "list" : ["","","","","",""],
         "img":"E-48A.jpg"  
     } ,
     {
@@ -674,6 +715,7 @@
         "name":"V41A",
         "Price":"2380",
         "Description":"Bullet Wi-Fi Camera  ",
+        "list" : ["","","","","",""],
         "img":"V41A.jpg"  
     } ,
     {
@@ -685,6 +727,7 @@
         "name":"V47A",
         "Price":"2985",
         "Description":"Bullet Wi-Fi Camera  ",
+        "list" : ["","","","","",""],
         "img":"V47A.jpg"  
     } ,
     {
@@ -696,6 +739,7 @@
         "name":"V48A",
         "Price":"2515",
         "Description":"Bullet Wi-Fi Camera  ",
+        "list" : ["","","","","",""],
         "img":"V48A.jpg"  
     } ,
     {
@@ -707,6 +751,7 @@
         "name":"EZ-P51",
         "Price":"2050",
         "Description":" Wi-Fi Camera  ",
+        "list" : ["","","","","",""],
         "img":"EZ-P51.jpg"  
     } ,
     {
@@ -718,6 +763,7 @@
         "name":"CP-Z43A",
         "Price":"2575",
         "Description":" Full color PT camera  ",
+        "list" : ["","","","","",""],
         "img":"CP-Z43A.jpg"  
     } ,
     {
@@ -729,6 +775,7 @@
         "name":"CP-Z32G",
         "Price":"3230",
         "Description":"  PT camera  ",
+        "list" : ["","","","","",""],
         "img":"CP-Z32G.jpg"  
     } ,
     {
@@ -740,6 +787,7 @@
         "name":"CP-V32G",
         "Price":"1650",
         "Description":"  Bullet 4G  ",
+        "list" : ["","","","","",""],
         "img":"CP-V32G.jpg"  
     } ,
     {
@@ -751,6 +799,7 @@
         "name":"CP-V33GN",
         "Price":"1725",
         "Description":"4G Camera ",
+        "list" : ["","","","","",""],
         "img":"CP-V33GN.jpg"  
     } ,
     {
@@ -762,6 +811,7 @@
         "name":"CP D31G",
         "Price":"2135",
         "Description":"Dome 4G  ",
+        "list" : ["","","","","",""],
         "img":"CP D31G.jpg"  
     } ,
     {
@@ -773,6 +823,7 @@
         "name":"CP-R33G",
         "Price":"1988",
         "Description":"Dome 4G  ",
+        "list" : ["","","","","",""],
         "img":"CP-R33G.jpg"  
     } ,
     {
@@ -784,6 +835,7 @@
         "name":"CP-Z44R",
         "Price":"6090",
         "Description":"Solar Camera  ",
+        "list" : ["","","","","",""],
         "img":"CP-Z44R.jpg"  
     } ,
     {
@@ -793,6 +845,7 @@
         "type":"SMPS",
         "name":"CP-DPS-MD50-12D",
         "Description":"4 CH Metal Case",
+        "list" : ["","","","","",""],
         "Price":385
     },
     {
@@ -802,6 +855,7 @@
         "accessoryType":"SMPS",
         "name":"CP-DPS-MD100-12D",
         "Description":"8 CH Metal Case",
+        "list" : ["","","","","",""],
         "Price":535
     },
     {
@@ -810,6 +864,7 @@
         "accessoryType":"SMPS",
         "name":"CP-DPS-MD200-12D",
         "Description":"16 CH Metal Case",
+        "list" : ["","","","","",""],
         "Price":1025
     },
     {
@@ -819,6 +874,7 @@
         "accessoryType":"SMPS",
         "name":"CP-DPS-PD04V2-12D",
         "Description":"4 CH Plastic Housing",
+        "list" : ["","","","","",""],
         "Price":340
     },
     {
@@ -828,6 +884,7 @@
         "accessoryType":"SMPS",
         "name":"CP-DPS-PD08V2-12D",
         "Description":"8 CH Plastic Housing",
+        "list" : ["","","","","",""],
         "Price":385
     },
     {
@@ -837,6 +894,7 @@
         "accessoryType":"SMPS",
         "name":"CP-DPS-PD16V2-12D",
         "Description":"16 CH Plastic Housing",
+        "list" : ["","","","","",""],
         "Price":795
     },
     {
@@ -846,6 +904,7 @@
         "accessoryType":"Rack",
         "name":"CP-HA-RK3535VM-2U",
         "Description":"2U Rack",
+        "list" : ["","","","","",""],
         "Price":545
     },
     {
@@ -855,6 +914,7 @@
         "accessoryType":"Rack",
         "name":"CP-HA-RK3535T-2U (ECO)",
         "Description":"2U Rack",
+        "list" : ["","","","","",""],
         "Price":460
     },
     {
@@ -864,6 +924,7 @@
         "accessoryType":"Rack",
         "name":"CP-HA-RK4535VM-2U",
         "Description":"2U Rack",
+        "list" : ["","","","","",""],
         "Price":710
     },
     {
@@ -873,6 +934,7 @@
         "accessoryType":"3+1 Cables",
         "name":"CP-HCC-180R",
         "Description":"Copper Cable 90M",
+        "list" : ["","","","","",""],
         "Price":1925
     },
     {
@@ -882,6 +944,7 @@
         "accessoryType":"3+1 Cables",
         "name":"CP-WCC-90RSO",
         "Description":"Copper Cable 90M Outdoor",
+        "list" : ["","","","","",""],
         "Price":1080
     },
     {
@@ -891,6 +954,7 @@
         "accessoryType":"3+1 Cables",
         "name":"CP-WCC-180RSO",
         "Description":"Copper Cable 180M Outdoor",
+        "list" : ["","","","","",""],
         "Price":2270
     },
     {
@@ -900,6 +964,7 @@
         "accessoryType":"3+1 Cables",
         "name":"CP-WCC-90RS",
         "Description":"Copper Cable 90M (3+1)",
+        "list" : ["","","","","",""],
         "Price":960
     },
     {
@@ -909,6 +974,7 @@
         "accessoryType":"3+1 Cables",
         "name":"CP-WCC-90R",
         "Description":"Copper Cable 90M (3+1)",
+        "list" : ["","","","","",""],
         "Price":930
     },
     {
@@ -917,6 +983,7 @@
         "accessoryType":"3+1 Cables",
         "name":"CP-WCC-7OR",
         "Description":"Copper Cable 7+R430M",
+        "list" : ["","","","","",""],
         "Price":810
     },
     {
@@ -926,6 +993,7 @@
         "accessoryType":"CAT 6 Cables",
         "name":"CP-EUT-6TGL-100",
         "Description":"CAT-6 Cable Copper",
+        "list" : ["","","","","",""],
         "Price":2060
     },
     {
@@ -935,6 +1003,7 @@
         "accessoryType":"CAT 6 Cables",
         "name":"CP-EUT-6TGL-305",
         "Description":"CAT-6 Cable Copper",
+        "list" : ["","","","","",""],
         "Price":6190
     },
     {
@@ -943,6 +1012,7 @@
         "accessoryType":"CAT 6 Cables",
         "name":"CP-EUT-6TGD-305",
         "Description":"CAT-6 Cable Outdoor",
+        "list" : ["","","","","",""],
         "Price":7065
     },
     {
@@ -952,6 +1022,7 @@
         "accessoryType":"CAT 6 Cables",
         "name":"CP-EUT-6TSRH-305 (ECO)",
         "Description":"CAT-6 Cable Alloy",
+        "list" : ["","","","","",""],
         "Price":2580
     },
     {
@@ -961,6 +1032,7 @@
         "accessoryType":"CAT 6 Cables",
         "name":"CP-EUT-6TSRH-100 (ECO)",
         "Description":"CAT-6 Cable Alloy",
+        "list" : ["","","","","",""],
         "Price":940
     },
     {
@@ -969,6 +1041,7 @@
         "accessoryType":"Biometric",
         "name":"CP-VTA-M1143",
         "Description":"Face/Finger Reader",
+        "list" : ["","","","","",""],
         "Price":5725
     },
     {
@@ -978,6 +1051,7 @@
         "accessoryType":"Biometric",
         "name":"CP-VTA-M1043",
         "Description":"Face/Finger Reader",
+        "list" : ["","","","","",""],
         "Price":3975
     },
     {
@@ -986,6 +1060,7 @@
         "accessoryType":"Biometric",
         "name":"CP-VTA-T2324-U",
         "Description":"Finger Reader",
+        "list" : ["","","","","",""],
         "Price":2390
     },
     {
@@ -995,6 +1070,7 @@
         "accessoryType":"POE Switch 4 Port",
         "name":"CP-DNW-HPU4H2-48",
         "Description":"4 Port 10x100 (10/100) 2 Uplink",
+        "list" : ["","","","","",""],
         "Price":950
     },
     {
@@ -1004,6 +1080,7 @@
         "accessoryType":"POE Switch 4 Port",
         "name":"CP-DNW-GPU4G2-48",
         "Description":"4 Port 10x100x1000 Full Giga (2 Uplink)",
+        "list" : ["","","","","",""],
         "Price":2290
     },
     {
@@ -1013,6 +1090,7 @@
         "accessoryType":"POE Switch 4 Port",
         "name":"CP-DNW-GPU4F2-48",
         "Description":"4 Port 10x100x1000 Full Giga (2 Uplink)",
+        "list" : ["","","","","",""],
         "Price":2450
     },
     {
@@ -1022,6 +1100,7 @@
         "type":"POE Switch 8 Port",
         "name":"CP-ANW-HP8H1-96",
         "description":"8 Port 10x100 (10x100) 1 uplink",
+        "list" : ["","","","","",""],
         "Price":1600
     },
     {
@@ -1031,6 +1110,7 @@
         "type":"POE Switch 8 Port",
         "name":"CP-ANW-DNW-HP8H2-96",
         "description":"8 Port 10x100 (10x100) 2 uplink",
+        "list" : ["","","","","",""],
         "Price":1650
     },
     {
@@ -1039,7 +1119,8 @@
         "productType":"Accessories",
         "type":"POE Switch 8 Port",
         "name":"CP-ANW-HPU8G2-96",
-        "description":"8 Port 10x100x1000 Full Giga (2 uplink)",
+        "description":"8 Port 10x100x1000 Full Giga (2 uplink)", 
+        "list" : ["","","","","",""],
         "Price":2690
     },
     {
@@ -1049,6 +1130,7 @@
         "accessoryType":"POE Switch 8 Port",
         "name":"CP-ANW-GPU8G2-96",
         "description":"8 Port 10x100x1000 Full Giga (2 uplink)",
+        "list" : ["","","","","",""],
         "Price":3490
     },
     {
@@ -1058,6 +1140,7 @@
         "type":"POE Switch 16 Port",
         "name":"CP-ANW-HP16G2F1-N30",
         "description":"16 Port 10/100 with 2Giga & 15FP Uplink Ports",
+        "list" : ["","","","","",""],
         "Price":6550
     },
     {
@@ -1067,6 +1150,7 @@
         "accessoryType":"POE Switch 24 Port",
         "name":"CP-ANW-HP24G2F1-T25",
         "description":"24 Port 10/100, 2Giga+1SEP link",
+        "list" : ["","","","","",""],
         "Price":7520
     },
     {
@@ -1076,6 +1160,7 @@
         "accessoryType":"Non POE Giga Switch",
         "name":"CP-ANW-GS105T",
         "description":"5 Port Non POE Giga",
+        "list" : ["","","","","",""],
         "Price":750
     },
     {
@@ -1085,6 +1170,7 @@
         "accessoryType":"Non POE Giga Switch",
         "name":"CP-ANW-GS108T",
         "description":"8 Port Non POE Giga",
+        "list" : ["","","","","",""],
         "Price":1180
     },
     {
@@ -1094,6 +1180,7 @@
         "accessoryType":"4G Router",
         "name":"CP-XR-DE21-S",
         "description":"4G Router",
+        "list" : ["","","","","",""],
         "Price":1455
     },
     {
@@ -1103,6 +1190,7 @@
         "accessoryType":"VDP",
         "name":"CP-UVX-701A",
         "description":"Without Memory",
+        "list" : ["","","","","",""],
         "Price":3975
     },
     {
@@ -1112,6 +1200,7 @@
         "accessoryType":"VDP",
         "name":"CP-UVX-701MTA",
         "description":"With Memory",
+        "list" : ["","","","","",""],
         "Price":4910
     },
     {
@@ -1121,6 +1210,7 @@
         "accessoryType":"VDP",
         "name":"CP-PVM-70T",
         "description":"7\" Indoor Unit",
+        "list" : ["","","","","",""],
         "Price":4100
     },
     {
@@ -1131,6 +1221,7 @@
         "name":"CP-PAV-C341",
         "img":"CP-PAV-C341.jpg",
         "description":"4 Bell Panel (Outdoor Unit)",
+        "list" : ["","","","","",""],
         "Price":5250
     },
     {
@@ -1140,6 +1231,7 @@
         "accessoryType":"VDP",
         "name":"CP-L23",
         "description":"Smart Wi-Fi Doorbell",
+        "list" : ["","","","","",""],
         "img":"CP-L23.jpg",
         "Price":4790
     },
@@ -1150,6 +1242,7 @@
         "accessoryType":"VDP",
         "name":"CP-UVX-711M",
         "description":"IP VDP Kit with Mobile App Support",
+        "list" : ["","","","","",""],
         "img":"CP-UVX-711M.jpg",
         "Price":12950
     },
@@ -1161,6 +1254,7 @@
         "accessoryType":"Rim Lock",
         "name":"CP Electronix Lock",
         "description":"EM Lock",
+        "list" : ["","","","","",""],
         "Price":0
     },
     {
@@ -1170,6 +1264,7 @@
         "accessoryType":"LED Monitor",
         "name":"CP UEM 19AH",
         "description":"LED Monitor",
+        "list" : ["","","","","",""],
         "Price":4700
     },
     {
@@ -1179,6 +1274,7 @@
         "accessoryType":"LED Monitor",
         "name":"CP UEM 22AH",
         "description":"LED Monitor",
+        "list" : ["","","","","",""],
         "Price":5390
     },
     {
@@ -1188,8 +1284,298 @@
         "accessoryType":"Memory Card",
         "name":"CP-NM64",
         "description":"Memory Card",
+        "list" : ["","","","","",""],
         "Price":435
+    },
+    {
+        "id":118,
+        "company":"Hikvision",
+        "productType":"CCTV",
+        "cameraType":"HD",
+        "megaPixels":"2MP",
+        "name":"DS-2CE1ADOT-ITP",
+        "description":"2MP BULLET 3.6 MM",
+        "list" : ["","","","","",""],
+        "Price":678,
+        "img":"DS-2CE1ADOT-ITP.jpg"
+    },
+    {
+        "id":119,
+        "company":"Hikvision",
+        "productType":"CCTV",
+        "cameraType":"HD",
+        "megaPixels":"2MP",
+        "name":"DS-2CE5ADOT-ITP",
+        "description":"2MP DOME 3.6 MM",
+        "list" : ["","","","","",""],
+        "Price":636,
+         "img":"DS-2CE5ADOT-ITP.jpg"
+    },
+    {
+        "id":119,
+        "company":"Hikvision",
+        "productType":"DVR",
+        "channels":"4",
+        "name":"DS-7104HGHI-K1",
+        "description":"4 CH DVR",
+        "list" : ["","","","","",""],
+        "Price":2103,
+        "img":"DS-7104HGHI-K1.jpg"
+        
+    },
+    {
+        "id":120,
+        "company":"Hikvision",
+        "productType":"DVR",
+        "channels":"8",
+        "name":"DS-7104HGHI-K1",
+        "description":"8 CH DVR",
+        "list" : ["","","","","",""],
+        "Price":3059,
+        "img":"DS-7104HGHI-K1.jpg"
+    },
+    {
+        "id":121,
+        "company":"Hikvision",
+        "productType":"DVR",
+        "channels":"16",
+        "name":"DS-7108HGHI-K1",
+        "description":"16 CH DVR",
+        "list" : ["","","","","",""],
+        "Price":3059,
+        "img":"DS-7108HGHI-K1.jpg"
+    },
+    {
+        "id":122,
+        "company":"Hikvision",
+        "productType":"DVR",
+        "channels":"32",
+        "name":"DS-7232HGHI-M2",
+        "description":"16 CH DVR",
+        "list" : ["","","","","",""],
+        "Price":3059,
+        "img":"DS-7232HGHI-M2.jpg"
+    },
+    {
+        "id":123,
+        "company":"Hikvision",
+        "productType":"CCTV",
+        "cameraType":"HD",
+        "megaPixels":"2MP",
+        "name":"DS-2CE16DOT-ITPFS",
+        "description":"2 MP Bullet 3.6 MM AUDIO CAMERA",
+        "list" : ["","","","","",""],
+        "Price":858,
+        "img":"DS-2CE16DOT-ITPFS.jpg"
+    },
+    {
+        "id":124,
+        "company":"Hikvision",
+        "productType":"CCTV",
+        "cameraType":"HD",
+        "megaPixels":"2MP",
+        "name":"DS-2CE76DOT-ITPFS",
+        "description":"2 MP DOME 3.6 MM AUDIO CAMERA",
+        "list" : ["","","","","",""],
+        "Price":782,
+        "img":"DS-2CE76DOT-ITPFS.jpg"
+    },
+    {
+        "id": 125,
+        "company": "Hikvision",
+        "productType": "CCTV",
+        "cameraType": "HD",
+        "megaPixels": "2MP",
+        "name": "DS-2CE10DFOT-PFS",
+        "description": "2 MP BULLET 3.6 MM COLOR+AUDIO",
+        "list": ["", "", "", "", "", ""],
+        "Price": 1591,
+        "img": "DS-2CE10DFOT-PFS.jpg"
+    },
+    {
+        "id": 126,
+        "company": "Hikvision",
+        "productType": "CCTV",
+        "cameraType": "HD",
+        "megaPixels": "2MP",
+        "name": "DS-2CE70DFOT-PFS",
+        "description": "2 MP DOME 3.6 MM COLOR+AUDIO",
+        "list": ["", "", "", "", "", ""],
+        "Price": 1540,
+        "img": "DS-2CE70DFOT-PFS.jpg"
+    },
+    {
+        "id": 127,
+        "company": "Hikvision",
+        "productType": "CCTV",
+        "cameraType": "HD",
+        "megaPixels": "2MP",
+        "name": "DS-2CE16DOT-LPFS",
+        "description": "2 MP Bullet 3.6 MM COLOR+AUDIO",
+        "list": ["", "", "", "", "", ""],
+        "Price": 1119,
+        "img": "DS-2CE16DOT-LPFS.jpg"
+    },
+    {
+        "id": 128,
+        "company": "Hikvision",
+        "productType": "CCTV",
+        "cameraType": "HD",
+        "megaPixels": "2MP",
+        "name": "DS-2CE76DOT-LPFS",
+        "description": "2 MP dome 3.6 MM COLOR+AUDIO",
+        "list": ["", "", "", "", "", ""],
+        "Price": 1068,
+        "img": "DS-2CE76DOT-LPFS.jpg"
+    },
+    {
+        "id": 129,
+        "company": "Hikvision",
+        "productType": "CCTV",
+        "cameraType": "HD",
+        "megaPixels": "",
+        "name": "DS-2CE16KOT-LPFS",
+        "description": "HIKVISION 3K BULLET (COLOUR+AUDIO)",
+        "list": ["", "", "", "", "", ""],
+        "Price": 1499,
+        "img": "DS-2CE16KOT-LPFS.jpg"
+    },
+    {
+        "id": 130,
+        "company": "Hikvision",
+        "productType": "CCTV",
+        "cameraType": "HD",
+        "megaPixels": "",
+        "name": "DS-2CE76KOT-LPFS",
+        "description": "HIKVISION 3K DOME (COLOUR+AUDIO)",
+        "list": ["", "", "", "", "", ""],
+        "Price": 1499,
+        "img": "DS-2CE76KOT-LPFS.jpg"
+    },
+    {
+        "id": 130,
+        "company": "Hikvision",
+        "productType": "DVR",
+        "channels": "4",
+        "name": "IDS-7104HQHI-M1/S",
+        "description": "HD 2MP DVR",
+        "list": ["", "", "", "", "", ""],
+        "Price": 1499,
+        "img": "IDS-7104HQHI-M1/S.jpg"
+    },
+    {
+        "id": 131,
+        "company": "Hikvision",
+        "productType": "DVR",
+        "channels": "8",
+        "name": "IDS-7108HQHI-M1/S",
+        "description": "HD 2MP DVR",
+        "list": ["", "", "", "", "", ""],
+        "Price": 4650,
+        "img": "IDS-7108HQHI-M1/S.jpg"
+    },
+    {
+        "id": 132,
+        "company": "Hikvision",
+        "productType": "DVR",
+        "channels": "16",
+        "name": "IDS-7116HQHI-M1/S",
+        "description": "HD 2MP DVR",
+        "list": ["", "", "", "", "", ""],
+        "Price": 8059,
+        "img": "IDS-7116HQHI-M1/S.jpg"
+    },
+    {
+        "id": 133,
+        "company": "Hikvision",
+        "productType": "DVR",
+        "channels": "32",
+        "name": "IDS-7232HQHI-M2/S",
+        "description": "HD 2MP DVR",
+        "list": ["", "", "", "", "", ""],
+        "Price": 20340,
+        "img": "IDS-7232HQHI-M2/S.jpg"
+    },
+    {
+        "id": 134,
+        "company": "Hikvision",
+        "productType": "DVR",
+        "channels": "4",
+        "name": "DS-7204HUHI-M1/FA",
+        "description": "HD 5MP TURBO DVR",
+        "list": ["", "", "", "", "", ""],
+        "Price": 4673,
+        "img": "DS-7204HUHI-M1/FA.jpg"
+    },
+    {
+        "id": 135,
+        "company": "Hikvision",
+        "productType": "DVR",
+        "channels": "8",
+        "name": "DS-7208HUHI-M1/FA",
+        "description": "HD 5MP TURBO DVR",
+        "list": ["", "", "", "", "", ""],
+        "Price": 7519,
+        "img": "DS-7208HUHI-M1/FA.jpg"
+    },
+    {
+        "id": 136,
+        "company": "Hikvision",
+        "productType": "DVR",
+        "channels": "16",
+        "name": "DS-7216HUHI-M2/FA",
+        "description": "HD 5MP TURBO DVR",
+        "list": ["", "", "", "", "", ""],
+        "Price": 13441,
+        "img": "DS-7216HUHI-M2/FA.jpg"
+    },
+    {
+        "id": 137,
+        "company": "Hikvision",
+        "productType": "CCTV",
+        "cameraType": "HD",
+        "megaPixels": "",
+        "name": "DS-2CE10KFOT-PFS[AUDIO]",
+        "description": "HIKVISION 3K BULLET (COLOUR+AUDIO)",
+        "list": ["", "", "", "", "", ""],
+        "Price": 2009,
+        "img": "DS-2CE10KFOT-PFS[AUDIO].jpg"
+    },
+    {
+        "id": 138,
+        "company": "Hikvision",
+        "productType": "CCTV",
+        "cameraType": "HD",
+        "megaPixels": "",
+        "name": "DS-2CE70KFOT-PFS[AUDIO]",
+        "description": "HIKVISION 3K DOME (COLOUR+AUDIO)",
+        "list": ["", "", "", "", "", ""],
+        "Price": 1669,
+        "img": "DS-2CE70KFOT-PFS[AUDIO].jpg"
+    },
+    {
+        "id": 139,
+        "company": "Hikvision",
+        "productType": "CCTV",
+        "cameraType": "HD",
+        "megaPixels": "5MP",
+        "name": "DS-2CE16HOT-ITPFS",
+        "description": "5 MP BULLET 3.6 MM (Audio)",
+        "list": ["", "", "", "", "", ""],
+        "Price": 1173,
+        "img": "DS-2CE16HOT-ITPFS.jpg"
+    },
+    {
+        "id": 140,
+        "company": "Hikvision",
+        "productType": "CCTV",
+        "cameraType": "HD",
+        "megaPixels": "5MP",
+        "name": "DS-2CE76HOT-ITPFS",
+        "description": "5 MP DOME 3.6 MM (Audio)",
+        "list": ["", "", "", "", "", ""],
+        "Price": 1111,
+        "img": "DS-2CE76HOT-ITPFS.jpg"
     }
-    
-    
+   
 ]

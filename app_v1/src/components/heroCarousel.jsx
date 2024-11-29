@@ -29,7 +29,7 @@ export default function Carousel() {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768); // Mobile breakpoint
     };
-
+   
     handleResize(); // Check on initial render
     window.addEventListener("resize", handleResize);
 

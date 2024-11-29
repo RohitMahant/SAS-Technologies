@@ -163,14 +163,15 @@ export default function Router() {
                   {/* Bullet Point Description */}
                   <div className="text-gray-600 mb-4">
                     <p className="font-semibold mb-2">Description:</p>
-                    <ul className="list-disc pl-5 space-y-1">
-                      <li>
-                        High-quality surveillance for your security needs.
-                      </li>
-                      <li>Durable and reliable for long-term use.</li>
-                      <li>Easy installation and setup.</li>
-                      <li>Comes with a one-year warranty.</li>
-                    </ul>
+                    {selectedProduct.list && selectedProduct.list.length > 0 ? (
+          <ul className="list-disc pl-5 space-y-1">
+            {selectedProduct.list.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        ) : (
+          <p>No features available for this product.</p>
+        )}
                   </div>
                   <p className="font-semibold text-red-800">
                     Price: Rs {selectedProduct.Price}

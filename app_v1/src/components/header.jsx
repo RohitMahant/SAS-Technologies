@@ -78,9 +78,7 @@ export default function Header() {
       <nav className="hidden w-full border lg:flex sticky z-10 bg-white md:h-16 lg:h-20 items-center justify-center md:gap-x-12 lg:gap-x-16 md:flex">
         <div>
           <img
-            onClick={() => {
-              router.push("/");
-            }}
+            onClick={() => handleNavClick("/")}
             src="/logo.png"
             alt="sas-technologiesLogo"
             className="md:h-14 lg:h-20 cursor-pointer"
@@ -188,9 +186,7 @@ export default function Header() {
         </div>
         <div>
           <img
-            onClick={() => {
-              router.push("/");
-            }}
+onClick={() => handleNavClick("/")}
             src="/logo.png"
             alt="sas-technologiesLogo"
             className="h-14 m-6"

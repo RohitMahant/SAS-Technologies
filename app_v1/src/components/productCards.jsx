@@ -19,7 +19,7 @@ const ServicesData1 = [
     id: 6,
     cardName: "HD Cameras",
     images: [
-      "CP-URC-DC24PL2-V3.jpg",
+      "hikvision_camera.webp",
       "CP-GPC-DA50PL2-SE.jpg",
       "CP-URC-DC24PL2C-V3.jpg",
     ],
@@ -47,7 +47,7 @@ const ServicesData1 = [
   {
     id: 3,
     cardName: "Wifi Cameras",
-    images: ["CP-R33G.png"],
+    images: ["hawkvision_camera.png"],
     desc:
       "Wifi Cameras available at most affordable prices",
       href:"/products/cctv/wifi_cameras"  

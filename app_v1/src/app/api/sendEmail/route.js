@@ -59,8 +59,8 @@ export async function POST(req) {
 
     const emailOptions = {
       from: process.env.EMAIL_USER,
-    //   to: 'office@sastechnologies.net',
-      to:"rohitsinghmahant707@gmail.com", // Replace with the target email
+      to: 'office@sastechnologies.net',
+      // to:"rohitsinghmahant707@gmail.com", // Replace with the target email
       subject: 'Wholesale Inquiry - SAS Technologies',
       html: `
         <h2>Wholesale Inquiry Details</h2>
