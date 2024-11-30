@@ -60,7 +60,7 @@ export default function Carousel() {
   };
 
   return (
-    <div className="relative w-full bg-secondary md:h-80 lg:h-96 h-72 overflow-hidden">
+    <div className="relative w-full bg-primary md:h-80 lg:h-96 h-72 overflow-hidden">
       {/* Slides */}
       <div
         className="flex transition-transform duration-500"
@@ -73,7 +73,7 @@ export default function Carousel() {
             <img
               src={`/${slide.img}`}
               alt={slide.alt}
-              className="w-full md:h-96 h-[300px] object-cover"
+              className="w-full md:h-96 h-[300px] object-contain"
             />
           </div>
         ))}

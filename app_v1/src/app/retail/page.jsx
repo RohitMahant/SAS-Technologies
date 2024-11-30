@@ -153,7 +153,7 @@ export default function Retail() {
           <div
             className={`fixed top-0 left-0 z-40 h-screen w-72 bg-white shadow-lg p-4 transform transition-transform duration-300 ease-in-out ${
               filterBar ? "translate-x-0" : "-translate-x-full"
-            } lg:sticky lg:translate-x-0 lg:w-[380px]`}
+            } lg:sticky lg:translate-x-0 lg:w-[320px] xl:w-[300px]`}
           >
             {/* Sidebar Header */}
             <div className="flex justify-between items-center mb-4 lg:hidden">
@@ -287,7 +287,7 @@ export default function Retail() {
               {paginatedProducts.map((product) => (
                 <div
                   key={product.id}
-                  className={`flex-none md:h-96 h-52 w-[calc(50%-1.2rem)] sm:w-[calc(33.33%-1.5rem)] md:w-[calc(25%-1.5rem)] bg-white shadow-md border overflow-hidden hover:shadow-lg transition-all duration-500 transform ${
+                  className={`flex-none md:h-96 h-52 w-[calc(50%-1.2rem)] sm:w-[calc(33.33%-1.5rem)] md:w-[calc(25%-1.5rem)] bg-white shadow-md border  overflow-hidden hover:shadow-lg transition-all duration-500 transform ${
                     isProductVisible
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 translate-y-6"

@@ -7,14 +7,14 @@ const reviews = [
     id: 1,
     image: "reviewer1.jpg",
     reviewerName: "Manoj Joshi",
-    reviewText: "Fantastic product! It really helped in my daily tasks.",
+    reviewText: "Fantastic products! It really helped in my daily tasks.",
     rating: 4.5,
   },
   {
     id: 2,
     image: "reviewer2.jpg",
-    reviewerName: "Jhon Doe",
-    reviewText: "Good quality, but delivery was a bit slow.",
+    reviewerName: "Rakesh Bhatia",
+    reviewText: "Good quality, and the customer care was exceptional",
     rating: 4,
   },
   {
@@ -27,8 +27,8 @@ const reviews = [
   {
     id: 4,
     image: "reviewer4.jpg",
-    reviewerName: "Killian MBappe",
-    reviewText: "Decent product for the price.And it works",
+    reviewerName: "Ankita Chaddha",
+    reviewText: "Decent products for the price.",
     rating: 3.5,
   },
 ];

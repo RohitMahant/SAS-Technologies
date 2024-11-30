@@ -1,7 +1,7 @@
 "use client";
 
 import Carousel from "@/components/heroCarousel";
-import { ProductCards1, ProductCards2 } from "@/components/productCards";
+import {ProductCard3,  ProductCards1, ProductCards2,ProductCard4 } from "@/components/productCards";
 import { useState } from "react";
 import ReviewCards from "@/components/reviewCards";
 import { IoIosCall, IoIosMail } from "react-icons/io";
@@ -28,13 +28,13 @@ export default function Home() {
         <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-red-800"></div>
       </div>
     )}
-    <div className=" font-cocoRegular">
+    <div className=" font-sans">
       {/* <div className=" md:hidden relative h-20 bg-[#0096C7]/70 text-white">
         <h1 className="text-center p-4 text-2xl font-cocoBold bg-">Welcome to SAS Technologies</h1>
       </div> */}
       {/* Hero Section */}
       <Carousel />
-      <div className="mt-12 m-4 md:mt-56 max-w-screen-lg mx-auto px-4">
+      <div className="m-4 md:mt-56 max-w-screen-lg mx-auto px-4">
         <h1 className=" text-gray-800 text-center text-3xl md:text-5xl font-cocoBold">
           Explore What We Offer in Gurgaon
         </h1>
@@ -69,8 +69,14 @@ export default function Home() {
       <div className="w-full h-full justify-center items-center md:mt-44 mt-24 lg:gap-x-20">
         <div className="justify-center items-center mt-16">
           <h1 className="text-center font-cocoBold text-2xl md:text-5xl">
-            Affordable Prices, Unbeatable Value in Gurgaon
+            Best Brands at the most affordable prices 
           </h1>
+          <h1 className="font-cocoBold md:text-3xl text-2xl text-center mt-10">Hikvision Products</h1>
+          <ProductCard3/>
+          <h1 className="font-cocoBold md:text-3xl text-2xl text-center mt-10">CP Plus Products</h1>
+          <ProductCard4/>
+          <h1 className="font-cocoBold md:text-3xl text-2xl text-center mt-10">Hawkvision Products</h1>
+          <ProductCards1/>
           <p className="text-center font-cocoRegular md:text-3xl m-2 md:m-6 ">
             Shop confidently with us, knowing we offer competitive prices
             for both retail and wholesale buyers in Gurgaon and nearby areas.
