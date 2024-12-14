@@ -352,7 +352,8 @@ export  function ProductCard3() {
 export  function ProductCard4() {
   const [selectedProduct, setSelectedProduct] = useState(null); // For dialog box
   const [showDialog, setShowDialog] = useState(false);
-
+  
+  const router = useRouter();
   // Filter products for Hikvision and select the first 5
   const hikvisionProducts = Products.filter(
     (product) => product.company === "CP Plus"

@@ -1,17 +1,21 @@
 "use client";
 
 import Carousel from "@/components/heroCarousel";
-import {ProductCard3,  ProductCards1, ProductCards2,ProductCard4 } from "@/components/productCards";
+import {
+  ProductCard3,
+  ProductCards1,
+  ProductCards2,
+  ProductCard4,
+} from "@/components/productCards";
 import { useState } from "react";
 import ReviewCards from "@/components/reviewCards";
 import { IoIosCall, IoIosMail } from "react-icons/io";
 import { useRouter } from "next/navigation";
 import PricingCards from "@/components/pricingCards";
-import { startTransition } from 'react'; 
-
+import { startTransition } from "react";
+import StickyDistributorBanner from "@/components/stickyCornerPRAMA";
 
 export default function Home() {
-
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -22,75 +26,83 @@ export default function Home() {
     });
   };
   return (
-    <> {/* Loading spinner */}
-    {isLoading && (
-      <div className="fixed inset-0 bg-white flex justify-center items-center z-50">
-        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-red-800"></div>
-      </div>
-    )}
-    <div className=" font-sans">
-      {/* <div className=" md:hidden relative h-20 bg-[#0096C7]/70 text-white">
+    <>
+      {" "}
+      {/* Loading spinner */}
+      {isLoading && (
+        <div className="fixed inset-0 bg-white flex justify-center items-center z-50">
+          <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-red-800"></div>
+        </div>
+      )}
+      <div className=" font-sans">
+        {/* <div className=" md:hidden relative h-20 bg-[#0096C7]/70 text-white">
         <h1 className="text-center p-4 text-2xl font-cocoBold bg-">Welcome to SAS Technologies</h1>
       </div> */}
-      {/* Hero Section */}
-      <Carousel />
-      <div className="m-4 md:mt-56 max-w-screen-lg mx-auto px-4">
-        <h1 className=" text-gray-800 text-center text-3xl md:text-5xl font-cocoBold">
-          Explore What We Offer in Gurgaon
-        </h1>
-        <p className=" md:text-2xl m-4">
-          At our Gurgaon-based store, we specialize in providing advanced CCTV
-          systems, top-tier biometric solutions, and high-performance alarm
-          systems. Secure your premises with reliable, cutting-edge technology
-          that’s designed for your safety and convenience.
-        </p>
-        <p className=" md:text-2xl m-4">
-          Discover an extensive selection of CCTV cameras, biometric access
-          control systems, premium quality cables, and robust connectors—all
-          tailored to meet your security needs in Gurgaon and beyond.
-        </p>
-      </div>
-
-      {/* Product Showcase */}
-      <ProductCards1 />
-      <div className="w-full max-w-screen-lg mx-auto px-4">
-        <h1 className="text-center font-cocoBold md:mt-44 mt-16 md:text-3xl m-4">
-          Your One-Stop Shop for Security Accessories in Gurgaon
-        </h1>
-        <p className="text-center md:text-2xl m-4">
-          From durable racks and high-capacity hard drives to an extensive range
-          of essential tools and accessories, we provide everything you need to
-          create a complete and reliable security setup.
-        </p>
-      </div>
-      <ProductCards2 />
-
-      {/* Pricing Section */}
-      <div className="w-full h-full justify-center items-center md:mt-44 mt-24 lg:gap-x-20">
-        <div className="justify-center items-center mt-16">
-          <h1 className="text-center font-cocoBold text-2xl md:text-5xl">
-            Best Brands at the most affordable prices 
+        {/* Hero Section */}
+        <Carousel />
+        <div className="m-4 md:mt-56 max-w-screen-lg mx-auto px-4">
+          <h1 className=" text-gray-800 text-center text-3xl md:text-5xl font-cocoBold">
+            Explore What We Offer in Gurgaon
           </h1>
-          <h1 className="font-cocoBold md:text-3xl text-2xl text-center mt-10">Hikvision Products</h1>
-          <ProductCard3/>
-          <h1 className="font-cocoBold md:text-3xl text-2xl text-center mt-10">CP Plus Products</h1>
-          <ProductCard4/>
-          <h1 className="font-cocoBold md:text-3xl text-2xl text-center mt-10">Hawkvision Products</h1>
-          <ProductCards1/>
-          <p className="text-center font-cocoRegular md:text-3xl m-2 md:m-6 ">
-            Shop confidently with us, knowing we offer competitive prices
-            for both retail and wholesale buyers in Gurgaon and nearby areas.
+          <p className=" md:text-2xl m-4">
+            At our Gurgaon-based store, we specialize in providing advanced CCTV
+            systems, top-tier biometric solutions, and high-performance alarm
+            systems. Secure your premises with reliable, cutting-edge technology
+            that’s designed for your safety and convenience.
           </p>
-          <div className="flex justify-center mt-8">
-          <button
-            onClick={() => handleNavClick("/wholesale")}
-          className="flex items-center justify-center w-48 h-12 rounded-md bg-white text-green-600 font-semibold shadow-md hover:bg-[#0096C7]/80 hover:text-white transition-all duration-500 border hover:scale-110 border-white gap-x-2 m-4"
-          >
-            Go to Wholesale
-          </button>
+          <p className=" md:text-2xl m-4">
+            Discover an extensive selection of CCTV cameras, biometric access
+            control systems, premium quality cables, and robust connectors—all
+            tailored to meet your security needs in Gurgaon and beyond.
+          </p>
         </div>
-          {/* Pricing Cards */}
-          {/* <div className="mt-4 items-center justify-center">
+
+        {/* Product Showcase */}
+        <ProductCards1 />
+        <div className="w-full max-w-screen-lg mx-auto px-4">
+          <h1 className="text-center font-cocoBold md:mt-44 mt-16 md:text-3xl m-4">
+            Your One-Stop Shop for Security Accessories in Gurgaon
+          </h1>
+          <p className="text-center md:text-2xl m-4">
+            From durable racks and high-capacity hard drives to an extensive
+            range of essential tools and accessories, we provide everything you
+            need to create a complete and reliable security setup.
+          </p>
+        </div>
+        <ProductCards2 />
+
+        {/* Pricing Section */}
+        <div className="w-full h-full justify-center items-center md:mt-44 mt-24 lg:gap-x-20">
+          <div className="justify-center items-center mt-16">
+            <h1 className="text-center font-cocoBold text-2xl md:text-5xl">
+              Best Brands at the most affordable prices
+            </h1>
+            <h1 className="font-cocoBold md:text-3xl text-2xl text-center mt-10">
+              Hikvision Products
+            </h1>
+            <ProductCard3 />
+            <h1 className="font-cocoBold md:text-3xl text-2xl text-center mt-10">
+              CP Plus Products
+            </h1>
+            <ProductCard4 />
+            <h1 className="font-cocoBold md:text-3xl text-2xl text-center mt-10">
+              Hawkvision Products
+            </h1>
+            <ProductCards1 />
+            <p className="text-center font-cocoRegular md:text-3xl m-2 md:m-6 ">
+              Shop confidently with us, knowing we offer competitive prices for
+              both retail and wholesale buyers in Gurgaon and nearby areas.
+            </p>
+            <div className="flex justify-center mt-8">
+              <button
+                onClick={() => handleNavClick("/wholesale")}
+                className="flex items-center justify-center w-48 h-12 rounded-md bg-white text-green-600 font-semibold shadow-md hover:bg-[#0096C7]/80 hover:text-white transition-all duration-500 border hover:scale-110 border-white gap-x-2 m-4"
+              >
+                Go to Wholesale
+              </button>
+            </div>
+            {/* Pricing Cards */}
+            {/* <div className="mt-4 items-center justify-center">
             <div className="w-full md:flex justify-center">
               <div className="md:h-36 h-32 w-80 md:w-96 lg:w-[650px] lg:h-40 md:m-4 ml-[35px] bg-tertiary">
                 <img
@@ -119,120 +131,128 @@ export default function Home() {
               </div>
             </div>
           </div> */}
-          <PricingCards/>
-        </div>
+            <PricingCards />
+          </div>
 
-        {/* Exclusive Brands Section */}
-        <div className="w-full p-6 text-center mt-36">
-          <h1 className="text-2xl md:text-5xl font-cocoBold">
-            Premium Brands for Unmatched Security Solutions
-          </h1>
-          <p className="text-lg md:text-2xl mt-4">
-            We are proud to be authorized resellers of globally trusted brands
-            like Hikvision, CP Plus, and Hawkvision. Our extensive range ensures
-            that every customer gets the best security solutions tailored to
-            their requirements in Gurgaon.
-          </p>
-          <div className="relative overflow-hidden ">
-           {/* Scrolling Brand Logos */}
-       
-            <div className="grid md:grid-cols-4 grid-cols-2">
-              <img
-                src="/Hikvision.svg"
-                alt="Hikvision cameras in Gurgaon"
-                className="h-44 md:h-72 transition-transform animate-pulse duration-300 hover:scale-110"
-              />
+          {/* Exclusive Brands Section */}
+          <div className="w-full p-6 text-center mt-36">
+            <h1 className="text-2xl md:text-5xl font-cocoBold">
+              Premium Brands for Unmatched Security Solutions
+            </h1>
+            <p className="text-lg md:text-2xl mt-4">
+              We are proud to be authorized resellers of globally trusted brands
+              like Hikvision, CP Plus, and Hawkvision. Our extensive range
+              ensures that every customer gets the best security solutions
+              tailored to their requirements in Gurgaon.
+            </p>
+            <div className="relative overflow-hidden ">
+              {/* Scrolling Brand Logos */}
 
-              <img
-                src="/cp-plus.png"
-                alt="CP Plus CCTV in Gurgaon"
-                className="h-44 md:h-72 transition-transform  animate-pulse duration-300 hover:scale-110"
-              />
-              <img
-                src="/wdsurveillance.png"
-                alt="WD Surveillance hardrives in Gurgaon"
-                className="h-30 md:h-56 transition-transform animate-pulse duration-300 hover:scale-110"
-              />
-              <img
-                src="/hawkvision.png"
-                alt="Hawkvision cameras in Gurgaon"
-                className="h-30 md:h-56 transition-transform  animate-pulse duration-300 hover:scale-110"
-              />
+              <div className="justify-center ">
+                <div className="md:flex justify-center ">
+                  <img
+                    src="/prama_logo.png"
+                    alt="Prama cameras in Gurgaon"
+                    className="h-44 md:h-72 transition-transform animate-pulse duration-300 hover:scale-110"
+                  />
 
-              
+                  <img
+                    src="/cp-plus.png"
+                    alt="CP Plus CCTV in Gurgaon"
+                    className="h-44 md:h-72 transition-transform  animate-pulse duration-300 hover:scale-110"
+                  />
+                  <img
+                    src="/wdsurveillance.png"
+                    alt="WD Surveillance hardrives in Gurgaon"
+                    className="h-30 md:h-56 transition-transform animate-pulse duration-300 hover:scale-110"
+                  />
+                </div>
+                <div className="md:flex justify-center">
+                  <img
+                    src="/hawkvision.png"
+                    alt="Hawkvision cameras in Gurgaon"
+                    className="h-30 md:h-56 transition-transform  animate-pulse duration-300 hover:scale-110"
+                  />
+                  <img
+                    src="/Hikvision.svg"
+                    alt="Prama cameras in Gurgaon"
+                    className="h-30 md:h-56 transition-transform  animate-pulse duration-300 hover:scale-110"
+                  />
+                </div>
+              </div>
             </div>
           </div>
-          </div>
         </div>
- 
 
-      {/* About Us Section */}
-      <div className="md:mt-20 mt-24">
-        <h1 className="text-center text-gray-800 text-3xl md:text-5xl font-cocoBold">
-          About Us: Leaders in Security Systems in Gurgaon
-        </h1>
-      </div>
-      <div>
-        <div className="mt-12 m-6">
-          <div className="w-full flex justify-center">
-            <img
-              src="/logo.png"
-              alt="Gurgaon security systems logo"
-              className=""
-            />
-          </div>
-          <h1 className="text-center text-2xl md:text-5xl font-cocoBold">
-            Your Satisfaction, Our Mission
+        {/* About Us Section */}
+        <div className="md:mt-20 mt-24">
+          <h1 className="text-center text-gray-800 text-3xl md:text-5xl font-cocoBold">
+            About Us: Leaders in Security Systems in Gurgaon
           </h1>
-          <p className="text-center md:text-2xl m-4">
-            Operating since{" "}
-            <span className="font-serif text-4xl font-bold">2001</span>,
-            we’ve been trusted by thousands of satisfied customers in Gurgaon
-            and beyond. Join our growing family of over 
-            <span className="font-serif text-4xl font-bold">1000+</span>happy
-            clients.
-          </p>
         </div>
-      </div>
+        <div>
+          <div className="mt-12 m-6">
+            <div className="w-full flex justify-center">
+              <img
+                src="/logo.png"
+                alt="Gurgaon security systems logo"
+                className=""
+              />
+            </div>
+            <h1 className="text-center text-2xl md:text-5xl font-cocoBold">
+              Your Satisfaction, Our Mission
+            </h1>
+            <p className="text-center md:text-2xl m-4">
+              Operating since{" "}
+              <span className="font-serif text-4xl font-bold">2001</span>, we’ve
+              been trusted by thousands of satisfied customers in Gurgaon and
+              beyond. Join our growing family of over
+              <span className="font-serif text-4xl font-bold">1000+</span>happy
+              clients.
+            </p>
+          </div>
+        </div>
 
-      {/* Customer Reviews */}
-      <ReviewCards />
+        {/* Customer Reviews */}
+        <ReviewCards />
 
-      {/* Contact Us Section */}
-      <div className="relative bg-transparent p-10 md:mt-20 m-6 md:m-14">
-        <h1 className="text-center text-2xl md:text-5xl font-cocoBold text-gray-700 leading-tight">
-          Got Questions? <br /> We’re Here to Help
-        </h1>
-        <div className="flex justify-center mt-8">
+        {/* Contact Us Section */}
+        <div className="relative bg-transparent p-10 md:mt-20 m-6 md:m-14">
+          <h1 className="text-center text-2xl md:text-5xl font-cocoBold text-gray-700 leading-tight">
+            Got Questions? <br /> We’re Here to Help
+          </h1>
+          <div className="flex justify-center mt-8">
+            <button
+              onClick={() => {
+                router.push("/contact");
+              }}
+              className="flex items-center justify-center w-48 h-12 rounded-md bg-white text-green-600 font-semibold shadow-md hover:bg-[#0096C7]/80 hover:text-white transition-all duration-500 hover:scale-110 border border-white gap-x-2 m-4"
+            >
+              Contact Us
+            </button>
+          </div>
+        </div>
+
+        <StickyDistributorBanner />
+
+        {/* Mobile Quick Action Buttons */}
+        <div className="md:hidden fixed bottom-4 right-4 z-30">
+          <button
+            onClick={() => (window.location.href = "tel:+9802012042")}
+            className="w-14 h-14 rounded-full bg-green-500 flex items-center justify-center shadow-lg hover:bg-green-600 transition-all duration-300"
+          >
+            <IoIosCall size={30} color="white" />
+          </button>
           <button
             onClick={() => {
               router.push("/contact");
             }}
-           className="flex items-center justify-center w-48 h-12 rounded-md bg-white text-green-600 font-semibold shadow-md hover:bg-[#0096C7]/80 hover:text-white transition-all duration-500 hover:scale-110 border border-white gap-x-2 m-4"
+            className="w-14 h-14 rounded-full bg-red-800 flex mt-2 items-center justify-center shadow-lg hover:bg-green-600 transition-all duration-300"
           >
-            Contact Us
+            <IoIosMail size={30} color="white" />
           </button>
         </div>
       </div>
-
-      {/* Mobile Quick Action Buttons */}
-      <div className="md:hidden fixed bottom-4 right-4 z-30">
-        <button
-          onClick={() => (window.location.href = "tel:+9802012042")}
-          className="w-14 h-14 rounded-full bg-green-500 flex items-center justify-center shadow-lg hover:bg-green-600 transition-all duration-300"
-        >
-          <IoIosCall size={30} color="white" />
-        </button>
-        <button
-          onClick={() => {
-            router.push("/contact");
-          }}
-          className="w-14 h-14 rounded-full bg-red-800 flex mt-2 items-center justify-center shadow-lg hover:bg-green-600 transition-all duration-300"
-        >
-          <IoIosMail size={30} color="white" />
-        </button>
-      </div>
-    </div>
     </>
   );
 }
