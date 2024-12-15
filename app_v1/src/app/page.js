@@ -153,30 +153,30 @@ export default function Home() {
                   <img
                     src="/prama_logo.png"
                     alt="Prama cameras in Gurgaon"
-                    className="h-44 md:h-72 transition-transform animate-pulse duration-300 hover:scale-110"
+                    className="h-44 md:h-44 transition-transform animate-pulse duration-300 hover:scale-110"
                   />
 
                   <img
                     src="/cp-plus.png"
                     alt="CP Plus CCTV in Gurgaon"
-                    className="h-44 md:h-72 transition-transform  animate-pulse duration-300 hover:scale-110"
+                    className="h-44 md:h-44 transition-transform  animate-pulse duration-300 hover:scale-110"
                   />
                   <img
                     src="/wdsurveillance.png"
                     alt="WD Surveillance hardrives in Gurgaon"
-                    className="h-30 md:h-56 transition-transform animate-pulse duration-300 hover:scale-110"
+                    className="h-30 md:h-44 transition-transform animate-pulse duration-300 hover:scale-110"
                   />
                 </div>
                 <div className="md:flex justify-center">
                   <img
                     src="/hawkvision.png"
                     alt="Hawkvision cameras in Gurgaon"
-                    className="h-30 md:h-56 transition-transform  animate-pulse duration-300 hover:scale-110"
+                    className="h-30 md:h-44 transition-transform  animate-pulse duration-300 hover:scale-110"
                   />
                   <img
                     src="/Hikvision.svg"
                     alt="Prama cameras in Gurgaon"
-                    className="h-30 md:h-56 transition-transform  animate-pulse duration-300 hover:scale-110"
+                    className="h-30 md:h-44 transition-transform  animate-pulse duration-300 hover:scale-110"
                   />
                 </div>
               </div>

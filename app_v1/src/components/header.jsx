@@ -130,7 +130,7 @@ export default function Header() {
 
 {isDropdownOpen && (
   <ul
-    className={`absolute bg-[#0096C7]/70 text-sm left-0 top-full transition-opacity duration-500  w-[250px] shadow-lg mt-2`}
+    className={`absolute bg-[#0096C7]/70 text-sm left-0 top-full transition-opacity duration-500  w-[250px] shadow-lg mt-2 `}
     ref={dropdownRef}
     onMouseLeave={toggleDropdown}
   >
