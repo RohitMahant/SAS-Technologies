@@ -159,7 +159,7 @@ export default function Footer() {
                 <IoLogoInstagram size={30} />
               </Link>
               <Link
-                href="https://instagram.com"
+                href="https://www.linkedin.com/company/sas-technologies5/"
                 className="hover:text-gray-900 flex items-center "
               >
                 <IoLogoLinkedin size={30} />
