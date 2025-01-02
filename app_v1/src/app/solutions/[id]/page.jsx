@@ -7,7 +7,7 @@ export default async function SolutionDetail({ params }) {
         title: "Biometric Door Lock",
         description:
           "Advanced biometric lock with secure fingerprint access. This system offers cutting-edge security features such as tamper alerts, multi-user support, and app integration.",
-        image: "/images/biometric_lock.jpg",
+        image: "/sol_1.jpg",
         features: [
           "Fingerprint recognition",
           "Tamper-proof design",
@@ -20,7 +20,7 @@ export default async function SolutionDetail({ params }) {
         title: "CCTV Camera",
         description:
           "High-resolution CCTV cameras for complete surveillance. Offers night vision, remote monitoring, and motion detection capabilities.",
-        image: "/images/cctv_camera.jpg",
+        image: "/sol_2.webp",
         features: [
           "Night vision",
           "Motion detection",
@@ -33,7 +33,7 @@ export default async function SolutionDetail({ params }) {
         title: "Smart Video Doorbell",
         description:
           "A video doorbell that allows you to see, hear, and speak to visitors at your door from your smartphone.",
-        image: "/images/video_doorbell.jpg",
+        image: "/sol_3.jpg",
         features: [
           "Two-way audio",
           "HD video",
@@ -46,7 +46,7 @@ export default async function SolutionDetail({ params }) {
         title: "Smart Video Doorbell",
         description:
           "A video doorbell that allows you to see, hear, and speak to visitors at your door from your smartphone.",
-        image: "/images/video_doorbell.jpg",
+        image: "/sol_4.jpg",
         features: [
           "Two-way audio",
           "HD video",

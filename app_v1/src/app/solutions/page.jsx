@@ -7,7 +7,7 @@ const solutionsData = [
     title: "Biometric Door Lock",
     description:
       "Advanced biometric lock with secure fingerprint access. This system offers cutting-edge security features such as tamper alerts, multi-user support, and app integration.",
-    image: "/images/biometric_lock.jpg",
+    image: "sol_1.jpg",
     category: "Private Property",
   },
   {
@@ -15,7 +15,7 @@ const solutionsData = [
     title: "CCTV Camera",
     description:
       "High-resolution CCTV cameras for complete surveillance. Offers night vision, remote monitoring, and motion detection capabilities.",
-    image: "/images/cctv_camera.jpg",
+    image: "/sol_2.webp",
     category: "Private Property",
   },
   {
@@ -23,7 +23,7 @@ const solutionsData = [
     title: "Smart Video Doorbell",
     description:
       "A video doorbell that allows you to see, hear, and speak to visitors at your door from your smartphone.",
-    image: "/images/video_doorbell.jpg",
+    image: "/sol_3.jpg",
     category: "Private Property",
   },
   {
@@ -31,7 +31,7 @@ const solutionsData = [
     title: "Bank Security Systems",
     description:
       "Comprehensive banking security systems with features like vault protection, real-time monitoring, and alarm integration to ensure the safety of assets and personnel.",
-    image: "/images/bank_security.jpg",
+    image: "/sol_4.webp",
     category: "Banking",
   },
   {
@@ -39,7 +39,7 @@ const solutionsData = [
     title: "Smart Classroom Solutions",
     description:
       "Empower educational institutions with smart classroom solutions, including interactive whiteboards, student monitoring systems, and secure access control.",
-    image: "/images/smart_classroom.jpg",
+    image: "/sol_5.jpg",
     category: "Schools",
   },
   {
@@ -47,7 +47,7 @@ const solutionsData = [
     title: "School Campus Surveillance",
     description:
       "High-quality surveillance systems designed specifically for school campuses, offering real-time monitoring and emergency alert systems.",
-    image: "/images/school_surveillance.jpg",
+    image: "/sol_6.jpg",
     category: "Schools",
   },
   {
@@ -55,7 +55,7 @@ const solutionsData = [
     title: "Office Access Control",
     description:
       "Secure your office space with advanced access control systems, offering multi-level authorization and detailed access logs.",
-    image: "/images/office_access.jpg",
+    image: "/sol_7.jpg",
     category: "Corporate",
   },
 ];
