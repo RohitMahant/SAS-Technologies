@@ -42,9 +42,9 @@ export default function AboutUs() {
                 <section>
                     <h2 className="text-2xl font-semibold">Explore Our Solutions</h2>
                     <ul className="list-disc list-inside mt-4 space-y-2">
-                        <li><a href="/solutions" className="text-blue-500 hover:underline">View Our Solutions</a></li>
-                        <li><a href="/wholesale" className="text-blue-500 hover:underline">Wholesale Options</a></li>
-                        <li><a href="/contact" className="text-blue-500 hover:underline">Contact Us</a></li>
+                        <li><Link href="/solutions" className="text-blue-500 hover:underline">View Our Solutions</Link></li>
+                        <li><Link href="/wholesale" className="text-blue-500 hover:underline">Wholesale Options</Link></li>
+                        <li><Link href="/contact" className="text-blue-500 hover:underline">Contact Us</Link></li>
                     </ul>
                 </section>
 
@@ -61,7 +61,7 @@ export default function AboutUs() {
                     <h2 className="text-2xl font-semibold">Products We Sell</h2>
                     <ul className="list-disc list-inside mt-4 space-y-2">
                         {products.map((item, index) => (
-                            <li key={index}><a href={item.href} className="text-blue-500 hover:underline">{item.label}</a></li>
+                            <li key={index}><Link href={item.href} className="text-blue-500 hover:underline">{item.label}</Link></li>
                         ))}
                     </ul>
                 </section>
