@@ -42,7 +42,7 @@ export default function Home() {
         <Carousel />
         <div className="m-4 md:mt-56 max-w-screen-lg mx-auto px-4">
           <h1 className=" text-gray-800 text-center text-3xl md:text-5xl font-cocoBold">
-            Explore What We Offer in Gurgaon
+            Explore What We Offer in Gurgaon and PAN India
           </h1>
           <p className=" md:text-2xl m-4">
             At our Gurgaon-based store, we specialize in providing advanced CCTV
@@ -80,15 +80,15 @@ export default function Home() {
             <h1 className="font-cocoBold md:text-3xl text-2xl text-center mt-10">
               Hikvision Products
             </h1>
-            <ProductCard3 />
+            {/* <ProductCard3 /> */}
             <h1 className="font-cocoBold md:text-3xl text-2xl text-center mt-10">
               CP Plus Products
             </h1>
-            <ProductCard4 />
+            {/* <ProductCard4 /> */}
             <h1 className="font-cocoBold md:text-3xl text-2xl text-center mt-10">
               Hawkvision Products
             </h1>
-            <ProductCards1 />
+            {/* <ProductCards1 /> */}
             <p className="text-center font-cocoRegular md:text-3xl m-2 md:m-6 ">
               Shop confidently with us, knowing we offer competitive prices for
               both retail and wholesale buyers in Gurgaon and nearby areas.
@@ -215,6 +215,20 @@ export default function Home() {
 
         {/* Customer Reviews */}
         <ReviewCards />
+
+        <div className="mt-10"> 
+          <p className="text-center font-cocoBold text-2xl ">Want to know more about us ? </p>
+          <div className="flex justify-center mt-8">
+            <button
+              onClick={() => {
+                router.push("/about");
+              }}
+              className="flex items-center justify-center w-48 h-12 rounded-md bg-white text-green-600 font-semibold shadow-md hover:bg-[#0096C7]/80 hover:text-white transition-all duration-500 hover:scale-110 border border-white gap-x-2 m-4"
+            >
+              View more
+            </button>
+          </div>
+        </div>
 
         {/* Contact Us Section */}
         <div className="relative bg-transparent p-10 md:mt-20 m-6 md:m-14">

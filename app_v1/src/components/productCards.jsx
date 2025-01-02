@@ -137,6 +137,7 @@ export  function ProductCards1() {
   const router = useRouter();
 
   return (
+    <div className="w-full">
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-4 mt-12 w-full place-items-center">
       {ServicesData1.map((service) => (
         <div
@@ -168,14 +169,15 @@ export  function ProductCards1() {
               {service.desc}
             </p>
             <button
-              onClick={() => router.push(service.href)}
+              onClick={() => router.push("/contact")}
               className="mt-3 py-2 px-4 bg-transparent border text-white rounded opacity-0 group-hover:opacity-100 hover:bg-primary hover:text-gray-700 transition-all duration-300"
             >
-              View More
+              Contact Us
             </button>
           </div>
         </div>
       ))}
+    </div>
     </div>
   );
 }
@@ -216,10 +218,10 @@ export  function ProductCards2() {
               {service.desc}
             </p>
             <button
-              onClick={() => router.push(service.href)}
+              onClick={() => router.push("/contact")}
               className="mt-3 py-2 px-4 bg-transparent border text-white rounded opacity-0 group-hover:opacity-100 hover:bg-primary hover:text-gray-700 transition-all duration-300"
             >
-              View More
+              Contact us
             </button>
           </div>
         </div>

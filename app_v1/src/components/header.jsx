@@ -92,12 +92,12 @@ export default function Header() {
             >
               HOME
             </li>
-            <li
+            {/* <li
               className={getNavItemClasses("/retail")}
               onClick={() => handleNavClick("/retail")}
             >
               RETAIL
-            </li>
+            </li> */}
             <li
               className={getNavItemClasses("/solutions")}
               onClick={() => handleNavClick("/solutions")}
@@ -111,21 +111,24 @@ export default function Header() {
               WHOLESALE
             </li>
             <li
+              className={getNavItemClasses("/about")}
+              onClick={() => handleNavClick("/about")}
+            >
+              ABOUT US
+            </li>
+            <li
               className={getNavItemClasses("/contact")}
               onClick={() => handleNavClick("/contact")}
             >
               CONTACT US
             </li>
-            <li className="cursor-pointer group relative">
+            {/* <li className="cursor-pointer group relative">
   <button
     className="w-full text-left flex justify-between items-center transition duration-300 rounded-md"
     onClick={toggleDropdown}
     onMouseEnter={toggleDropdown}
   >
     <span className="font-semibold text-gray-800">OUR PRODUCTS</span>
-    {/* <span className="text-gray-600 ml-3">
-      {isDropdownOpen ? "▲" : "▼"}
-    </span> */}
   </button>
 
 {isDropdownOpen && (
@@ -165,7 +168,7 @@ export default function Header() {
     ))}
   </ul>
 )}
-</li>
+</li> */}
 
           </ul>
         </div>
@@ -216,7 +219,7 @@ onClick={() => handleNavClick("/")}
           >
             HOME
           </li>
-          <li className="relative group">
+          {/* <li className="relative group">
   <button 
     className="w-full text-left flex justify-between items-center  transition duration-300 rounded-md" 
     onClick={toggleDropdown}
@@ -257,11 +260,11 @@ onClick={() => handleNavClick("/")}
       ))}
     </ul>
   )}
-</li>
+</li> */}
 
 
-          <li className={getNavItemClasses("/retail")} onClick={() => handleNavClick("/retail")}>
-            RETAIL
+          <li className={getNavItemClasses("/about")} onClick={() => handleNavClick("/about")}>
+            ABOUT US
           </li>
           <li className={getNavItemClasses("/solutions")} onClick={() => handleNavClick("/solutions")}>
             SOLUTIONS
@@ -273,7 +276,7 @@ onClick={() => handleNavClick("/")}
             CONTACT US
           </li>
 
-          {/* Add more mobile menu items */}
+      
         </ul>
       </div>
 
