@@ -129,9 +129,15 @@ export default function Footer() {
             <h3 className="text-md font-cocoBold mb-4">
               Authorised Sellers by
             </h3>
-            <ul className="text-sm">
+            <ul className="text-sm md:flex">
               <li className="z-30">
                 <img src="cp-plus.png" alt="cpplus " className="h-16 cursor-pointer"  />
+              </li>
+              <li className="z-30">
+                <img src="Hikvision.svg" alt="cpplus " className="h-16 cursor-pointer"  />
+              </li>
+              <li className="z-30">
+                <img src="prama_logo.png" alt="cpplus " className="h-10 cursor-pointer"  />
               </li>
             </ul>
           </div>

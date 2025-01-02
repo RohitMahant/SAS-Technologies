@@ -12,7 +12,7 @@ const PricingCards = () => {
   const handleRedirect = () => {
     startTransition(() => {
       setIsLoading(true); // Show loading spinner
-      router.push("/wholesale"); // Redirect to /wholesale
+      router.push("/contact"); // Redirect to /wholesale
     });
   };
 
@@ -46,7 +46,7 @@ const PricingCards = () => {
               onClick={handleRedirect}
               className="bg-[#0096C7] md:text-md text-sm mt-2 text-white md:py-2 md:px-4 py-1 px-4 rounded-md hover:bg-[#0096C7]/60 transition duration-300"
             >
-              View Pricing
+              Contact us
             </button>
           </div>
         </div>
@@ -72,7 +72,7 @@ const PricingCards = () => {
               onClick={handleRedirect}
               className="bg-[#0096C7] md:text-md text-sm mt-2 text-white md:py-2 md:px-4 py-1 px-4 rounded-md hover:bg-[#0096C7]/60 transition duration-300"
             >
-              View Pricing
+             Contact us
             </button>
           </div>
         </div>
@@ -98,7 +98,7 @@ const PricingCards = () => {
               onClick={handleRedirect}
               className="bg-[#0096C7] mt-2 text-white md:py-2 md:px-4 py-1 px-4 md:text-md text-sm rounded-md hover:bg-[#0096C7]/60 transition duration-300"
             >
-              View Pricing
+              Contact us 
             </button>
           </div>
         </div>

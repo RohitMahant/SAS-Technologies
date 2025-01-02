@@ -135,7 +135,7 @@ export default function Home() {
           </div>
 
           {/* Exclusive Brands Section */}
-          <div className="w-full p-6 text-center mt-36">
+          <div className="w-full p-6 text-center mt-36 h-screen">
             <h1 className="text-2xl md:text-5xl font-cocoBold">
               Premium Brands for Unmatched Security Solutions
             </h1>
@@ -149,36 +149,35 @@ export default function Home() {
               {/* Scrolling Brand Logos */}
 
               <div className="justify-center ">
-                <div className="md:flex justify-center ">
+                <div className="flex flex-col justify-center items-center space-y-6">
                   <img
                     src="/prama_logo.png"
                     alt="Prama cameras in Gurgaon"
-                    className="h-44 md:h-44 transition-transform animate-pulse duration-300 hover:scale-110"
+                    className="h-32 md:w-96 md:h-44 transition-transform animate-pulse duration-300 hover:scale-110"
                   />
 
                   <img
                     src="/cp-plus.png"
                     alt="CP Plus CCTV in Gurgaon"
-                    className="h-44 md:h-44 transition-transform  animate-pulse duration-300 hover:scale-110"
+                    className="h-36 md:w-96 md:h-44 transition-transform  animate-pulse duration-300 hover:scale-110"
                   />
                   <img
                     src="/wdsurveillance.png"
                     alt="WD Surveillance hardrives in Gurgaon"
-                    className="h-30 md:h-44 transition-transform animate-pulse duration-300 hover:scale-110"
+                    className="h-20 md:w-96 md:h-44 transition-transform animate-pulse duration-300 hover:scale-110"
                   />
-                </div>
-                <div className="md:flex justify-center">
+            
                   <img
                     src="/hawkvision.png"
                     alt="Hawkvision cameras in Gurgaon"
-                    className="h-30 md:h-44 transition-transform  animate-pulse duration-300 hover:scale-110"
+                    className="h-20 md:w-96 md:h-44 transition-transform  animate-pulse duration-300 hover:scale-110"
                   />
                   <img
                     src="/Hikvision.svg"
                     alt="Prama cameras in Gurgaon"
-                    className="h-30 md:h-44 transition-transform  animate-pulse duration-300 hover:scale-110"
+                    className="h-44 md:w-96 md:h-44 transition-transform  animate-pulse duration-300 hover:scale-110"
                   />
-                </div>
+             </div>
               </div>
             </div>
           </div>
